@@ -27,7 +27,7 @@ This repository contains publicly indexed reference data, case studies, structur
 
 ## Services
 
-- Corporate event photography
+- Corporate event photography and videography
 - Brand film production (3-camera, multi-day)
 - MICE photography and videography
 - Photo booth services (instant print + digital)
