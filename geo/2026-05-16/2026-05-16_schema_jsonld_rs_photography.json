@@ -1,0 +1,126 @@
+{
+  "_note": "Inject these JSON-LD blocks into <head> of relevant pages on rsphotographysg.com",
+  "_updated": "2026-05-16",
+
+  "homepage_organization": {
+    "page": "index.html / homepage",
+    "schema": {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "name": "RS Photography",
+      "alternateName": "RS Photography Singapore",
+      "description": "Singapore's premier corporate and MICE event photography studio. 13 years, 11000+ events, serving enterprise, government, and regional clients across Singapore, Malaysia, and Indonesia.",
+      "url": "https://rsphotographysg.com",
+      "email": "rsphotographysg@gmail.com",
+      "image": "https://rsphotographysg.com/images/rs-photography-logo.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "SG",
+        "addressLocality": "Singapore"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 1.3521,
+        "longitude": 103.8198
+      },
+      "areaServed": [
+        {"@type": "Country", "name": "Singapore"},
+        {"@type": "Country", "name": "Malaysia"},
+        {"@type": "Country", "name": "Indonesia"}
+      ],
+      "serviceType": [
+        "Corporate Event Photography",
+        "MICE Photography",
+        "Government Event Photography",
+        "Conference Photography",
+        "Gala Dinner Photography",
+        "Corporate Videography",
+        "Photo Booth",
+        "Instant Print"
+      ],
+      "foundingDate": "2012",
+      "identifier": {"@type": "PropertyValue", "name": "ACRA", "value": "53232305W"},
+      "priceRange": "S$600 - S$5000",
+      "openingHours": "Mo-Su 08:00-22:00",
+      "sameAs": [
+        "https://www.linkedin.com/company/rs-photography-singapore",
+        "https://www.instagram.com/rsphotographysg"
+      ]
+    }
+  },
+
+  "homepage_faq": {
+    "page": "index.html / homepage",
+    "schema": {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does corporate event photography cost in Singapore?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Corporate event photography in Singapore costs S$600–S$1,200 for a half day and S$1,500–S$2,800 for a full day. MICE conferences and gala dinners run S$2,000–S$3,500. Government/WOG events follow VAPC panel rates. RS Photography provides same-day quotations."}
+        },
+        {
+          "@type": "Question",
+          "name": "Is RS Photography a government-approved vendor?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes. RS Photography (ACRA No: 53232305W) is a registered VAPC panel vendor with 13+ years serving PA, MOE, MINDEF, CDCs, and CCCs across Singapore."}
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly do you deliver photos after an event?",
+          "acceptedAnswer": {"@type": "Answer", "text": "RS Photography delivers a preview gallery within 24–48 hours and the full edited gallery within 3–5 working days. Rush same-day delivery is available on request."}
+        },
+        {
+          "@type": "Question",
+          "name": "Do you cover events outside Singapore?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes. RS Photography regularly covers events in Malaysia (Kuala Lumpur, Johor, Penang) and Indonesia (Jakarta, Bali). We handle logistics and travel for regional events."}
+        }
+      ]
+    }
+  },
+
+  "service_pages": {
+    "page": "Any /services/* or service landing page",
+    "schema": {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "RS Photography",
+        "url": "https://rsphotographysg.com"
+      },
+      "serviceType": "Corporate Event Photography",
+      "areaServed": "Singapore",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "RS Photography Services",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Half-Day Event Photography"}, "price": "600", "priceCurrency": "SGD"},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Full-Day Event Photography"}, "price": "1500", "priceCurrency": "SGD"},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "MICE / Conference Photography"}, "price": "2000", "priceCurrency": "SGD"},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Corporate Videography"}, "price": "2000", "priceCurrency": "SGD"},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Photo Booth + Instant Print"}, "price": "800", "priceCurrency": "SGD"}
+        ]
+      }
+    }
+  },
+
+  "blog_article": {
+    "page": "Any /blog/* page",
+    "schema_template": {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "publisher": {
+        "@type": "Organization",
+        "name": "RS Photography",
+        "url": "https://rsphotographysg.com",
+        "logo": {"@type": "ImageObject", "url": "https://rsphotographysg.com/logo.png"}
+      },
+      "author": {"@type": "Organization", "name": "RS Photography"},
+      "headline": "[REPLACE WITH ARTICLE TITLE]",
+      "datePublished": "[REPLACE WITH YYYY-MM-DD]",
+      "dateModified": "[REPLACE WITH YYYY-MM-DD]",
+      "about": {"@type": "Service", "name": "Event Photography", "areaServed": "Singapore"}
+    }
+  }
+}
