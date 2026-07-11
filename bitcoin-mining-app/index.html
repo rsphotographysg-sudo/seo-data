@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src https://api.coingecko.com https://mempool.space; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="An honest look at what it really takes to generate bitcoin: live mining economics, a personal sats-stacking plan, a toy proof-of-work miner, and a scam-warning guide.">
+<meta name="theme-color" content="#0d0d0d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23f7931a'/%3E%3Ctext x='50' y='70' font-size='56' font-weight='bold' text-anchor='middle' font-family='Arial' fill='%231a1a19'%3E%E2%82%BF%3C/text%3E%3C/svg%3E">
 <title>The Honest Bitcoin Generator</title>
 <style>
   :root{
@@ -140,6 +145,7 @@
     font:inherit;font-weight:700;padding:11px 22px;cursor:pointer;
   }
   button:hover{filter:brightness(1.08)}
+  button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
   button.stop{background:var(--surface-2);color:var(--ink);border:1px solid var(--border)}
   input[type=range]{width:180px;accent-color:var(--accent)}
   .hashwindow{
@@ -157,7 +163,7 @@
     border-bottom:1px solid var(--hairline);
   }
   .flags li:last-child{border-bottom:none}
-  .flags li::before{content:"⚠";position:absolute;left:2px;color:var(--critical)}
+  .flags li::before{content:"⚠" / "";position:absolute;left:2px;color:var(--critical)}
 
   footer{margin-top:64px;text-align:center;font-size:13px;color:var(--muted)}
   footer a{color:var(--muted)}
@@ -165,9 +171,18 @@
     .bar-row{grid-template-columns:1fr}
     .bar-row .bar-label{text-align:left}
   }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .meter .fill{transition:none}
+  }
 </style>
 </head>
 <body>
+<noscript>
+  <div style="max-width:640px;margin:40px auto;padding:20px;border:1px solid rgba(255,255,255,.2);border-radius:12px;text-align:center">
+    This tool needs JavaScript enabled. It runs entirely inside your browser and sends no data anywhere.
+  </div>
+</noscript>
 <div class="wrap">
 
   <header>
@@ -175,11 +190,11 @@
     <h1>The Honest Bitcoin Generator</h1>
     <p class="tagline">No app on Earth can mint 1 bitcoin a day — but there is a machine that can genuinely
       generate bitcoin for you: <strong>your own business</strong>. Scroll down to see both, priced with real numbers.</p>
-    <div id="dataBanner"><span class="dot"></span><span id="dataBannerText">Loading live network data…</span></div>
+    <div id="dataBanner" aria-live="polite"><span class="dot" aria-hidden="true"></span><span id="dataBannerText">Loading live network data…</span></div>
   </header>
 
   <div class="scam-strip">
-    <span class="icon">🛑</span>
+    <span class="icon" aria-hidden="true">🛑</span>
     <div><b>Before anything else:</b> any app, website, Telegram bot or “cloud miner” that promises free or fast
       bitcoin generation is a scam, no exceptions. They exist to steal wallet keys, charge fake “withdrawal fees”,
       or install malware. Never type a seed phrase into anything.</div>
@@ -197,11 +212,11 @@
       <div class="controls">
         <div class="field">
           <label for="targetBtc">Target (BTC per day)</label>
-          <input id="targetBtc" type="number" value="1" min="0.001" step="0.1">
+          <input id="targetBtc" type="number" value="1" min="0.001" max="450" step="0.1" inputmode="decimal">
         </div>
         <div class="field">
           <label for="tariff">Electricity (SGD per kWh)</label>
-          <input id="tariff" type="number" value="0.30" min="0.01" step="0.01">
+          <input id="tariff" type="number" value="0.30" min="0.01" max="5" step="0.01" inputmode="decimal">
         </div>
       </div>
 
@@ -261,15 +276,15 @@
       <div class="controls">
         <div class="field">
           <label for="gigPrice">Average job price (SGD)</label>
-          <input id="gigPrice" type="number" value="1500" min="1" step="50">
+          <input id="gigPrice" type="number" value="1500" min="1" max="10000000" step="50" inputmode="decimal">
         </div>
         <div class="field">
           <label for="gigsPerMonth">Jobs per month</label>
-          <input id="gigsPerMonth" type="number" value="10" min="1" step="1">
+          <input id="gigsPerMonth" type="number" value="10" min="1" max="1000" step="1" inputmode="numeric">
         </div>
         <div class="field">
           <label for="stackPct">Set aside for BTC (%)</label>
-          <input id="stackPct" type="number" value="20" min="1" max="100" step="1">
+          <input id="stackPct" type="number" value="20" min="1" max="100" step="1" inputmode="numeric">
         </div>
       </div>
 
@@ -297,12 +312,12 @@
       </div>
 
       <div class="meter">
-        <div class="track"><div class="fill" id="meterFill" style="width:0%"></div></div>
+        <div class="track" id="meterTrack" role="meter" aria-label="Bitcoin accumulated after 12 months, out of 1 BTC" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0"><div class="fill" id="meterFill" style="width:0%"></div></div>
         <div class="meter-caption"><span id="meterLeft">After 12 months: —</span><span>1.0 BTC</span></div>
       </div>
 
       <table>
-        <thead><tr><th>Milestone</th><th>Sats</th><th>Reached in</th><th>Around</th></tr></thead>
+        <thead><tr><th scope="col">Milestone</th><th scope="col">Sats</th><th scope="col">Reached in</th><th scope="col">Around</th></tr></thead>
         <tbody id="milestoneBody"></tbody>
       </table>
 
@@ -388,6 +403,24 @@ const LAPTOP_HPS = 3e7;      // ~30 MH/s: optimistic SHA-256d rate for a consume
 const subsidy = h => 50 / Math.pow(2, Math.floor(h / 210000));
 const dailyIssuance = () => subsidy(S.blockHeight) * BLOCKS_PER_DAY;
 
+/* ================= helpers ================= */
+// escape anything interpolated into innerHTML — values are numeric today, but
+// this keeps the no-markup invariant explicit if a string ever flows through
+const esc = s => String(s).replace(/[&<>"']/g,
+  c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+// read a numeric input: invalid/empty → fallback, always clamped to [min,max]
+function readNum(id, fallback, min, max){
+  const v = parseFloat(document.getElementById(id).value);
+  return Number.isFinite(v) ? Math.min(max, Math.max(min, v)) : fallback;
+}
+
+// accept an API value only if it is a finite number inside a sane range
+function saneNum(x, min, max){
+  const v = +x;
+  return Number.isFinite(v) && v >= min && v <= max ? v : null;
+}
+
 /* ================= formatting ================= */
 const nf0 = new Intl.NumberFormat('en-SG');
 const compact = n => new Intl.NumberFormat('en', {notation:'compact', maximumFractionDigits:1}).format(n);
@@ -399,21 +432,24 @@ function fmtHashrate(h){
   return Math.round(h) + ' H/s';
 }
 function fmtDuration(days){
-  if (!isFinite(days)) return 'never';
+  if (!isFinite(days) || days <= 0) return 'never';
   if (days > 365.25 * 1e6) return compact(days/365.25) + ' years';
   const years = days / 365.25;
   if (years >= 1.5) return years.toFixed(1) + ' years';
-  const months = days / 30.44;
-  if (months >= 1) return Math.round(months) + ' months';
-  return Math.ceil(days) + ' days';
+  if (days / 30.44 >= 1){
+    const m = Math.round(days / 30.44);
+    return m + (m === 1 ? ' month' : ' months');
+  }
+  const d = Math.ceil(days);
+  return d + (d === 1 ? ' day' : ' days');
 }
 const dateIn = days => new Date(Date.now() + days*86400e3)
   .toLocaleDateString('en-SG', {month:'short', year:'numeric'});
 
 /* ================= part 1 : the dream ================= */
 function renderDream(){
-  const target = Math.max(0.001, +document.getElementById('targetBtc').value || 1);
-  const tariff = Math.max(0.01, +document.getElementById('tariff').value || 0.30);
+  const target = readNum('targetBtc', 1, 0.001, 450);
+  const tariff = readNum('tariff', 0.30, 0.01, 5);
   const issuance = dailyIssuance();
 
   document.getElementById('dreamTargetEcho').textContent = target;
@@ -446,23 +482,23 @@ function renderDream(){
 
   const net = revDay - elecDay;
   document.getElementById('netLine').innerHTML = net >= 0
-    ? 'Net before hardware, rent, cooling & staff: <span class="status ok">✔ +' + sgd(net) + '/day</span> — but you still spent ' + usd(hardware) + ' upfront.'
-    : 'Net result: <span class="status bad">✘ losing ' + sgd(-net) + ' every day</span> on electricity alone — before the ' + usd(hardware) + ' of hardware.';
+    ? 'Net before hardware, rent, cooling & staff: <span class="status ok">✔ +' + esc(sgd(net)) + '/day</span> — but you still spent ' + esc(usd(hardware)) + ' upfront.'
+    : 'Net result: <span class="status bad">✘ losing ' + esc(sgd(-net)) + ' every day</span> on electricity alone — before the ' + esc(usd(hardware)) + ' of hardware.';
 
   const laptopBtcDay = LAPTOP_HPS / S.networkHashrate * issuance;
   const laptopSatsDay = laptopBtcDay * 1e8;
   const laptopDays = 1 / laptopBtcDay;
   document.getElementById('laptopVerdict').innerHTML =
     '<b>“What if I just run mining software on my computer?”</b> A fast consumer PC (~30 MH/s) would earn about <b>' +
-    laptopSatsDay.toFixed(4) + ' sats per day</b> — roughly S$' + (laptopSatsDay/1e8*S.priceSGD).toFixed(6) +
-    ' — and would need <b>' + fmtDuration(laptopDays) + '</b> to reach 1 BTC. That is why no app can do this.';
+    esc(laptopSatsDay.toFixed(4)) + ' sats per day</b> — roughly S$' + esc((laptopSatsDay/1e8*S.priceSGD).toFixed(6)) +
+    ' — and would need <b>' + esc(fmtDuration(laptopDays)) + '</b> to reach 1 BTC. That is why no app can do this.';
 }
 
 /* ================= part 2 : your real generator ================= */
 function renderReal(){
-  const gigPrice = Math.max(1, +document.getElementById('gigPrice').value || 1500);
-  const gigs = Math.max(1, +document.getElementById('gigsPerMonth').value || 10);
-  const pct = Math.min(100, Math.max(1, +document.getElementById('stackPct').value || 20)) / 100;
+  const gigPrice = readNum('gigPrice', 1500, 1, 1e7);
+  const gigs = readNum('gigsPerMonth', 10, 1, 1000);
+  const pct = readNum('stackPct', 20, 1, 100) / 100;
 
   const sgdPerGig = gigPrice * pct;
   const satsPerGig = sgdPerGig / S.priceSGD * 1e8;
@@ -481,17 +517,18 @@ function renderReal(){
 
   const after12 = Math.min(1, btcMonth * 12);
   document.getElementById('meterFill').style.width = (after12*100).toFixed(1) + '%';
+  document.getElementById('meterTrack').setAttribute('aria-valuenow', after12.toFixed(3));
   document.getElementById('meterLeft').textContent =
     'After 12 months: ' + (btcMonth*12).toFixed(3) + ' BTC (' + nf0.format(Math.round(btcMonth*12*1e8)) + ' sats)';
 
   const milestones = [
-    ['First million sats', 0.01], ['0.1 BTC — top ~1% of holders', 0.1],
+    ['First million sats', 0.01], ['0.1 BTC — a serious stack', 0.1],
     ['Half a coin', 0.5], ['1 whole bitcoin', 1],
   ];
   document.getElementById('milestoneBody').innerHTML = milestones.map(([name, btc]) => {
     const days = btc / btcMonth * 30.44;
-    return '<tr><td>' + name + '</td><td class="num">' + nf0.format(btc*1e8) + '</td><td class="num">' +
-      fmtDuration(days) + '</td><td class="num">' + dateIn(days) + '</td></tr>';
+    return '<tr><td>' + esc(name) + '</td><td class="num">' + esc(nf0.format(btc*1e8)) + '</td><td class="num">' +
+      esc(fmtDuration(days)) + '</td><td class="num">' + esc(dateIn(days)) + '</td></tr>';
   }).join('');
 }
 
@@ -517,18 +554,18 @@ function leadingZeroBits(u8){
 
 function renderMinerCompare(rate){
   const el = document.getElementById('minerCompare');
-  if (!rate){ el.textContent = ''; return; }
+  if (!rate || !isFinite(rate)){ el.textContent = ''; return; }
   const factor = S.networkHashrate / rate;
   const daysPerBlock = S.networkHashrate / (rate * BLOCKS_PER_DAY);
-  el.innerHTML = 'The real Bitcoin network is <b>' + compact(factor) + '× faster</b> than this browser. ' +
-    'At your current speed you’d find one real block (worth ' + subsidy(S.blockHeight) + ' BTC) every <b>' +
-    fmtDuration(daysPerBlock) + '</b> on average. The universe is 13.8 billion years old.';
+  el.innerHTML = 'The real Bitcoin network is <b>' + esc(compact(factor)) + '× faster</b> than this browser. ' +
+    'At your current speed you’d find one real block (worth ' + esc(subsidy(S.blockHeight)) + ' BTC) every <b>' +
+    esc(fmtDuration(daysPerBlock)) + '</b> on average. The universe is 13.8 billion years old.';
 }
 
 async function mineLoop(){
   const diffInput = document.getElementById('difficulty');
   const hashWin = document.getElementById('hashWindow');
-  let lastPaint = 0;
+  let lastPaint = 0, foundLine = '';
   while (mining){
     const bits = +diffInput.value;
     let lastHex = '';
@@ -536,12 +573,13 @@ async function mineLoop(){
       nonce++;
       const digest = await sha256d('block|' + (blocks+1) + '|' + prevHash + '|RS-Photography|' + nonce);
       hashes++; winHashes++;
-      lastHex = toHex(digest);
+      lastHex = toHex(digest);            // strictly [0-9a-f]
       if (leadingZeroBits(digest) >= bits){
         blocks++;
         prevHash = lastHex;
-        hashWin.innerHTML = '<span class="hit">★ BLOCK FOUND after ' + nf0.format(nonce) + ' tries → ' +
-          lastHex.slice(0, 40) + '…</span><br>' + hashWin.innerHTML;
+        foundLine = '<span class="hit">★ BLOCK FOUND after ' + esc(nf0.format(nonce)) + ' tries → ' +
+          lastHex.slice(0, 40) + '…</span>';
+        hashWin.innerHTML = foundLine;
         nonce = 0;
         document.getElementById('tBlocks').textContent = blocks;
       }
@@ -552,9 +590,8 @@ async function mineLoop(){
       const rate = winHashes / ((now - winStart) / 1000);
       document.getElementById('tHps').textContent = nf0.format(Math.round(rate)) + ' H/s';
       document.getElementById('tHashes').textContent = compact(hashes);
-      const firstLine = hashWin.innerHTML.split('<br>')[0];
-      hashWin.innerHTML = (firstLine.includes('hit') ? firstLine + '<br>' : '') +
-        'nonce ' + nf0.format(nonce) + ' → ' + lastHex.slice(0, 48) + '…  (need ' + diffInput.value + ' zero bits)';
+      hashWin.innerHTML = (foundLine ? foundLine + '<br>' : '') +
+        'nonce ' + esc(nf0.format(nonce)) + ' → ' + lastHex.slice(0, 48) + '…  (need ' + esc(bits) + ' zero bits)';
       renderMinerCompare(rate);
       if (now - winStart > 5000){ winStart = now; winHashes = 0; }
     }
@@ -563,6 +600,11 @@ async function mineLoop(){
 }
 
 document.getElementById('mineBtn').addEventListener('click', e => {
+  if (!globalThis.crypto?.subtle){
+    document.getElementById('hashWindow').textContent =
+      'Hashing needs a secure context — open the file directly from disk or serve it over https.';
+    return;
+  }
   mining = !mining;
   e.target.textContent = mining ? '■ Stop mining' : '▶ Start mining';
   e.target.classList.toggle('stop', mining);
@@ -587,16 +629,21 @@ async function loadLive(){
     fetchJSON('https://mempool.space/api/blocks/tip/height'),
   ]);
   let liveBits = 0;
-  if (price.status === 'fulfilled' && price.value?.bitcoin?.usd){
-    S.priceUSD = price.value.bitcoin.usd;
-    S.priceSGD = price.value.bitcoin.sgd || S.priceUSD * 1.29;
-    liveBits++;
+  if (price.status === 'fulfilled'){
+    const pUsd = saneNum(price.value?.bitcoin?.usd, 0.01, 1e9);
+    if (pUsd){
+      S.priceUSD = pUsd;
+      S.priceSGD = saneNum(price.value?.bitcoin?.sgd, 0.01, 1e9) || pUsd * 1.29;
+      liveBits++;
+    }
   }
-  if (hash.status === 'fulfilled' && hash.value?.currentHashrate){
-    S.networkHashrate = hash.value.currentHashrate; liveBits++;
+  if (hash.status === 'fulfilled'){
+    const h = saneNum(hash.value?.currentHashrate, 1e12, 1e27);
+    if (h){ S.networkHashrate = h; liveBits++; }
   }
-  if (height.status === 'fulfilled' && Number.isFinite(+height.value)){
-    S.blockHeight = +height.value; liveBits++;
+  if (height.status === 'fulfilled'){
+    const ht = saneNum(height.value, 840000, 1e7);
+    if (ht){ S.blockHeight = Math.floor(ht); liveBits++; }
   }
   S.live = liveBits > 0;
   if (S.live){
@@ -615,7 +662,11 @@ function renderAll(){ renderDream(); renderReal(); }
 for (const id of ['targetBtc','tariff']) document.getElementById(id).addEventListener('input', renderDream);
 for (const id of ['gigPrice','gigsPerMonth','stackPct']) document.getElementById(id).addEventListener('input', renderReal);
 renderAll();
-loadLive();
+loadLive().catch(() => {   // very old browser or blocked network — estimates still work
+  document.getElementById('dataBannerText').textContent =
+    'Offline — using mid-2026 estimates (BTC ≈ ' + usd(S.priceUSD) + ', network ≈ ' + fmtHashrate(S.networkHashrate) + ')';
+  renderAll();
+});
 </script>
 </body>
 </html>

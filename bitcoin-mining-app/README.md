@@ -42,6 +42,24 @@ offline it falls back to built-in estimates and says so in the banner.
 - Consequently, **every** app/site/bot promising free or fast bitcoin generation
   is fraudulent. Never enter a seed phrase or pay a "withdrawal fee".
 
+## Security & privacy
+
+Audited (static analysis + full source-to-sink data-flow review). Posture:
+
+- **Fully client-side.** No server, no accounts, no wallet connections. The app
+  never asks for — and has no code paths to receive — seed phrases or keys.
+- **No data collection.** No cookies, no localStorage, no analytics, nothing
+  transmitted. The only network traffic is two read-only HTTPS GET requests
+  (CoinGecko price, mempool.space hashrate/height) with no personal data.
+- **Content Security Policy** pins connections to those two hosts and blocks
+  all external scripts, styles, images, and form posts.
+- **Untrusted-data handling.** API responses are type- and range-validated
+  before use, and every value interpolated into HTML is escaped; user inputs
+  are parsed as numbers and clamped to sane ranges.
+- **Graceful degradation.** Works offline (labeled estimates), without
+  WebCrypto (miner disabled with an explanation), and without JavaScript
+  (noscript notice).
+
 ## Disclaimer
 
 Educational tool only. Not financial advice. Bitcoin is highly volatile — the
