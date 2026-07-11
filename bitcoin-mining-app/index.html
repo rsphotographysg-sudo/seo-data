@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Honest Bitcoin Generator</title>
+<style>
+  :root{
+    --page:#0d0d0d;
+    --surface:#1a1a19;
+    --surface-2:#222220;
+    --ink:#ffffff;
+    --ink-2:#c3c2b7;
+    --muted:#898781;
+    --hairline:#2c2c2a;
+    --border:rgba(255,255,255,.10);
+    --accent:#f7931a;          /* bitcoin orange */
+    --accent-track:rgba(247,147,26,.16);
+    --good:#0ca30c;
+    --warn:#fab219;
+    --critical:#d03b3b;
+    --bar:#3987e5;             /* single-series bar hue */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--page);color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px 80px}
+
+  /* ---------- hero ---------- */
+  header{padding:64px 0 36px;text-align:center}
+  .btc-mark{
+    width:56px;height:56px;border-radius:50%;background:var(--accent);
+    display:inline-flex;align-items:center;justify-content:center;
+    font-size:32px;font-weight:700;color:#1a1a19;margin-bottom:18px;
+  }
+  h1{font-size:clamp(28px,5vw,44px);font-weight:700;letter-spacing:-.02em}
+  .tagline{color:var(--ink-2);font-size:clamp(15px,2.4vw,19px);max-width:640px;margin:12px auto 0}
+  .tagline strong{color:var(--accent)}
+  #dataBanner{
+    display:inline-flex;align-items:center;gap:8px;margin-top:22px;
+    padding:6px 14px;border:1px solid var(--border);border-radius:999px;
+    font-size:13px;color:var(--muted);
+  }
+  #dataBanner .dot{width:8px;height:8px;border-radius:50%;background:var(--muted)}
+  #dataBanner.live .dot{background:var(--good)}
+  #dataBanner.live{color:var(--ink-2)}
+
+  /* ---------- scam strip ---------- */
+  .scam-strip{
+    margin:28px 0 0;padding:14px 18px;border-radius:12px;
+    background:rgba(208,59,59,.12);border:1px solid rgba(208,59,59,.35);
+    display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--ink-2);
+  }
+  .scam-strip .icon{flex:none;font-style:normal}
+  .scam-strip b{color:var(--ink)}
+
+  /* ---------- sections & cards ---------- */
+  section{margin-top:56px}
+  .kicker{
+    font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:6px;
+  }
+  h2{font-size:clamp(21px,3.4vw,28px);font-weight:700;letter-spacing:-.01em}
+  .sub{color:var(--ink-2);margin-top:6px;max-width:680px;font-size:15px}
+  .card{
+    background:var(--surface);border:1px solid var(--border);border-radius:16px;
+    padding:24px;margin-top:20px;
+  }
+
+  /* ---------- controls ---------- */
+  .controls{display:flex;flex-wrap:wrap;gap:18px 28px;margin-bottom:6px}
+  .field{display:flex;flex-direction:column;gap:6px;min-width:150px}
+  .field label{font-size:13px;color:var(--muted)}
+  .field input,.field select{
+    background:var(--surface-2);border:1px solid var(--border);border-radius:8px;
+    color:var(--ink);font:inherit;font-weight:600;padding:9px 12px;width:160px;
+  }
+  .field input:focus,.field select:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:transparent}
+
+  /* ---------- stat tiles ---------- */
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:18px}
+  .tile{
+    background:var(--surface-2);border:1px solid var(--border);border-radius:12px;
+    padding:16px 18px;
+  }
+  .tile .label{font-size:13px;color:var(--muted)}
+  .tile .value{font-size:26px;font-weight:600;margin-top:4px;overflow-wrap:anywhere}
+  .tile .note{font-size:12.5px;color:var(--muted);margin-top:4px}
+  .tile.hero-tile{grid-column:1/-1;text-align:center;padding:26px 18px}
+  .tile.hero-tile .value{font-size:clamp(38px,7vw,56px)}
+
+  .verdict{
+    margin-top:18px;padding:14px 18px;border-radius:12px;font-size:15px;
+    background:rgba(250,178,25,.10);border:1px solid rgba(250,178,25,.30);color:var(--ink-2);
+  }
+  .verdict b{color:var(--ink)}
+  .verdict .status{font-weight:700}
+  .status.bad{color:var(--critical)}
+  .status.ok{color:var(--good)}
+
+  /* ---------- money bars ---------- */
+  .money-bars{margin-top:22px}
+  .bar-row{display:grid;grid-template-columns:170px 1fr;align-items:center;gap:12px;margin-top:10px}
+  .bar-row .bar-label{font-size:13.5px;color:var(--ink-2);text-align:right}
+  .bar-track{position:relative;height:24px}
+  .bar-fill{
+    position:relative;height:22px;max-width:100%;background:var(--bar);
+    border-radius:0 4px 4px 0;min-width:2px;
+    display:flex;align-items:center;
+  }
+  .bar-fill .bar-value{
+    font-size:13px;font-weight:600;color:var(--ink);white-space:nowrap;
+    position:absolute;left:calc(100% + 8px);
+  }
+  .bar-fill.inside .bar-value{left:auto;right:8px;color:#0b0b0b}
+  .baseline{border-left:1px solid var(--hairline);padding-left:0}
+  .net-line{margin-top:14px;font-size:14.5px;color:var(--ink-2)}
+
+  /* ---------- meter ---------- */
+  .meter{margin-top:20px}
+  .meter .track{height:14px;border-radius:7px;background:var(--accent-track);overflow:hidden}
+  .meter .fill{height:100%;background:var(--accent);border-radius:7px;transition:width .4s ease}
+  .meter .meter-caption{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-top:6px}
+
+  /* ---------- milestones table ---------- */
+  table{width:100%;border-collapse:collapse;margin-top:18px;font-size:14.5px}
+  th{font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;text-align:left;padding:8px 10px;border-bottom:1px solid var(--hairline)}
+  td{padding:10px;border-bottom:1px solid var(--hairline);color:var(--ink-2)}
+  td:first-child{color:var(--ink);font-weight:600}
+  td.num{font-variant-numeric:tabular-nums}
+
+  /* ---------- toy miner ---------- */
+  .miner-controls{display:flex;flex-wrap:wrap;gap:16px;align-items:end}
+  button{
+    background:var(--accent);color:#1a1a19;border:none;border-radius:8px;
+    font:inherit;font-weight:700;padding:11px 22px;cursor:pointer;
+  }
+  button:hover{filter:brightness(1.08)}
+  button.stop{background:var(--surface-2);color:var(--ink);border:1px solid var(--border)}
+  input[type=range]{width:180px;accent-color:var(--accent)}
+  .hashwindow{
+    margin-top:18px;background:#111110;border:1px solid var(--border);border-radius:10px;
+    padding:14px 16px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;color:var(--ink-2);min-height:64px;overflow-wrap:anywhere;
+  }
+  .hashwindow .hit{color:var(--accent);font-weight:700}
+  .miner-note{margin-top:14px;font-size:14px;color:var(--ink-2)}
+
+  /* ---------- scam shield ---------- */
+  .flags{list-style:none;margin-top:14px}
+  .flags li{
+    padding:10px 0 10px 30px;position:relative;color:var(--ink-2);font-size:14.5px;
+    border-bottom:1px solid var(--hairline);
+  }
+  .flags li:last-child{border-bottom:none}
+  .flags li::before{content:"⚠";position:absolute;left:2px;color:var(--critical)}
+
+  footer{margin-top:64px;text-align:center;font-size:13px;color:var(--muted)}
+  footer a{color:var(--muted)}
+  @media (max-width:560px){
+    .bar-row{grid-template-columns:1fr}
+    .bar-row .bar-label{text-align:left}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="btc-mark">₿</div>
+    <h1>The Honest Bitcoin Generator</h1>
+    <p class="tagline">No app on Earth can mint 1 bitcoin a day — but there is a machine that can genuinely
+      generate bitcoin for you: <strong>your own business</strong>. Scroll down to see both, priced with real numbers.</p>
+    <div id="dataBanner"><span class="dot"></span><span id="dataBannerText">Loading live network data…</span></div>
+  </header>
+
+  <div class="scam-strip">
+    <span class="icon">🛑</span>
+    <div><b>Before anything else:</b> any app, website, Telegram bot or “cloud miner” that promises free or fast
+      bitcoin generation is a scam, no exceptions. They exist to steal wallet keys, charge fake “withdrawal fees”,
+      or install malware. Never type a seed phrase into anything.</div>
+  </div>
+
+  <!-- ================= PART 1 : THE DREAM ================= -->
+  <section id="dream">
+    <div class="kicker">Part 1 · The dream, priced</div>
+    <h2>What would it really take to generate <span id="dreamTargetEcho">1</span> BTC per day?</h2>
+    <p class="sub">New bitcoin only comes from mining. The whole global network mints about
+      <span id="issuanceEcho">450</span> BTC per day, shared by every miner on the planet — so your slice is
+      exactly proportional to the computing power you bring.</p>
+
+    <div class="card">
+      <div class="controls">
+        <div class="field">
+          <label for="targetBtc">Target (BTC per day)</label>
+          <input id="targetBtc" type="number" value="1" min="0.001" step="0.1">
+        </div>
+        <div class="field">
+          <label for="tariff">Electricity (SGD per kWh)</label>
+          <input id="tariff" type="number" value="0.30" min="0.01" step="0.01">
+        </div>
+      </div>
+
+      <div class="tiles">
+        <div class="tile hero-tile">
+          <div class="label">ASIC mining machines required (Antminer S21 XP-class, 270 TH/s each)</div>
+          <div class="value" id="tMachines">—</div>
+          <div class="note">That is a warehouse-scale datacenter, not an app.</div>
+        </div>
+        <div class="tile">
+          <div class="label">Hashrate you must own</div>
+          <div class="value" id="tHashrate">—</div>
+          <div class="note" id="tShare">— of the entire world's mining power</div>
+        </div>
+        <div class="tile">
+          <div class="label">Hardware cost</div>
+          <div class="value" id="tHardware">—</div>
+          <div class="note">at ≈US$4,300 per machine, before buildings & cooling</div>
+        </div>
+        <div class="tile">
+          <div class="label">Continuous power draw</div>
+          <div class="value" id="tPower">—</div>
+          <div class="note" id="tEnergy">—</div>
+        </div>
+        <div class="tile">
+          <div class="label">Electricity bill per day</div>
+          <div class="value" id="tElec">—</div>
+          <div class="note">at Singapore-style tariffs</div>
+        </div>
+      </div>
+
+      <div class="money-bars" id="moneyBars">
+        <div class="bar-row">
+          <div class="bar-label">Bitcoin earned / day</div>
+          <div class="bar-track baseline"><div class="bar-fill" id="barRev" style="--w:0%"><span class="bar-value" id="barRevVal"></span></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">Electricity cost / day</div>
+          <div class="bar-track baseline"><div class="bar-fill" id="barCost" style="--w:0%"><span class="bar-value" id="barCostVal"></span></div></div>
+        </div>
+        <div class="net-line" id="netLine"></div>
+      </div>
+
+      <div class="verdict" id="laptopVerdict"></div>
+    </div>
+  </section>
+
+  <!-- ================= PART 2 : YOUR REAL GENERATOR ================= -->
+  <section id="real">
+    <div class="kicker">Part 2 · Your real generator</div>
+    <h2>Rig model RS-1: your camera</h2>
+    <p class="sub">Here's the out-of-the-box truth — the only realistic bitcoin generator you already own is income.
+      Every paid shoot can be partly converted to bitcoin (“stacking sats”). 1 bitcoin = 100,000,000 satoshis (sats).
+      Set your numbers and see your honest path to a whole coin.</p>
+
+    <div class="card">
+      <div class="controls">
+        <div class="field">
+          <label for="gigPrice">Average job price (SGD)</label>
+          <input id="gigPrice" type="number" value="1500" min="1" step="50">
+        </div>
+        <div class="field">
+          <label for="gigsPerMonth">Jobs per month</label>
+          <input id="gigsPerMonth" type="number" value="10" min="1" step="1">
+        </div>
+        <div class="field">
+          <label for="stackPct">Set aside for BTC (%)</label>
+          <input id="stackPct" type="number" value="20" min="1" max="100" step="1">
+        </div>
+      </div>
+
+      <div class="tiles">
+        <div class="tile hero-tile">
+          <div class="label">Every job you shoot generates</div>
+          <div class="value"><span id="tSatsPerGig">—</span> sats</div>
+          <div class="note" id="tSatsPerGigNote">—</div>
+        </div>
+        <div class="tile">
+          <div class="label">Bitcoin stacked per month</div>
+          <div class="value" id="tBtcMonth">—</div>
+          <div class="note" id="tSgdMonth">—</div>
+        </div>
+        <div class="tile">
+          <div class="label">Time to 1 whole bitcoin</div>
+          <div class="value" id="tTimeTo1">—</div>
+          <div class="note" id="tDateTo1">—</div>
+        </div>
+        <div class="tile">
+          <div class="label">Sats-millionaire in</div>
+          <div class="value" id="tTimeToMillion">—</div>
+          <div class="note">1,000,000 sats = 0.01 BTC</div>
+        </div>
+      </div>
+
+      <div class="meter">
+        <div class="track"><div class="fill" id="meterFill" style="width:0%"></div></div>
+        <div class="meter-caption"><span id="meterLeft">After 12 months: —</span><span>1.0 BTC</span></div>
+      </div>
+
+      <table>
+        <thead><tr><th>Milestone</th><th>Sats</th><th>Reached in</th><th>Around</th></tr></thead>
+        <tbody id="milestoneBody"></tbody>
+      </table>
+
+      <div class="verdict" style="margin-top:20px">
+        Assumes today's price stays flat — in reality bitcoin is <b>extremely volatile</b> and can fall as well as rise.
+        This is a savings illustration, <b>not financial advice</b>. Only ever set aside money you can afford to lose,
+        buy through a regulated exchange (MAS-licensed in Singapore), and withdraw to a wallet whose keys only you hold.
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PART 3 : TOY MINER ================= -->
+  <section id="mine">
+    <div class="kicker">Part 3 · Feel the proof-of-work</div>
+    <h2>Mine a toy block in your browser</h2>
+    <p class="sub">This is the exact game real miners play — double-SHA256 hashing until a hash starts with enough
+      zero bits — just at a microscopic difficulty. Watch how hard it is even when it's a trillion times easier
+      than the real thing.</p>
+
+    <div class="card">
+      <div class="miner-controls">
+        <button id="mineBtn">▶ Start mining</button>
+        <div class="field">
+          <label for="difficulty">Toy difficulty: <span id="diffEcho">16</span> leading zero bits</label>
+          <input id="difficulty" type="range" min="8" max="22" value="16">
+        </div>
+      </div>
+
+      <div class="tiles">
+        <div class="tile">
+          <div class="label">Your hashrate</div>
+          <div class="value" id="tHps">0 H/s</div>
+        </div>
+        <div class="tile">
+          <div class="label">Hashes tried</div>
+          <div class="value" id="tHashes">0</div>
+        </div>
+        <div class="tile">
+          <div class="label">Toy blocks found</div>
+          <div class="value" id="tBlocks">0</div>
+        </div>
+      </div>
+
+      <div class="hashwindow" id="hashWindow">Press “Start mining” — every line below is one lottery ticket.</div>
+      <div class="miner-note" id="minerCompare"></div>
+    </div>
+  </section>
+
+  <!-- ================= PART 4 : SCAM SHIELD ================= -->
+  <section id="shield">
+    <div class="kicker">Part 4 · Scam shield</div>
+    <h2>If you ever see these, walk away</h2>
+    <div class="card">
+      <ul class="flags">
+        <li>“Generate / flash / double your BTC” apps or videos — bitcoin cannot be generated by software; the protocol makes it mathematically impossible.</li>
+        <li>Cloud-mining sites showing a balance that grows fast but demands a “fee”, “tax” or “upgrade” before you can withdraw.</li>
+        <li>Anyone — including a “support agent” or a new online friend — asking for your seed phrase or private key.</li>
+        <li>Guaranteed daily returns (“1% a day”, “1 BTC in 24 hours”). Guaranteed + crypto = Ponzi.</li>
+        <li>Pressure to move the chat to Telegram/WhatsApp and send funds to “activate a mining node”.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    Educational tool · live data from mempool.space & CoinGecko when online · not financial advice.<br>
+    Built for RS Photography — the best bitcoin miner in the studio is the person holding the camera.
+  </footer>
+</div>
+
+<script>
+/* ================= state & constants ================= */
+const S = {
+  priceUSD: 105000,          // fallback estimate, mid-2026
+  priceSGD: 135000,
+  networkHashrate: 1.0e21,   // 1,000 EH/s fallback estimate
+  blockHeight: 957000,       // fallback estimate for mid-2026
+  live: false,
+};
+const BLOCKS_PER_DAY = 144;
+const ASIC = { name:'Antminer S21 XP', ths:270, watts:3645, usd:4300 };
+const LAPTOP_HPS = 3e7;      // ~30 MH/s: optimistic SHA-256d rate for a consumer PC
+
+const subsidy = h => 50 / Math.pow(2, Math.floor(h / 210000));
+const dailyIssuance = () => subsidy(S.blockHeight) * BLOCKS_PER_DAY;
+
+/* ================= formatting ================= */
+const nf0 = new Intl.NumberFormat('en-SG');
+const compact = n => new Intl.NumberFormat('en', {notation:'compact', maximumFractionDigits:1}).format(n);
+const sgd = n => 'S$' + (n >= 1e6 ? compact(n) : nf0.format(Math.round(n)));
+const usd = n => 'US$' + compact(n);
+function fmtHashrate(h){
+  const units = [['ZH/s',1e21],['EH/s',1e18],['PH/s',1e15],['TH/s',1e12],['GH/s',1e9],['MH/s',1e6],['kH/s',1e3]];
+  for (const [u,f] of units) if (h >= f) return (h/f).toFixed(h/f < 10 ? 2 : 1) + ' ' + u;
+  return Math.round(h) + ' H/s';
+}
+function fmtDuration(days){
+  if (!isFinite(days)) return 'never';
+  if (days > 365.25 * 1e6) return compact(days/365.25) + ' years';
+  const years = days / 365.25;
+  if (years >= 1.5) return years.toFixed(1) + ' years';
+  const months = days / 30.44;
+  if (months >= 1) return Math.round(months) + ' months';
+  return Math.ceil(days) + ' days';
+}
+const dateIn = days => new Date(Date.now() + days*86400e3)
+  .toLocaleDateString('en-SG', {month:'short', year:'numeric'});
+
+/* ================= part 1 : the dream ================= */
+function renderDream(){
+  const target = Math.max(0.001, +document.getElementById('targetBtc').value || 1);
+  const tariff = Math.max(0.01, +document.getElementById('tariff').value || 0.30);
+  const issuance = dailyIssuance();
+
+  document.getElementById('dreamTargetEcho').textContent = target;
+  document.getElementById('issuanceEcho').textContent = Math.round(issuance);
+
+  const share = target / issuance;                       // fraction of world hashrate
+  const reqHash = share * S.networkHashrate;             // H/s
+  const machines = Math.ceil(reqHash / (ASIC.ths * 1e12));
+  const hardware = machines * ASIC.usd;
+  const powerMW = machines * ASIC.watts / 1e6;
+  const kwhDay = machines * ASIC.watts / 1000 * 24;
+  const elecDay = kwhDay * tariff;
+  const revDay = target * S.priceSGD;
+
+  document.getElementById('tMachines').textContent = nf0.format(machines);
+  document.getElementById('tHashrate').textContent = fmtHashrate(reqHash);
+  document.getElementById('tShare').textContent = (share*100).toFixed(2) + '% of the entire world’s mining power';
+  document.getElementById('tHardware').textContent = usd(hardware);
+  document.getElementById('tPower').textContent = powerMW.toFixed(1) + ' MW';
+  document.getElementById('tEnergy').textContent = '≈ ' + compact(kwhDay) + ' kWh every day';
+  document.getElementById('tElec').textContent = sgd(elecDay);
+
+  const maxVal = Math.max(revDay, elecDay);
+  const wRev = Math.max(2, revDay/maxVal*100), wCost = Math.max(2, elecDay/maxVal*100);
+  const barRev = document.getElementById('barRev'), barCost = document.getElementById('barCost');
+  barRev.style.width = wRev + '%';  barRev.classList.toggle('inside', wRev > 72);
+  barCost.style.width = wCost + '%'; barCost.classList.toggle('inside', wCost > 72);
+  document.getElementById('barRevVal').textContent = sgd(revDay);
+  document.getElementById('barCostVal').textContent = sgd(elecDay);
+
+  const net = revDay - elecDay;
+  document.getElementById('netLine').innerHTML = net >= 0
+    ? 'Net before hardware, rent, cooling & staff: <span class="status ok">✔ +' + sgd(net) + '/day</span> — but you still spent ' + usd(hardware) + ' upfront.'
+    : 'Net result: <span class="status bad">✘ losing ' + sgd(-net) + ' every day</span> on electricity alone — before the ' + usd(hardware) + ' of hardware.';
+
+  const laptopBtcDay = LAPTOP_HPS / S.networkHashrate * issuance;
+  const laptopSatsDay = laptopBtcDay * 1e8;
+  const laptopDays = 1 / laptopBtcDay;
+  document.getElementById('laptopVerdict').innerHTML =
+    '<b>“What if I just run mining software on my computer?”</b> A fast consumer PC (~30 MH/s) would earn about <b>' +
+    laptopSatsDay.toFixed(4) + ' sats per day</b> — roughly S$' + (laptopSatsDay/1e8*S.priceSGD).toFixed(6) +
+    ' — and would need <b>' + fmtDuration(laptopDays) + '</b> to reach 1 BTC. That is why no app can do this.';
+}
+
+/* ================= part 2 : your real generator ================= */
+function renderReal(){
+  const gigPrice = Math.max(1, +document.getElementById('gigPrice').value || 1500);
+  const gigs = Math.max(1, +document.getElementById('gigsPerMonth').value || 10);
+  const pct = Math.min(100, Math.max(1, +document.getElementById('stackPct').value || 20)) / 100;
+
+  const sgdPerGig = gigPrice * pct;
+  const satsPerGig = sgdPerGig / S.priceSGD * 1e8;
+  const btcMonth = gigs * sgdPerGig / S.priceSGD;
+  const monthsTo1 = 1 / btcMonth;
+  const monthsToMillion = 0.01 / btcMonth;
+
+  document.getElementById('tSatsPerGig').textContent = nf0.format(Math.round(satsPerGig));
+  document.getElementById('tSatsPerGigNote').textContent =
+    'by setting aside ' + sgd(sgdPerGig) + ' of a ' + sgd(gigPrice) + ' job (' + Math.round(pct*100) + '%)';
+  document.getElementById('tBtcMonth').textContent = btcMonth.toFixed(5) + ' BTC';
+  document.getElementById('tSgdMonth').textContent = sgd(gigs * sgdPerGig) + ' per month converted';
+  document.getElementById('tTimeTo1').textContent = fmtDuration(monthsTo1 * 30.44);
+  document.getElementById('tDateTo1').textContent = 'around ' + dateIn(monthsTo1 * 30.44) + ' at today’s price';
+  document.getElementById('tTimeToMillion').textContent = fmtDuration(monthsToMillion * 30.44);
+
+  const after12 = Math.min(1, btcMonth * 12);
+  document.getElementById('meterFill').style.width = (after12*100).toFixed(1) + '%';
+  document.getElementById('meterLeft').textContent =
+    'After 12 months: ' + (btcMonth*12).toFixed(3) + ' BTC (' + nf0.format(Math.round(btcMonth*12*1e8)) + ' sats)';
+
+  const milestones = [
+    ['First million sats', 0.01], ['0.1 BTC — top ~1% of holders', 0.1],
+    ['Half a coin', 0.5], ['1 whole bitcoin', 1],
+  ];
+  document.getElementById('milestoneBody').innerHTML = milestones.map(([name, btc]) => {
+    const days = btc / btcMonth * 30.44;
+    return '<tr><td>' + name + '</td><td class="num">' + nf0.format(btc*1e8) + '</td><td class="num">' +
+      fmtDuration(days) + '</td><td class="num">' + dateIn(days) + '</td></tr>';
+  }).join('');
+}
+
+/* ================= part 3 : toy miner ================= */
+const enc = new TextEncoder();
+let mining = false, nonce = 0, hashes = 0, blocks = 0, prevHash = 'genesis';
+let winStart = 0, winHashes = 0;
+
+async function sha256d(str){
+  const h1 = await crypto.subtle.digest('SHA-256', enc.encode(str));
+  return new Uint8Array(await crypto.subtle.digest('SHA-256', h1));
+}
+const toHex = u8 => Array.from(u8, b => b.toString(16).padStart(2,'0')).join('');
+function leadingZeroBits(u8){
+  let bits = 0;
+  for (const byte of u8){
+    if (byte === 0){ bits += 8; continue; }
+    bits += Math.clz32(byte) - 24;
+    break;
+  }
+  return bits;
+}
+
+function renderMinerCompare(rate){
+  const el = document.getElementById('minerCompare');
+  if (!rate){ el.textContent = ''; return; }
+  const factor = S.networkHashrate / rate;
+  const daysPerBlock = S.networkHashrate / (rate * BLOCKS_PER_DAY);
+  el.innerHTML = 'The real Bitcoin network is <b>' + compact(factor) + '× faster</b> than this browser. ' +
+    'At your current speed you’d find one real block (worth ' + subsidy(S.blockHeight) + ' BTC) every <b>' +
+    fmtDuration(daysPerBlock) + '</b> on average. The universe is 13.8 billion years old.';
+}
+
+async function mineLoop(){
+  const diffInput = document.getElementById('difficulty');
+  const hashWin = document.getElementById('hashWindow');
+  let lastPaint = 0;
+  while (mining){
+    const bits = +diffInput.value;
+    let lastHex = '';
+    for (let i = 0; i < 48 && mining; i++){
+      nonce++;
+      const digest = await sha256d('block|' + (blocks+1) + '|' + prevHash + '|RS-Photography|' + nonce);
+      hashes++; winHashes++;
+      lastHex = toHex(digest);
+      if (leadingZeroBits(digest) >= bits){
+        blocks++;
+        prevHash = lastHex;
+        hashWin.innerHTML = '<span class="hit">★ BLOCK FOUND after ' + nf0.format(nonce) + ' tries → ' +
+          lastHex.slice(0, 40) + '…</span><br>' + hashWin.innerHTML;
+        nonce = 0;
+        document.getElementById('tBlocks').textContent = blocks;
+      }
+    }
+    const now = performance.now();
+    if (now - lastPaint > 180){
+      lastPaint = now;
+      const rate = winHashes / ((now - winStart) / 1000);
+      document.getElementById('tHps').textContent = nf0.format(Math.round(rate)) + ' H/s';
+      document.getElementById('tHashes').textContent = compact(hashes);
+      const firstLine = hashWin.innerHTML.split('<br>')[0];
+      hashWin.innerHTML = (firstLine.includes('hit') ? firstLine + '<br>' : '') +
+        'nonce ' + nf0.format(nonce) + ' → ' + lastHex.slice(0, 48) + '…  (need ' + diffInput.value + ' zero bits)';
+      renderMinerCompare(rate);
+      if (now - winStart > 5000){ winStart = now; winHashes = 0; }
+    }
+    await new Promise(r => setTimeout(r, 0));
+  }
+}
+
+document.getElementById('mineBtn').addEventListener('click', e => {
+  mining = !mining;
+  e.target.textContent = mining ? '■ Stop mining' : '▶ Start mining';
+  e.target.classList.toggle('stop', mining);
+  if (mining){ winStart = performance.now(); winHashes = 0; mineLoop(); }
+});
+document.getElementById('difficulty').addEventListener('input', e => {
+  document.getElementById('diffEcho').textContent = e.target.value;
+});
+
+/* ================= live data ================= */
+async function fetchJSON(url){
+  const res = await fetch(url, {signal: AbortSignal.timeout(7000)});
+  if (!res.ok) throw new Error(res.status);
+  return res.json();
+}
+async function loadLive(){
+  const banner = document.getElementById('dataBanner');
+  const text = document.getElementById('dataBannerText');
+  const [price, hash, height] = await Promise.allSettled([
+    fetchJSON('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd,sgd'),
+    fetchJSON('https://mempool.space/api/v1/mining/hashrate/3d'),
+    fetchJSON('https://mempool.space/api/blocks/tip/height'),
+  ]);
+  let liveBits = 0;
+  if (price.status === 'fulfilled' && price.value?.bitcoin?.usd){
+    S.priceUSD = price.value.bitcoin.usd;
+    S.priceSGD = price.value.bitcoin.sgd || S.priceUSD * 1.29;
+    liveBits++;
+  }
+  if (hash.status === 'fulfilled' && hash.value?.currentHashrate){
+    S.networkHashrate = hash.value.currentHashrate; liveBits++;
+  }
+  if (height.status === 'fulfilled' && Number.isFinite(+height.value)){
+    S.blockHeight = +height.value; liveBits++;
+  }
+  S.live = liveBits > 0;
+  if (S.live){
+    banner.classList.add('live');
+    text.textContent = 'Live: BTC ' + usd(S.priceUSD) + ' (' + sgd(S.priceSGD) + ') · network ' +
+      fmtHashrate(S.networkHashrate) + (liveBits < 3 ? ' · some values estimated' : '');
+  } else {
+    text.textContent = 'Offline — using mid-2026 estimates (BTC ≈ ' + usd(S.priceUSD) + ', network ≈ ' +
+      fmtHashrate(S.networkHashrate) + ')';
+  }
+  renderAll();
+}
+
+/* ================= wiring ================= */
+function renderAll(){ renderDream(); renderReal(); }
+for (const id of ['targetBtc','tariff']) document.getElementById(id).addEventListener('input', renderDream);
+for (const id of ['gigPrice','gigsPerMonth','stackPct']) document.getElementById(id).addEventListener('input', renderReal);
+renderAll();
+loadLive();
+</script>
+</body>
+</html>
