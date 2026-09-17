@@ -258,6 +258,8 @@ def build_rows(inv, entity, issue_date):
 # PDF writer
 # ----------------------------------------------------------------------------
 def _register_fonts():
+    if os.environ.get("INVOICE_EMBED_FONT", "0") != "1":
+        return "Helvetica", "Helvetica-Bold"
     cands = [
         ("/usr/share/fonts/truetype/msttcorefonts/Arial.ttf", "/usr/share/fonts/truetype/msttcorefonts/Arial_Bold.ttf"),
         ("/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf", "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"),
@@ -537,6 +539,14 @@ def write_xlsx(all_rows, path):
     wb.save(path)
 
 
+def _b64(path):
+    """Write <path>.b64 (base64, 76-column lines) for uploading via connectors."""
+    import base64
+    with open(path, "rb") as f, open(path + ".b64", "w") as o:
+        data = base64.b64encode(f.read()).decode()
+        o.write("\n".join(data[i:i + 76] for i in range(0, len(data), 76)) + "\n")
+
+
 # ----------------------------------------------------------------------------
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -570,12 +580,14 @@ def main():
         book = f"Invoice - {entity['prefix']}{ev_date:%Y%m%d}.xlsx"
         sheets.setdefault(book, []).append((f"Invoice {inv['number']}", rows, entity["logo"]))
         print(f"{inv['number']}\tS$ {total:,.2f}\t{pdf}")
+        _b64(pdf)
 
     if not args.no_xlsx:
         for book, all_rows in sheets.items():
             p = os.path.join(args.out, book)
             write_xlsx(all_rows, p)
             print(f"xlsx\t{p}")
+            _b64(p)
     return outputs
 
 
