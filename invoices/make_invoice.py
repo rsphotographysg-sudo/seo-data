@@ -227,6 +227,8 @@ def build_rows(inv, entity, issue_date):
         attn = [attn]
     left = [("Attn", attn[0] if attn else "")] + [("", a) for a in attn[1:]]
     if inv.get("pic"):
+        while len(left) < 2:          # template keeps one blank row between Attn and PIC
+            left.append(("", ""))
         left.append(("PIC", inv["pic"]))
     terms = inv.get("payment_terms", "30 Days")
     right = [("Date of Issue", fmt_date(issue_date)), ("Invoice Number", inv["number"]), ("Payment Terms", terms)]
@@ -274,7 +276,7 @@ def _register_fonts():
 
 
 # Excel column widths (characters) from the template; used to place columns.
-COL_W = {"A": 4.0, "B": 1.16, "C": 7.83, "D": 1.16, "E": 12.33, "F": 8.83, "G": 9.83, "H": 11.16, "I": 8.83, "J": 1.16, "K": 20.33}
+COL_W = {"A": 4.0, "B": 1.16, "C": 7.83, "D": 1.16, "E": 12.33, "F": 12.33, "G": 9.83, "H": 11.16, "I": 11.16, "J": 1.16, "K": 20.33}
 COLS = "ABCDEFGHIJK"
 
 
@@ -316,7 +318,7 @@ def write_pdf(rows, path):
     tbl_left, no_right, amt_left, tbl_right = x["A"], x["C"], x["J"], x["END"]
     in_table = False
     rlabels = [r["rlabel"] for r in rows if r["kind"] == "meta" and r["rlabel"]]
-    colon_x = x["I"] + max(pdfmetrics.stringWidth(t, font, FS) for t in rlabels) + 5
+    colon_x = x["J"] + 0.5
     llabels = [r["llabel"] for r in rows if r["kind"] == "meta" and r["llabel"]]
     lcolon_x = max(x["B"] + 0.5, x["A"] + max(pdfmetrics.stringWidth(t, font, FS) for t in llabels) + 4)
 
@@ -350,7 +352,7 @@ def write_pdf(rows, path):
             if r["lvalue"]:
                 text(max(x["C"], lcolon_x + 6), b, r["lvalue"])
             if r["rlabel"]:
-                text(x["I"], b, r["rlabel"])
+                text(colon_x - 3, b, r["rlabel"], font, FS, "right")
                 text(colon_x, b, ":")
                 text(colon_x + 6, b, r["rvalue"])
             y -= LINE
@@ -483,7 +485,9 @@ def write_xlsx(all_rows, path):
                 if r["lvalue"]:
                     put(f"C{rn}", r["lvalue"])
                 if r["rlabel"]:
-                    put(f"I{rn}", r["rlabel"]); put(f"J{rn}", ":"); put(f"K{rn}", r["rvalue"], align=Alignment(horizontal="left"))
+                    put(f"I{rn}", r["rlabel"], align=Alignment(horizontal="right", vertical="center"))
+                    put(f"J{rn}", ":", align=Alignment(vertical="center"))
+                    put(f"K{rn}", r["rvalue"], align=Alignment(horizontal="left", vertical="center"))
             elif k == "thead":
                 put(f"A{rn}", "NO.", boldf, Alignment(horizontal="center", vertical="center"))
                 put(f"C{rn}", "DESCRIPTION", boldf, Alignment(horizontal="center", vertical="center"))
