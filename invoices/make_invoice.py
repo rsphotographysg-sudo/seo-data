@@ -73,10 +73,11 @@ ENTITIES = {
         # (no_col, description, amount) rows for the payment block
         "payment_info": [
             ("-", "This is an electronic invoice. No hardcopy invoice would be provided."),
-            ("-", "Payment can be made in the following forms. Please quote invoice number as reference."),
-            ("", "Cheque            : Payable to RS Photography"),
-            ("", "Bank Transfer : DBS Current Account: 163-900020-1"),
-            ("", "PayNow           : UEN 53232305W"),
+            ("-", [("Payment can be made in the following forms. ", 0),
+                   ("Please quote invoice number as reference", 1), (".", 0)]),
+            ("", [("Cheque            : Payable to ", 0), ("RS Photography", 1)]),
+            ("", [("Bank Transfer : DBS Current Account: ", 0), ("163-900020-1", 1)]),
+            ("", [("PayNow           : ", 0), ("UEN 53232305W", 1)]),
             ("-", "A monthly late payment fee of 10% of the total balance due will be charged if payment has not been"),
             ("", "received by the due date."),
         ],
@@ -89,9 +90,10 @@ ENTITIES = {
         "logo": os.path.join(HERE, "assets", "rsm_logo.png"),
         "payment_info": [
             ("1", "This is an electronic invoice. No hardcopy invoice will be provided."),
-            ("2", "Payment can be made in the following forms. Please quote invoice number as reference."),
-            ("-", "Cheque                                  : Payable to RS Media Pte. Ltd."),
-            ("-", "PayNow                                  : UEN 202447665H"),
+            ("2", [("Payment can be made in the following forms. ", 0),
+                   ("Please quote invoice number as reference", 1), (".", 0)]),
+            ("-", [("Cheque                                  : Payable to ", 0), ("RS Media Pte. Ltd.", 1)]),
+            ("-", [("PayNow                                  : UEN ", 0), ("202447665H", 1)]),
             ("-", "Electronic Funds Transfer      :-"),
             ("", "Bank Name                            : DBS Bank Ltd"),
             ("", "Address                                  : 12 Marina Boulevard, DBS Asia Central,"),
@@ -101,8 +103,8 @@ ENTITIES = {
             ("", "Swift Code                             : DBSSSGSG"),
             ("", "Bank Code                             : 7171"),
             ("", "Branch Code                          : 072"),
-            ("", "Company Name                     : RS Media Pte. Ltd."),
-            ("", "Current Account Number      : 0721336944"),
+            ("", [("Company Name                     : ", 0), ("RS Media Pte. Ltd.", 1)]),
+            ("", [("Current Account Number      : ", 0), ("0721336944", 1)]),
             ("3", "A monthly late payment fee of 10% of the total balance due will be charged if payment has not been"),
             ("", "received by the due date."),
         ],
@@ -407,7 +409,12 @@ def write_pdf(rows, path):
         elif k == "pay":
             if r["no"]:
                 text((tbl_left + no_right) / 2, b, r["no"], font, FS, "center")
-            text(x["C"], b, r["text"])
+            runs = r["text"] if isinstance(r["text"], list) else [(r["text"], 0)]
+            xx = x["C"]
+            for seg, strong in runs:
+                f = bold if strong else font
+                text(xx, b, seg, f, FS)
+                xx += pdfmetrics.stringWidth(seg, f, FS)
         y -= LINE
         if y < 40:
             raise SystemExit("Invoice is too long for one page; split the items.")
@@ -419,6 +426,16 @@ def write_pdf(rows, path):
 # ----------------------------------------------------------------------------
 # XLSX writer (same layout as the hand-made template, one sheet per invoice)
 # ----------------------------------------------------------------------------
+def _rich(runs):
+    """[(text, bold)] -> an Excel rich-text cell value matching the template."""
+    from openpyxl.cell.rich_text import CellRichText, TextBlock
+    from openpyxl.cell.text import InlineFont
+    out = CellRichText()
+    for seg, strong in runs:
+        out.append(TextBlock(InlineFont(rFont="Arial", sz=11, b=bool(strong)), seg))
+    return out
+
+
 def write_xlsx(all_rows, path, append_to=None):
     import openpyxl
     from openpyxl.drawing.image import Image as XLImage
@@ -534,7 +551,10 @@ def write_xlsx(all_rows, path, append_to=None):
             elif k == "pay":
                 if r["no"]:
                     put(f"A{rn}", int(r["no"]) if r["no"].isdigit() else r["no"], align=Alignment(horizontal="center"))
-                put(f"C{rn}", r["text"])
+                if isinstance(r["text"], list):
+                    put(f"C{rn}", _rich(r["text"]))
+                else:
+                    put(f"C{rn}", r["text"])
         ws.print_area = f"A1:K{rn}"
         ws.page_setup.orientation = "portrait"
         ws.page_setup.paperSize = ws.PAPERSIZE_A4
