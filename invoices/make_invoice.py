@@ -227,7 +227,8 @@ def build_rows(inv, entity, issue_date):
         attn = [attn]
     left = [("Attn", attn[0] if attn else "")] + [("", a) for a in attn[1:]]
     if inv.get("pic"):
-        left.append(("", ""))         # template keeps one blank row between Attn and PIC
+        while len(left) < 2:          # 1-line Attn: template keeps a blank row before PIC.
+            left.append(("", ""))     # A multi-line billing address already fills that row.
         left.append(("PIC", inv["pic"]))
     terms = inv.get("payment_terms", "30 Days")
     right = [("Date of Issue", fmt_date(issue_date)), ("Invoice Number", inv["number"]), ("Payment Terms", terms)]
