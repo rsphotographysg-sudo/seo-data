@@ -227,8 +227,7 @@ def build_rows(inv, entity, issue_date):
         attn = [attn]
     left = [("Attn", attn[0] if attn else "")] + [("", a) for a in attn[1:]]
     if inv.get("pic"):
-        while len(left) < 2:          # template keeps one blank row between Attn and PIC
-            left.append(("", ""))
+        left.append(("", ""))         # template keeps one blank row between Attn and PIC
         left.append(("PIC", inv["pic"]))
     terms = inv.get("payment_terms", "30 Days")
     right = [("Date of Issue", fmt_date(issue_date)), ("Invoice Number", inv["number"]), ("Payment Terms", terms)]
