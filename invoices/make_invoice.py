@@ -419,14 +419,17 @@ def write_pdf(rows, path):
 # ----------------------------------------------------------------------------
 # XLSX writer (same layout as the hand-made template, one sheet per invoice)
 # ----------------------------------------------------------------------------
-def write_xlsx(all_rows, path):
+def write_xlsx(all_rows, path, append_to=None):
     import openpyxl
     from openpyxl.drawing.image import Image as XLImage
     from openpyxl.styles import Alignment, Border, Font, Side
     from openpyxl.utils import get_column_letter
 
-    wb = openpyxl.Workbook()
-    wb.remove(wb.active)
+    if append_to:                     # continue the day's existing workbook
+        wb = openpyxl.load_workbook(append_to)
+    else:
+        wb = openpyxl.Workbook()
+        wb.remove(wb.active)
     thin = Side(style="thin")
     ACC = '_-[$S$]\\ * #,##0.00_-;\\-[$S$]\\ * #,##0.00_-;_-[$S$]\\ * "-"??_-;_-@_-'
 
@@ -557,6 +560,7 @@ def main():
     ap.add_argument("jobs", help="JSON file describing the invoices")
     ap.add_argument("--out", default=".", help="output directory")
     ap.add_argument("--no-xlsx", action="store_true", help="skip the XLSX copy")
+    ap.add_argument("--append-to", help="existing workbook to add the sheets to")
     args = ap.parse_args()
 
     with open(args.jobs) as f:
@@ -589,7 +593,7 @@ def main():
     if not args.no_xlsx:
         for book, all_rows in sheets.items():
             p = os.path.join(args.out, book)
-            write_xlsx(all_rows, p)
+            write_xlsx(all_rows, p, append_to=args.append_to)
             print(f"xlsx\t{p}")
             _b64(p)
     return outputs
