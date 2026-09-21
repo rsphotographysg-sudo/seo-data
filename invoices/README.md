@@ -25,15 +25,18 @@ invoice PDF is produced for each paid job that took place the day before.
    invoices say RS Media (`RSM`).
    Payment terms: `30 Days` when there is a PO number or the client is a
    government agency / statutory board / school; otherwise `Immediate`.
-5. Invoice number = `<RSM?><event date YYYYMMDD>-<n>1`, `n` = 1, 2, 3… for
+5. Overtime is its own line item, worded `<Service> extended till <end time>`
+   (e.g. `Photography Service extended till 9.15pm`). The `Time` line in the
+   event block keeps the booked hours, not the extended ones.
+6. Invoice number = `<RSM?><event date YYYYMMDD>-<n>1`, `n` = 1, 2, 3… for
    different clients on the same date. Check the Drive invoices folder first so
    numbers are never reused.
-6. Write the JSON, run `make_invoice.py`, and deliver the PDFs:
+7. Write the JSON, run `make_invoice.py`, and deliver the PDFs:
    * upload to Google Drive → `Invoices` parent folder → the month's
      `NN. Invoices <Mon YYYY>` sub-folder (create it if missing), and
    * email them to rsphotographysg@gmail.com with a one-line summary per
      invoice and the list of jobs that were skipped and why.
-7. Never send an invoice to a client. The PDFs are drafts for Ricky to review.
+8. Never send an invoice to a client. The PDFs are drafts for Ricky to review.
 
 The Drive upload is what reaches the desktop: keep the Drive folder synced with
 Google Drive for desktop (or drag the attachment from the 08:30 email).
