@@ -1,0 +1,270 @@
+# -*- coding: utf-8 -*-
+"""Jobs for the crew schedule, week of 28th September to 04th October 2026.
+Taken from the Google Calendar; `crew` is only filled where the calendar names
+the photographer."""
+
+DAYS = [
+    ("2026-09-28", "*28th September 2026, Monday*"),
+    ("2026-09-29", "*29th September 2026, Tuesday*"),
+    ("2026-09-30", "*30th September 2026, Wednesday*"),
+    ("2026-10-01", "*01st October 2026, Thursday*"),
+    ("2026-10-02", "*02nd October 2026, Friday*"),
+    ("2026-10-03", "*03rd October 2026, Saturday*"),
+    ("2026-10-04", "*04th October 2026, Sunday*"),
+]
+
+ROSTER = ["Ken", "Alvin", "Gerald", "Bryant", "Wing", "Pierre", "Mifzal", "Evelyn"]
+
+# day, sort key (24h start), heading, body lines, crew
+JOBS = [
+ ("2026-09-28", "0715", "*Interview + Filming*", [
+    "POC: Fatimah, 91192158",
+    "Event: Dunearn Secondary School – Interview",
+    "Date: 28th September 2026, Monday",
+    "Time: 7.15am to 12pm (4 Hours 45 Minutes)",
+    "Venue: Dunearn Secondary School",
+    "*Refer to the Agenda in the group chat.",
+    "*Bring lapel mic & teleprompter.",
+    "*First draft to be ready by mid of October.",
+ ], None),
+ ("2026-09-28", "0900", "*Event PG*", [
+    "POC: Joey, 96570882",
+    "Event: 27th Asia-Pacific Programme for Senior Military Officers (APPSMO 2026)",
+    "Day 2: 28th September 2026, Monday",
+    "Time: 9am to 9pm (12 Hours)",
+    "Venue: Grand Copthorne Waterfront, Grand Ballroom 1, Level 4",
+    "Attire: Formal",
+    "*PG: Gerald, Wing, Bryant, Pierre, Mifzal",
+    "*Refer to the event programme",
+ ], None),
+ ("2026-09-28", "0901", "*Photo Booth* (TBC)", [
+    "Name: Fauziah, 62858833",
+    "Event: PCF Sparkletots Children’s Day Celebration",
+    "Date: 28th September 2026, Monday",
+    "Time: 9am to 12pm (3 Hours)",
+    "Venue: The Serangoon CC MPH",
+    "*Estimated attendance: 250 children",
+    "*Children’s-theme props.",
+    "*3 hours photo booth with unlimited prints.",
+ ], None),
+
+ ("2026-09-29", "0830", "*Event PG*", [
+    "POC: Joey, 96570882",
+    "Event: 27th Asia-Pacific Programme for Senior Military Officers (APPSMO 2026)",
+    "Day 3: 29th September 2026, Tuesday",
+    "Time: 8.30am to 8.30pm (12 Hours)",
+    "Venue: Grand Copthorne Waterfront, Grand Ballroom 1, Level 4",
+    "Attire: Formal",
+    "*PG: Gerald, Wing, Bryant, Pierre, Mifzal",
+    "*Refer to the event programme",
+ ], None),
+ ("2026-09-29", "1400", "*Event PG cum VG* (TBC)", [
+    "Name: Radha Das, 91512867 (WhatsApp)",
+    "Event: Data Centre World Singapore 2026 – Bloomiingo Pte Ltd",
+    "Day 1: 29th September 2026, Tuesday",
+    "Time: 2pm to 4pm (2 Hours)",
+    "Venue: Marina Bay Sands Convention Centre, Booth H35",
+    "*Booth coverage – stand, team at work, visitor interactions, product close-ups",
+    "*Short video clips for LinkedIn alongside the stills",
+    "*Exhibitor/contractor pass for MBS halls – client to arrange",
+ ], None),
+
+ ("2026-09-30", "0830", "*Event PG*", [
+    "POC: Joey, 96570882",
+    "Event: 27th Asia-Pacific Programme for Senior Military Officers (APPSMO 2026)",
+    "Day 4: 30th September 2026, Wednesday",
+    "Time: 8.30am to 3.30pm (7 Hours)",
+    "Venue: Grand Copthorne Waterfront, Grand Ballroom 1, Level 4",
+    "Attire: Formal",
+    "*PG: Gerald, Wing, Bryant, Pierre, Mifzal",
+    "*Refer to the event programme",
+ ], None),
+ ("2026-09-30", "1100", "*Event PG cum VG* (TBC)", [
+    "Name: Radha Das, 91512867 (WhatsApp)",
+    "Event: Data Centre World Singapore 2026 – Bloomiingo Pte Ltd",
+    "Day 2: 30th September 2026, Wednesday",
+    "Time: 11am to 1pm (2 Hours)",
+    "Venue: Marina Bay Sands Convention Centre, Booth H35",
+    "*Booth coverage – stand, team at work, visitor interactions, product close-ups",
+    "*Short video clips for LinkedIn alongside the stills",
+ ], None),
+ ("2026-09-30", "1400", "*Event PG*", [
+    "POC: Jolaine, 90279926",
+    "Event: National Security Studies Programme (NSSP) 10th Anniversary Event",
+    "Date: 30th September 2026, Wednesday",
+    "Time: 2pm to 5.30pm (3.5 Hours)",
+    "Venue: Ngee Ann Kongsi Auditorium, Singapore Management University (60 Stamford Rd S178900)",
+    "Attire: Formal",
+    "*PG: Gerald",
+ ], "Gerald"),
+ ("2026-09-30", "1700", "*Live Streaming + Set-up*", [
+    "POC: Amelia Lim, 98586645",
+    "Event: Airbus Weblive by Top Management (EVP)",
+    "Date: 30th September 2026, Wednesday",
+    "Time: 5pm to 6pm (1 Hour) – Report at 3pm to set-up",
+    "Venue: Airbus Campus, Level 1 Airbus Media Studio",
+    "Attire: Formal",
+    "*Dry run & testing starts at 3.45pm.",
+    "*Need teleprompter.",
+    "*No physical audience except logistic crew & moderators.",
+    "*Exchange pass at the guardhouse.",
+ ], None),
+ ("2026-09-30", "1930", "*Event PG + 4R Print*", [
+    "Name: Joanne Chew, 67863227 / 92232820",
+    "Event: House Visit",
+    "Date: 30th September 2026, Wednesday",
+    "Time: 7.30pm to 9.30pm (2 Hours)",
+    "Venue: Blk 270 Tampines St 21 S520270.",
+    "*Unit: #161-165, 2nd to 4th Floor & #155-159",
+ ], None),
+
+ ("2026-10-01", "0830", "*Event PG*", [
+    "POC: Joey, 96570882",
+    "Event: 27th Asia-Pacific Programme for Senior Military Officers (APPSMO 2026)",
+    "Day 5: 01st October 2026, Thursday",
+    "Time: 8.30am to 1.30pm (5 Hours)",
+    "Venue: Grand Copthorne Waterfront, Grand Ballroom 1, Level 4",
+    "Attire: Formal",
+    "*PG: Gerald, Wing, Bryant, Pierre, Mifzal",
+    "*Refer to the event programme",
+ ], None),
+
+ ("2026-10-02", "0845", "*Event PG*", [
+    "Name: Jasmine Ng, 90698788 / Josephine Tan, 97684176",
+    "Event: Bring Your Child To Work 2026",
+    "Date: 02nd October 2026, Friday",
+    "Time: 8.45am to 12.45pm (4 Hours)",
+    "Venue: PAHQ Indoor (9 King George’s Avenue S208581)",
+    "*Provide our crew details to Jasmine for clearance.",
+ ], None),
+ ("2026-10-02", "1100", "*2 x Photo Booth*", [
+    "Name: Janet Lim, 93208010",
+    "Event: Secondary School Graduation Ceremony",
+    "Day 2: 02nd October 2026, Friday",
+    "Time: 11am to 1pm (2 Hours)",
+    "Venue: Jurong Secondary (31 Yuan Ching Rd S618652)",
+    "*Strip printing.",
+ ], None),
+ ("2026-10-02", "1730", "*Photo Booth*", [
+    "Name: Renjie, 88331066 / Kim Loong, 91270276",
+    "POC: Zhi Long, 90589776",
+    "Event: 48th Battalion Singapore Armoured Regiment Milestone Parade",
+    "Date: 02nd October 2026, Friday",
+    "Time: 5.30pm to 7.30pm (2 Hours)",
+    "Venue: Blk 480 Sungei Gedong Road",
+    "*Below 500pax",
+    "*Refer to the artwork via WhatsApp.",
+ ], None),
+
+ ("2026-10-03", "0830", "*AD VG*", [
+    "Couple: Tan Heng Chian, 98353843 / Hara Phor, 98988057",
+    "Event: Actual Day – Eric",
+    "Date: 03rd October 2026, Saturday",
+    "Time: 8.30am to 2.30pm (6 Hours)",
+    "Venue: Goodwood Park Hotel (22 Scotts Road S228221)",
+    "*Return of footages.",
+    "*Refer to the agenda.",
+ ], None),
+ ("2026-10-03", "0831", "*Event PG*", [
+    "Name: Law Cheng San, 62984359 / 92352466",
+    "Event: Breakfast With Love",
+    "Date: 03rd October 2026, Saturday",
+    "Time: 8.30am to 10am (1.5 Hours)",
+    "Venue: Kampong Glam CC (385 Beach Road S199581)",
+ ], None),
+ ("2026-10-03", "0900", "*Event PG + Instant Print*", [
+    "Name: Michiko, 66005292 / 92225002",
+    "POC: HuiYee, 96487628 / Michiko, 92225002",
+    "Event: Citizenship Ceremony @ One Punggol",
+    "Date: 03rd October 2026, Saturday",
+    "Time: 9am to 12pm (3 Hours)",
+    "Venue: One Punggol CC Level 5 Hall (1 Punggol Dr S828629)",
+    "*304pax",
+    "*Registration 9am to 9.20am",
+    "*GRA arrival at 9.40am",
+ ], None),
+ ("2026-10-03", "1200", "*Photo Booth*", [
+    "Name: Janet, 96699769",
+    "Event: 10th Anniversary Celebration",
+    "Date: 03rd October 2026, Saturday",
+    "Time: 12pm to 2pm (2 Hours)",
+    "Venue: Pek Chuan Building #02-08 (116 Lavender Street S338730)",
+    "*50pax",
+ ], None),
+ ("2026-10-03", "1230", "*Event PG*", [
+    "Name: Mr Wayne Lim, 67459919 / 98383726",
+    "Event: Greenville RN Block Party at Blk 323",
+    "Date: 03rd October 2026, Saturday",
+    "Time: 12.30pm to 3.30pm (3 Hours)",
+    "Venue: Void Deck of Blk 323 Ubi Ave 1",
+ ], None),
+ ("2026-10-03", "1730", "*Event PG + Photo Booth* (TBC)", [
+    "Name: Mr Raihan, 63534487 / 93629966",
+    "Event: Mid-Autumn Festival in conjunction with the PAssionArts Festival 2026",
+    "Date: 03rd October 2026, Saturday",
+    "Time: 5.30pm to 8.30pm (3 Hours)",
+    "Venue: Toa Payoh West Community Club",
+    "*Approximately 800 participants",
+ ], None),
+ ("2026-10-03", "1800", "*Event PG*", [
+    "Name: Wong Yu Qing, 80140200",
+    "Event: Geylang Serai and Kembangan CACCs PAssionArts Festival 2026",
+    "Date: 03rd October 2026, Saturday",
+    "Time: 6pm to 9pm (3 Hours)",
+    "Venue: Paya Lebar Quarter (Open Plaza)",
+ ], None),
+ ("2026-10-03", "1900", "*Event PG*", [
+    "Name: Sheryljit Kaur, 65060900 / 88422381",
+    "Event: Dandiya Nite 2026",
+    "Date: 03rd October 2026, Saturday",
+    "Time: 7pm to 9.30pm (2.5 Hours)",
+    "Venue: Bukit Panjang CC MPH (8 Pending Rd S678295)",
+ ], None),
+ ("2026-10-03", "2359", "*AD VG*", [
+    "Event: Wedding Dinner with SDE – Edmund",
+    "Date: 03rd October 2026, Saturday",
+    "Time: TBC",
+    "*VG: Wing",
+ ], "Wing"),
+
+ ("2026-10-04", "1200", "*Event PG cum I.Print*", [
+    "Name: Ms Cheryl Kuik, 63530577 / 86862617",
+    "Event: Toa Payoh West-Thomson CCC CDWF Mid-Autumn Luncheon 2026",
+    "Date: 04th October 2026, Sunday",
+    "Time: 12pm to 2pm (2 Hours)",
+    "Venue: Toa Payoh West CC, Level 1 MPH",
+    "*220pax",
+ ], None),
+ ("2026-10-04", "1630", "*Event PG*", [
+    "Name: Chan Chun Meng, 88288488",
+    "Event: Mid-Autumn and Children’s Day Celebration 2026",
+    "Date: 04th October 2026, Sunday",
+    "Time: 4.30pm to 7.30pm (3 Hours)",
+    "Venue: Chestnut Close Playground (Adjacent to 18 Chestnut Close)",
+ ], None),
+ ("2026-10-04", "1900", "*2 x Event PG*", [
+    "Name: Jocelyn Chua Bi Ru, 97119328",
+    "Event: TBC",
+    "Date: 04th October 2026, Sunday",
+    "Time: 7pm to 9pm (2 Hours)",
+    "Venue: Senja-Cashew CC (101 Bukit Panjang Road S679910)",
+    "*1 photographer to follow adviser, 1 photographer to take photos of the event.",
+ ], None),
+
+ ("2026-10-03", "0000", "KIV \u2013 Attend Wedding", [], "Gerald"),
+]
+
+# Non-shooting entries kept out of the day columns
+NOTES = [
+ ("*ACJC Photo Delivery Deadline*", [
+    "Delivery deadline: first week of October (latest by 02nd October 2026, Friday)",
+    "5R print S$3/pc, 8R print S$5/pc",
+ ]),
+ ("*Appointment (Dr Nair)*", [
+    "Date: 29th September 2026, Tuesday",
+ ]),
+ ("*HOLD – MARK DESIGN booth, Data Centre World Asia @ MBS*", [
+    "Date: 29th September 2026, Tuesday",
+    "*Not confirmed, no deposit. Release the hold and free the crew if nothing comes in.",
+ ]),
+]
