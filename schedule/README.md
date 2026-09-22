@@ -27,7 +27,19 @@ One Python file per week, copied from the previous one. It holds:
 * A job goes under a person's day only when the calendar names them. Everything
   else lands in the **Jobs To Be Assigned** section at the end, so nobody is
   told to turn up somewhere the calendar never assigned them.
-* Report times ("– Report at 7.30am") are copied from the calendar, never
-  invented.
+* Crew assignments come from the RS MS 2026 master schedule (one column per
+  photographer per day; a day's block starts at the column whose row 6 holds
+  the date). Where the master schedule is blank the job stays in **Jobs To Be
+  Assigned** — it is never guessed. A split shift is written as the person's
+  own hours plus a line naming both, e.g.
+  `Event PG: Gerald (9am to 3pm) & Wing (3pm to 9pm)`.
+* Reporting time is derived from the start time: 30 minutes before for a
+  shoot, one hour before for anything with a printer —
+  `– Report at 4.30pm to set-up and test print`. A report time already stated
+  in the calendar wins.
+* Client contacts carry the mobile only. Where the calendar records an office
+  line and a mobile for the same person, the 6xxxxxxx is dropped; two people
+  with two mobiles both stay.
+* A job with 4R printing also carries `*Canon Selphy Printer`.
 * A day with nothing assigned reads `To Be Assigned`; Evelyn's default standing
   task is `Clear Video`.
