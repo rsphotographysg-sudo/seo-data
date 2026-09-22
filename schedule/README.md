@@ -43,3 +43,35 @@ One Python file per week, copied from the previous one. It holds:
 * A job with 4R printing also carries `*Canon Selphy Printer`.
 * A day with nothing assigned reads `To Be Assigned`; Evelyn's default standing
   task is `Clear Video`.
+
+## Filling the master schedule
+
+`fill_master.py` writes a week of jobs into `3. RS MS 2026.xlsx`:
+
+    python3 schedule/fill_master.py schedule/week_2026-10-05.py \
+        --master "3. RS MS 2026.xlsx" --out "3. RS MS 2026.xlsx"
+
+Each block goes in its lead crew member's column, on the row whose time in
+column A matches the job's start (anything before 10am sits on the first row).
+The script refuses to overwrite a cell that already holds something, so a
+re-run cannot quietly clobber hand-entered work. `=TODAY()` in B3 survives the
+round trip; its cached value clears until Excel recalculates on open.
+
+### Who gets what
+
+Specialisation is read off the crew's own history in the master schedule, not
+assumed:
+
+| Crew | Strength (2026 counts) |
+|---|---|
+| Siang | corporate 28, interior/stock 7, instant print |
+| Alvin | photo booth 44, logistics 62, live-streaming set-up |
+| Gerald | event PG 121 — grassroots and government |
+| Bryant | event PG 99, stock PG 12, static VG, live streaming |
+| Wing | event PG 103, 4R/instant print 17, editor 8 |
+| Pierre | event PG 82, PG cum VG 28, MC 8 |
+| Mifzal | videographer — Event VG, 30 clear-video days |
+| Evelyn | video editing |
+
+After matching the skill, jobs are placed so one person's day runs in one part
+of the island where possible, and nobody is booked across overlapping hours.
