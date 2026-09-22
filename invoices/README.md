@@ -25,9 +25,22 @@ invoice PDF is produced for each paid job that took place the day before.
    invoices say RS Media (`RSM`).
    Payment terms: `30 Days` when there is a PO number or the client is a
    government agency / statutory board / school; otherwise `Immediate`.
-5. Overtime is its own line item, worded `<Service> extended till <end time>`
-   (e.g. `Photography Service extended till 9.15pm`). The `Time` line in the
-   event block keeps the booked hours, not the extended ones.
+5. House style for the table, taken from the hand-made sheets:
+   * Overtime is its own line item, `<Service> Extended till <end time>`
+     (e.g. `Photography Service Extended till 9.15pm`). The `Time` line keeps
+     the booked hours.
+   * Durations are decimal — `(3.5 Hours)`, not `(3 Hours 30 Minutes)`.
+   * Item descriptions stay plain (`Photography Service`); the hours and the
+     day belong in the event block above, not in the description.
+   * A job with several services on different clocks gets one `Time` line per
+     service (`"time": ["Photography and Videography - 10am to 4pm (6 Hours)",
+     "Live Feed: 10am to 12pm (2 Hours)"]`).
+   * A multi-day job bills each day right under that day's event block: put the
+     item inside the event (`"items"`), not in the invoice-level list.
+   * `Attn` is the Billing Info verbatim; a PA CC/CCC/RN with no address given
+     is just its name. A blank row sits between Attn and PIC unless the address
+     already runs five lines.
+   * Where the remarks say not to print the PO (NLB), leave `po_no` out.
 6. Invoice number = `<RSM?><event date YYYYMMDD>-<n>1`, `n` = 1, 2, 3… for
    different clients on the same date. Check the Drive invoices folder first so
    numbers are never reused.

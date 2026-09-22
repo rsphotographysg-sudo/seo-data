@@ -152,6 +152,13 @@ def money(v):
 # Row model — one list of rows shared by the PDF and XLSX writers.
 # Each row is a dict: kind + fields. Column letters follow the Excel template.
 # ----------------------------------------------------------------------------
+def _item(body, it, no):
+    body.append({"kind": "item", "no": no, "desc": it.get("desc", ""),
+                 "amount": float(it.get("amount", 0))})
+    for line in it.get("extra_lines") or []:
+        body.append({"kind": "item", "no": "", "desc": line, "amount": None})
+
+
 def build_rows(inv, entity, issue_date):
     rows = []
     events = inv.get("events", [])
@@ -182,8 +189,11 @@ def build_rows(inv, entity, issue_date):
         except (ValueError, TypeError):
             pass
         lines = [("Event", ev.get("event", "")), (ev.get("day_label") or "Date", d)]
-        if ev.get("time"):
-            lines.append(("Time", ev["time"]))
+        times = ev.get("time") or []
+        if isinstance(times, str):
+            times = [times]
+        for k, t in enumerate(times):
+            lines.append(("Time" if k == 0 else "", t))
         venue = ev.get("venue") or []
         if isinstance(venue, str):
             venue = [venue]
@@ -192,16 +202,16 @@ def build_rows(inv, entity, issue_date):
         for label, value in lines:
             body.append({"kind": "detail", "no": no if first else "", "label": label, "value": value})
             first = False
+        # An event's own items are billed straight under it, as in the template.
+        for it in ev.get("items", []) or []:
+            body.append({"kind": "blank"})
+            _item(body, it, "-")
 
     body.append({"kind": "blank"})
     items = inv.get("items", [])
+    multi = multi or any(ev.get("items") for ev in events)
     for i, it in enumerate(items, 1):
-        no = "-" if multi else str(i)
-        desc = it.get("desc", "")
-        extra = it.get("extra_lines") or []
-        body.append({"kind": "item", "no": no, "desc": desc, "amount": float(it.get("amount", 0))})
-        for line in extra:
-            body.append({"kind": "item", "no": "", "desc": line, "amount": None})
+        _item(body, it, "-" if multi else str(i))
         body.append({"kind": "blank"})
     for p in inv.get("payments_received", []) or []:
         d = p.get("date")
@@ -229,8 +239,10 @@ def build_rows(inv, entity, issue_date):
         attn = [attn]
     left = [("Attn", attn[0] if attn else "")] + [("", a) for a in attn[1:]]
     if inv.get("pic"):
-        while len(left) < 2:          # 1-line Attn: template keeps a blank row before PIC.
-            left.append(("", ""))     # A multi-line billing address already fills that row.
+        # A blank row separates Attn from PIC, but PIC never drops below the last
+        # meta row on the right (Number of Page(s)), so a 5-line address loses it.
+        while len(left) < 2 or (len(left) < 5 and left[-1] != ("", "")):
+            left.append(("", ""))
         left.append(("PIC", inv["pic"]))
     terms = inv.get("payment_terms", "30 Days")
     right = [("Date of Issue", fmt_date(issue_date)), ("Invoice Number", inv["number"]), ("Payment Terms", terms)]
