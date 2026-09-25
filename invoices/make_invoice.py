@@ -99,7 +99,7 @@ ENTITIES = {
             ("", "Address                                  : 12 Marina Boulevard, DBS Asia Central,"),
             ("", "                                                  Marina Bay Financial Centre Tower 3,"),
             ("", "                                                  Singapore 018982."),
-            ("", "Country                                  : Singapore"),
+            ("", "Country                                  : Singapore (Singapore banks do not use IBAN)"),
             ("", "Swift Code                             : DBSSSGSG"),
             ("", "Bank Code                             : 7171"),
             ("", "Branch Code                          : 072"),
@@ -153,8 +153,9 @@ def money(v):
 # Each row is a dict: kind + fields. Column letters follow the Excel template.
 # ----------------------------------------------------------------------------
 def _item(body, it, no):
+    amount = it.get("amount")
     body.append({"kind": "item", "no": no, "desc": it.get("desc", ""),
-                 "amount": float(it.get("amount", 0))})
+                 "amount": None if amount is None else float(amount)})
     for line in it.get("extra_lines") or []:
         body.append({"kind": "item", "no": "", "desc": line, "amount": None})
 
@@ -171,7 +172,7 @@ def build_rows(inv, entity, issue_date):
     if po:
         body.append({"kind": "detail", "no": "", "label": "PO No.", "value": po})
     if qtn:
-        body.append({"kind": "detail", "no": "", "label": "Qtn Ref", "value": qtn})
+        body.append({"kind": "detail", "no": "", "label": "Quote", "value": qtn})
     if po or qtn:
         if not multi:
             pass  # event details follow directly, as in the template
@@ -310,6 +311,15 @@ def write_pdf(rows, path):
     LINE = 13.2         # row pitch (14pt Excel rows at 92% print scale)
     FS = 10.1           # 11pt Arial at 92%
     PAD = 2.5
+    # A long invoice shrinks to the page, the way the XLSX does with fit-to-page.
+    need = sum(2 if r["kind"] == "logo" else 1 for r in rows) * LINE
+    room = H - margin_top - 40
+    if need > room:
+        shrink = room / need
+        if shrink < 0.75:
+            raise SystemExit("Invoice is too long for one page; split the items.")
+        LINE *= shrink
+        FS *= shrink
 
     c = canvas.Canvas(path, pagesize=A4)
     c.setTitle("Invoice")
@@ -413,6 +423,9 @@ def write_pdf(rows, path):
         elif k == "item":
             if r["no"]:
                 text((tbl_left + no_right) / 2, b, r["no"], font, FS, "center")
+            if pdfmetrics.stringWidth(r["desc"], font, FS) > amt_left - x["C"] - PAD:
+                raise SystemExit("Description runs into the amount column; shorten it "
+                                 f"or move part to extra_lines: {r['desc']!r}")
             text(x["C"], b, r["desc"])
             if r["amount"] is not None:
                 cur, num = money(r["amount"])
@@ -428,8 +441,6 @@ def write_pdf(rows, path):
                 text(xx, b, seg, f, FS)
                 xx += pdfmetrics.stringWidth(seg, f, FS)
         y -= LINE
-        if y < 40:
-            raise SystemExit("Invoice is too long for one page; split the items.")
 
     c.showPage()
     c.save()
