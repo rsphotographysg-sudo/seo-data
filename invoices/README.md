@@ -40,7 +40,10 @@ invoice PDF is produced for each paid job that took place the day before.
    * `Attn` is the Billing Info verbatim; a PA CC/CCC/RN with no address given
      is just its name. A blank row sits between Attn and PIC unless the address
      already runs five lines.
+   * A PA / GEMS order number prints as `Order #` (`order_no`), not `PO No.`.
    * Where the remarks say not to print the PO (NLB), leave `po_no` out.
+   * Two jobs for the same client on the same date go on one invoice, an event
+     block and an item line each.
 6. Invoice number = `<RSM?><event date YYYYMMDD>-<n>1`, `n` = 1, 2, 3… for
    different clients on the same date. Check the Drive invoices folder first so
    numbers are never reused.

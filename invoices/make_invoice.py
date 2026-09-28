@@ -22,6 +22,7 @@ JSON schema (see examples/ for a real one):
       "pic": "Name, 91234567",             # optional
       "payment_terms": "30 Days" | "Immediate",
       "po_no": "POD26000057",              # optional
+      "order_no": "DA-2026-04039",         # optional, PA / GEMS order
       "qtn_ref": "RSM20260812-02 dated 12th August 2026",   # optional
       "events": [
         {"event": "...", "date": "2026-09-16" | "16th September 2026, Wednesday",
@@ -165,15 +166,18 @@ def build_rows(inv, entity, issue_date):
     events = inv.get("events", [])
     multi = len(events) > 1
     po = inv.get("po_no")
+    order = inv.get("order_no")          # PA / GEMS orders print as "Order #"
     qtn = inv.get("qtn_ref")
 
     # -- table body --------------------------------------------------------
     body = [{"kind": "blank"}]
     if po:
         body.append({"kind": "detail", "no": "", "label": "PO No.", "value": po})
+    if order:
+        body.append({"kind": "detail", "no": "", "label": "Order #", "value": order})
     if qtn:
         body.append({"kind": "detail", "no": "", "label": "Quote", "value": qtn})
-    if po or qtn:
+    if po or order or qtn:
         if not multi:
             pass  # event details follow directly, as in the template
         else:
