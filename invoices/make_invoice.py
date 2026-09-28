@@ -419,6 +419,9 @@ def write_pdf(rows, path):
             if r["label"]:
                 text(x["C"], b, r["label"])
                 text(x["D"] + 0.5, b, ":")
+            if pdfmetrics.stringWidth(r["value"], font, FS) > amt_left - x["E"] - PAD:
+                print(f"warning: crosses the amount column, consider splitting: {r['value']!r}",
+                      file=sys.stderr)
             text(x["E"], b, r["value"])
         elif k == "item":
             if r["no"]:
