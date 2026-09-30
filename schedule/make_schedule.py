@@ -65,13 +65,14 @@ def build(jobs, template, out):
         line(doc, f"{person}’s Schedule", bold=True, underline=True, center=True)
         line(doc)
         line(doc)
+        defaults = getattr(jobs, "DEFAULTS", {})
         for day, label in jobs.DAYS:
             line(doc, label)
             entries = sorted(by_person.get(person, {}).get(day, []))
-            if person == "Evelyn" and not entries:
-                line(doc, "Clear Video")
-            elif not entries:
-                line(doc, "To Be Assigned")
+            if not entries:
+                # what the person does on a day with no booking, per their role
+                for t in defaults.get(person, ["To Be Assigned"]):
+                    line(doc, t)
             else:
                 for i, (_, heading, lines) in enumerate(entries):
                     if i:
@@ -81,27 +82,23 @@ def build(jobs, template, out):
         line(doc)
         line(doc)
 
-    line(doc, "Jobs To Be Assigned", bold=True, underline=True, center=True)
-    line(doc)
-    line(doc)
-    for day, label in jobs.DAYS:
-        line(doc, label)
-        entries = sorted(unassigned.get(day, []))
-        if not entries:
-            line(doc, "Nil")
-        for i, (_, heading, lines) in enumerate(entries):
-            if i:
-                line(doc)
-            block(doc, heading, lines)
-        line(doc)
-    line(doc)
-    line(doc)
-
+    # Unbooked jobs and admin notes share one closing section, as in the
+    # hand-edited schedules.
     line(doc, "Reminders", bold=True, underline=True, center=True)
     line(doc)
     line(doc)
     for heading, lines in jobs.NOTES:
         block(doc, heading, lines)
+        line(doc)
+    for day, label in jobs.DAYS:
+        entries = sorted(unassigned.get(day, []))
+        if not entries:
+            continue
+        line(doc, label)
+        for i, (_, heading, lines) in enumerate(entries):
+            if i:
+                line(doc)
+            block(doc, heading, lines)
         line(doc)
 
     doc.save(out)
