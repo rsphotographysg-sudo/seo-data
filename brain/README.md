@@ -9,7 +9,7 @@ each other directly. This folder is how they share memory and plan together.
 | Layer | Where | What goes there |
 |---|---|---|
 | **Public** | this folder (`seo-data/brain/`, public GitHub repo) | How we work, who does what, the task board, the automation map, the growth plan in public-safe form |
-| **Private** | **RS Master Index** in Notion (+ its child pages) | Clients, quotes, prices, pipeline, finances, contacts, risks, dated to-dos |
+| **Private** | private GitHub repo **`rsphotographysg-sudo/rs-brain`** (agents' working copy) and the **RS Master Index** in Notion (Ricky's dashboard, mirrored weekly) | Clients, quotes, prices, pipeline, finances, contacts, risks, dated to-dos |
 
 Rule of thumb: if a competitor or a journalist reading it would hurt RS, it goes in Notion.
 

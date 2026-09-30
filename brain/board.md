@@ -6,7 +6,7 @@ Private detail (client names, amounts) stays in Notion; reference it by name her
 
 | ID | Task | Automation | Owner | Status | Reviewer | Notes |
 |---|---|---|---|---|---|---|
-| T-001 | Daily approval list: one morning message listing every draft waiting on Ricky, GO/EDIT/KILL per item | A1 | Claude | todo | Gemini | Biggest lever — the Master Index shows money stuck in unsent drafts |
+| T-001 | Daily approval list: one morning message listing every draft waiting on Ricky, GO/EDIT/KILL per item | A1 | Claude | doing | Gemini | Biggest lever — the Master Index shows money stuck in unsent drafts |
 | T-002 | Refresh the Notion send queue and tender board against real mailbox state (sent / won / lost / expired / pending) | A1 | Gemini | todo | Claude | August figures are stale; verify before acting |
 | T-003 | Tender price intelligence: collect past award results, model the price gap to winners | A4 | Gemini | todo | Claude | Master Index records RS pricing well above winners |
 | T-004 | Quote generator from the rate card (PDF + xlsx, same house style as invoices) | A3 | Codex | todo | Claude | Reuse `invoices/make_invoice.py` patterns |
@@ -17,5 +17,5 @@ Private detail (client names, amounts) stays in Notion; reference it by name her
 | T-009 | Overdue receivables: daily list + chaser drafts at 7/14/30 days | A10 | Claude | todo | Gemini | |
 | T-010 | Weekly scoreboard (growth-plan.md metrics) written to Notion every Monday | A11 | Gemini | todo | Claude | |
 | T-011 | LIVE 60™ pilot on 3 confirmed jobs | A7 | Codex | blocked | Claude | Waiting on Ricky: storage switch-on + Lightroom preset & sample frames |
-| T-012 | Decide where the private brain lives for Codex/Gemini: Notion connector for each agent, or a private GitHub repo | A13 | Ricky | todo | — | See decisions.md D-008 |
+| T-012 | Private brain lives in private GitHub repo `rs-brain` | A13 | Claude | doing | — | D-008 GO; repo creation needs Ricky (GitHub app cannot create repos) |
 | T-013 | Set up Codex and Gemini with this repo + Notion access | A13 | Ricky | todo | — | Steps in log.md 2026-09-30 entry |
