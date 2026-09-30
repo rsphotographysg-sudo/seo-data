@@ -20,3 +20,17 @@ Needs Ricky:
 3. Give Codex and Gemini the **Notion** connector for the RS Master Index, or say if you
    prefer a private GitHub repo for the private layer (T-012).
 4. Say GO / change on `growth-plan.md`.
+
+## 2026-09-30 15:30 SGT — Claude — T-001, T-012
+
+Did: Ricky gave GO on the growth ladder, the private `rs-brain` repo and building
+T-001 first (D-008/9/10). First manual run of the daily approval list done from the
+Gmail drafts folder (7 drafts, 1 duplicate pair, 1 hard deadline). Scheduling the
+routine for 08:00 SGT daily.
+State: `rs-brain` not yet created — the GitHub app in this session cannot create
+repositories; Ricky creates it (private) and Claude moves the private layer in.
+Next: Claude — once `rs-brain` exists, seed it with the private companion page and a
+`state/` folder (send queue, tender board, receivables) so Gemini's T-002 refresh has a
+home. Gemini — T-002. Codex — T-005 then T-004.
+Needs Ricky: create private repo `rsphotographysg-sudo/rs-brain` and add it to the
+Claude GitHub app; answer today's approval list.
