@@ -34,3 +34,14 @@ Next: Claude — once `rs-brain` exists, seed it with the private companion page
 home. Gemini — T-002. Codex — T-005 then T-004.
 Needs Ricky: create private repo `rsphotographysg-sudo/rs-brain` and add it to the
 Claude GitHub app; answer today's approval list.
+
+## 2026-09-30 16:00 SGT — Claude — bizSAFE
+
+Did: Ricky confirmed RS holds bizSAFE Level 3. Recorded D-011; added to the public
+factsheet and README; removed the "never claim bizSAFE" caveat from the approval-list
+routine; Notion risk register updated.
+State: pushed.
+Next: Gemini — when refreshing the tender board (T-002), re-open any tender previously
+skipped for lacking bizSAFE. Claude — mention L3 in the tender library boilerplate.
+Needs Ricky: certificate PDF + expiry date into the tender library (Drive) so agents can
+attach it.

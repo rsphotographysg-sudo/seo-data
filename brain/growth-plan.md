@@ -33,7 +33,7 @@ The bottleneck today is not leads. It is **quotes and tenders waiting on Ricky**
 - Tender engine: find, read, price against past winning bids, draft (A4).
 - Crew auto-scheduling from skills and geography; subcontractor bench for peaks (A6).
 - Review ask and repeat-client nudges on every delivery (A9).
-- Incorporate (Pte Ltd), insurance and certifications so bigger tenders are open to us.
+- Incorporate (Pte Ltd) and public-liability insurance so bigger tenders are open to us (bizSAFE Level 3 held since Sep 2026).
 
 **Gate:** 50+ qualified enquiries a month, quote turnaround < 1 working day,
 tender win rate doubled, Ricky's daily admin < 1 hour.

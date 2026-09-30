@@ -1,5 +1,5 @@
 # RS Photography — Master Fact Sheet
-*Last updated: 2026-05-07 | Authoritative source document*
+*Last updated: 2026-09-30 | Authoritative source document*
 
 ## Identity
 - **Name:** RS Photography
@@ -13,6 +13,9 @@
 - SME500 Singapore Award Winner 2023
 - SME500 Singapore Award Winner 2024
 - Singapore Entrepreneur 100 Award 2023
+
+## Certifications
+- bizSAFE Level 3 (Workplace Safety and Health Council, Singapore)
 
 ## Government Panel Status
 - Panel Vendor under the VAPC (Singapore government procurement)

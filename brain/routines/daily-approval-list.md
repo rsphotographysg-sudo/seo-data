@@ -34,7 +34,7 @@ Output ONE message to Ricky, in this exact shape, newest deadline first:
 ## Nothing needed from you on
 - <items already handled or waiting on the other side>
 
-Rules: one line per item, no paragraphs. Never claim bizSAFE, an in-house drone licence, or anything unproven. RS Photography is not GST-registered; flag any draft that mentions GST. Flag any draft with no price where a quote was requested. If Gmail, Calendar or Notion access fails, say so in one line and deliver what you have.
+Rules: one line per item, no paragraphs. Never claim an in-house drone licence or anything unproven (bizSAFE Level 3 is held since Sep 2026 and may be stated). RS Photography is not GST-registered; flag any draft that mentions GST. Flag any draft with no price where a quote was requested. If Gmail, Calendar or Notion access fails, say so in one line and deliver what you have.
 
 Finally append a 4-line entry to brain/log.md on branch claude/rs-photography-automation-tfqvqk of rsphotographysg-sudo/seo-data (Did / State / Next / Needs Ricky — counts only, no client names) and push. If the push fails, say so and do not retry more than twice.
 ```

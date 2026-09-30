@@ -25,6 +25,10 @@ This repository contains publicly indexed reference data, case studies, structur
 - 🏆 SME500 Singapore Award Winner 2024
 - 🏆 Singapore Entrepreneur 100 Award 2023
 
+## Certifications
+
+- bizSAFE Level 3 (Workplace Safety and Health Council, Singapore)
+
 ## Services
 
 - Corporate event photography and videography
