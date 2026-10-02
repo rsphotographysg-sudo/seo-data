@@ -20,13 +20,14 @@ JSON schema (see examples/ for a real one):
       "event_date": "2026-09-16",          # date of the (first) job, used for numbering
       "attn": ["Company", "Address line", "Singapore 123456."],
       "pic": "Name, 91234567",             # optional
-      "payment_terms": "30 Days" | "Immediate",
+      "payment_terms": "30 Days" | "Immediate" | "Month End + 30 Days",
       "po_no": "POD26000057",              # optional
       "order_no": "DA-2026-04039",         # optional, PA / GEMS order
       "qtn_ref": "RSM20260812-02 dated 12th August 2026",   # optional
       "events": [
         {"event": "...", "date": "2026-09-16" | "16th September 2026, Wednesday",
          "day_label": "Day 1",             # optional, replaces the "Date" label
+         "days": [["Day 1", "2026-09-01"], ["Day 2", "2026-09-02"]],  # optional, multi-date
          "time": "12pm to 2pm (2 Hours)", "venue": ["line 1", "line 2"]}
       ],
       "items": [{"desc": "Photography Service", "amount": 440}],
@@ -193,7 +194,18 @@ def build_rows(inv, entity, issue_date):
             d = fmt_event_date(parse_date(d))
         except (ValueError, TypeError):
             pass
-        lines = [("Event", ev.get("event", "")), (ev.get("day_label") or "Date", d)]
+        name = ev.get("event", "")
+        name = [name] if isinstance(name, str) else name
+        lines = [("Event" if k == 0 else "", n) for k, n in enumerate(name)]
+        if ev.get("days"):                 # Day 1 / Day 2 ... one line each
+            for label, dd in ev["days"]:
+                try:
+                    dd = fmt_event_date(parse_date(dd))
+                except (ValueError, TypeError):
+                    pass
+                lines.append((label, dd))
+        else:
+            lines.append((ev.get("day_label") or "Date", d))
         times = ev.get("time") or []
         if isinstance(times, str):
             times = [times]
@@ -253,9 +265,15 @@ def build_rows(inv, entity, issue_date):
     right = [("Date of Issue", fmt_date(issue_date)), ("Invoice Number", inv["number"]), ("Payment Terms", terms)]
     if terms.lower().endswith("days"):
         try:
-            n = int(terms.split()[0])
-            right.append(("Payment Due Date", fmt_date(issue_date + dt.timedelta(days=n))))
-        except ValueError:
+            n = int(terms.split()[-2])
+            start = issue_date
+            if terms.lower().startswith("month end"):
+                # "Month End + 30 Days" counts from the last day of the issue month
+                # (issued in Oct: 31 Oct + 30 days = 30 Nov).
+                nxt = (issue_date.replace(day=28) + dt.timedelta(days=4)).replace(day=1)
+                start = nxt - dt.timedelta(days=1)
+            right.append(("Payment Due Date", fmt_date(start + dt.timedelta(days=n))))
+        except (ValueError, IndexError):
             pass
     right.append(("Number of Page(s)", "Page 1 of 1"))
     for i in range(max(len(left), len(right))):
@@ -272,7 +290,67 @@ def build_rows(inv, entity, issue_date):
         rows.append({"kind": "pay", "no": no, "text": text})
     rows.append({"kind": "blank"})
     rows.append({"kind": "text", "text": "Thank you."})
+    pages = paginate(rows)
+    if pages > 1:
+        for r in rows:
+            if r["kind"] == "meta" and r["rlabel"] == "Number of Page(s)":
+                r["rvalue"] = f"Page 1 of {pages}"
     return rows, total
+
+
+def _units(r):
+    """Height of a row in 14pt-row units, as both writers lay it out."""
+    k = r["kind"]
+    if k == "logo":
+        return 2
+    if k == "spacer":
+        return r["h"]
+    if k == "title":
+        return 1.25
+    if k == "text" and r.get("size", 11) > 11:
+        return 1.2
+    return 1
+
+
+PAGE_UNITS = 54        # rows that fit on one A4 page at the template's 92% scale
+FIT_UNITS = PAGE_UNITS / 0.8   # up to this long, shrink onto one page instead
+
+
+def paginate(rows):
+    """Mark where each new page starts ("page_break" on its first row).
+
+    A short overrun is shrunk onto one page, like the hand-made sheets. Longer
+    invoices break between event blocks (after the blank row in front of an
+    event), so an event never parts from its amount and the BALANCE DUE row
+    always shares a page with the last event. Returns the page count."""
+    for r in rows:
+        r.pop("page_break", None)
+    if sum(_units(r) for r in rows) <= FIT_UNITS:
+        return 1
+    def good(j):          # may a new page start at rows[j]?
+        r = rows[j]
+        return rows[j - 1]["kind"] == "blank" and (
+            (r["kind"] == "detail" and r["no"]) or
+            (r["kind"] == "text" and r.get("bold")))     # "Payment Information:"
+
+    def ok(j):            # fallback: any row after a blank, except the total
+        return rows[j - 1]["kind"] == "blank" and rows[j]["kind"] not in ("total", "blank")
+
+    pages, used, start = 1, 0.0, 0
+    i = 0
+    while i < len(rows):
+        u = _units(rows[i])
+        if used + u > PAGE_UNITS and i > start:
+            cut = next((j for j in range(i, start, -1) if good(j)), None) \
+                or next((j for j in range(i, start, -1) if ok(j)), None) or i
+            rows[cut]["page_break"] = True
+            pages += 1
+            start, used = cut, 0.0
+            i = cut
+            continue
+        used += u
+        i += 1
+    return pages
 
 
 # ----------------------------------------------------------------------------
@@ -316,9 +394,10 @@ def write_pdf(rows, path):
     FS = 10.1           # 11pt Arial at 92%
     PAD = 2.5
     # A long invoice shrinks to the page, the way the XLSX does with fit-to-page.
+    pages = 1 + sum(1 for r in rows if r.get("page_break"))
     need = sum(2 if r["kind"] == "logo" else 1 for r in rows) * LINE
     room = H - margin_top - 40
-    if need > room:
+    if pages == 1 and need > room:
         shrink = room / need
         if shrink < 0.75:
             raise SystemExit("Invoice is too long for one page; split the items.")
@@ -350,8 +429,27 @@ def write_pdf(rows, path):
     llabels = [r["llabel"] for r in rows if r["kind"] == "meta" and r["llabel"]]
     lcolon_x = max(x["B"] + 0.5, x["A"] + max(pdfmetrics.stringWidth(t, font, FS) for t in llabels) + 4)
 
+    page = 1
+
+    def footer():
+        if pages > 1:
+            text(W / 2, 28, f"Page {page} of {pages}", font, FS * 0.9, "center")
+
     for r in rows:
         k = r["kind"]
+        if r.get("page_break"):
+            if in_table:              # close this page's slice of the table
+                for xx in (tbl_left, no_right, amt_left, tbl_right):
+                    c.line(xx, table_top, xx, y)
+                c.line(tbl_left, y, tbl_right, y)
+            footer()
+            c.showPage()
+            c.setLineWidth(0.6)
+            page += 1
+            y = H - margin_top
+            if in_table:
+                c.line(tbl_left, y, tbl_right, y)
+                table_top = y
         if k == "logo":
             logo = r.get("path")
             if logo and os.path.exists(logo):
@@ -449,6 +547,7 @@ def write_pdf(rows, path):
                 xx += pdfmetrics.stringWidth(seg, f, FS)
         y -= LINE
 
+    footer()
     c.showPage()
     c.save()
 
@@ -500,8 +599,15 @@ def write_xlsx(all_rows, path, append_to=None):
                 c.number_format = fmt
             return c
 
+        breaks = []
         for r in rows:
             k = r["kind"]
+            if r.get("page_break"):
+                breaks.append(rn)
+                if table_top is not None:     # rule off the table at the page edge
+                    for col in COLS:
+                        b = ws[f"{col}{rn}"].border
+                        ws[f"{col}{rn}"].border = Border(left=b.left, right=b.right, top=b.top, bottom=thin)
             if k == "logo":
                 rn += 2
                 ws.row_dimensions[rn - 1].height = 17
@@ -557,6 +663,10 @@ def write_xlsx(all_rows, path, append_to=None):
                     ws[f"A{rn}"].alignment = Alignment(horizontal="center", vertical="center")
                     ws[f"J{rn}"].number_format = ACC
                     ws[f"J{rn}"].alignment = Alignment(horizontal="center", vertical="center")
+                    if r.get("page_break"):
+                        for col in COLS:
+                            b = ws[f"{col}{rn}"].border
+                            ws[f"{col}{rn}"].border = Border(left=b.left, right=b.right, top=thin)
                 if k == "detail":
                     if r["no"]:
                         put(f"A{rn}", int(r["no"]) if r["no"].isdigit() else r["no"], align=Alignment(horizontal="center", vertical="center"))
@@ -589,8 +699,15 @@ def write_xlsx(all_rows, path, append_to=None):
         ws.page_setup.orientation = "portrait"
         ws.page_setup.paperSize = ws.PAPERSIZE_A4
         ws.page_setup.fitToWidth = 1
-        ws.page_setup.fitToHeight = 1
+        ws.page_setup.fitToHeight = 0 if breaks else 1
         ws.sheet_properties.pageSetUpPr.fitToPage = True
+        if breaks:
+            from openpyxl.worksheet.pagebreak import Break
+            for b in breaks:
+                ws.row_breaks.append(Break(id=b))
+            ws.oddFooter.center.text = "Page &P of &N"
+            ws.oddFooter.center.font = "Arial"
+            ws.oddFooter.center.size = 10
         ws.page_margins.left = ws.page_margins.right = 0.7
         ws.page_margins.top = ws.page_margins.bottom = 0.75
     wb.save(path)

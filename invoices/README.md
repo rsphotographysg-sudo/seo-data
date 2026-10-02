@@ -44,6 +44,13 @@ invoice PDF is produced for each paid job that took place the day before.
    * Where the remarks say not to print the PO (NLB), leave `po_no` out.
    * Two jobs for the same client on the same date go on one invoice, an event
      block and an item line each.
+   * A monthly invoice (NTU, SICC) lists every job of the month as its own
+     numbered event; a multi-date job uses `"days": [["Day 1", date], …]` and one
+     `Time` line per day when the hours differ. Long names split over lines by
+     passing `event` as a list.
+   * `Month End + 30 Days` terms (SICC) count from the last day of the issue
+     month. Invoices longer than one page break between event blocks, with
+     `Page n of N` on each page (row breaks + footer in the XLSX).
 6. Invoice number = `<RSM?><event date YYYYMMDD>-<n>1`, `n` = 1, 2, 3… for
    different clients on the same date. Check the Drive invoices folder first so
    numbers are never reused.
