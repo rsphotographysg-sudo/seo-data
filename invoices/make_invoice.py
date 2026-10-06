@@ -24,6 +24,7 @@ JSON schema (see examples/ for a real one):
       "po_no": "POD26000057",              # optional
       "order_no": "DA-2026-04039",         # optional, PA / GEMS order
       "qtn_ref": "RSM20260812-02 dated 12th August 2026",   # optional
+      "ref_lines": ["GeBiz PO No.: PAS000ECI26006722/ 1"],     # optional, printed as-is
       "events": [
         {"event": "...", "date": "2026-09-16" | "16th September 2026, Wednesday",
          "day_label": "Day 1",             # optional, replaces the "Date" label
@@ -178,6 +179,8 @@ def build_rows(inv, entity, issue_date):
         body.append({"kind": "detail", "no": "", "label": "Order #", "value": order})
     if qtn:
         body.append({"kind": "detail", "no": "", "label": "Quote", "value": qtn})
+    for line in inv.get("ref_lines") or []:   # e.g. "GeBiz PO No.: PAS000ECI26006722/ 1"
+        body.append({"kind": "item", "no": "", "desc": line, "amount": None})
     if po or order or qtn:
         if not multi:
             pass  # event details follow directly, as in the template
