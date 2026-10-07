@@ -10,7 +10,9 @@ layout are carried over untouched.
 
 ## The jobs file
 
-One Python file per week, copied from the previous one. It holds:
+One Python file per week, copied from the previous one. Jobs files hold client
+names and numbers, so they are git-ignored and kept off this public repository
+(`.gitignore`); keep them locally next to the schedules. It holds:
 
 * `DAYS` — the seven `("YYYY-MM-DD", "*28th September 2026, Monday*")` headings.
 * `ROSTER` — the crew, in the order their sections appear.

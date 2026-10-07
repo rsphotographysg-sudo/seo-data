@@ -4,17 +4,18 @@
     {
       "entity": "RSP",
       "event_date": "2026-09-16",
-      "attn": ["The Singapore Island Country Club", "180 Island Club Road", "Singapore 578874."],
-      "pic": "Zhi Hui, 64318388 / 91509493",
+      "attn": ["Example Country Club", "1 Example Road", "Singapore 000000."],
+      "pic": "Jane Tan, 61234567 / 91234567",
       "payment_terms": "30 Days",
-      "po_no": "POD26000057",
+      "po_no": "PO00000000",
       "events": [
-        {"event": "SICC Open Invitation", "date": "2026-09-16", "time": "12pm to 2pm (2 Hours)",
-         "venue": ["Island Location, The New Course"]},
-        {"event": "SICC vs Pickle Padel Movement @ PUB Recreation Club", "date": "2026-09-16", "time": "7pm to 9pm (2 Hours)",
-         "venue": ["PUB Recreation Club", "48 Woodleigh Park #01-01"]}
+        {"event": "Club Golf Invitational", "date": "2026-09-16", "time": "12pm to 2pm (2 Hours)",
+         "venue": ["Clubhouse, The New Course"]},
+        {"event": "Club vs Visitors Padel Night", "date": "2026-09-16", "time": "7pm to 9pm (2 Hours)",
+         "venue": ["Example Recreation Club", "2 Example Park #01-01"]}
       ],
-      "items": [{"desc": "Photography Service (2 x 2 Hours)", "amount": 440}]
+      "items": [{"desc": "Photography Service", "amount": 220},
+                {"desc": "Photography Service", "amount": 220}]
     }
   ]
 }
