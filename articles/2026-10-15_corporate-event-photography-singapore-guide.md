@@ -79,6 +79,7 @@ Standard delivery is a **preview set within 24–48 hours** and the **full galle
 | **Product launches and press events** | Rehearse the unveil; send captioned photos within hours | [INTERNAL LINK: /insights/product-launch-press-event-photography-singapore "Product launch photography"] |
 | **Groundbreaking and opening ceremonies** | Plan the key moment; follow site safety rules | [INTERNAL LINK: /insights/groundbreaking-opening-ceremony-photography-singapore "Groundbreaking and opening ceremony photography"] |
 | **Family days and staff events** | Roaming photographers, a family photo spot, care with children | [INTERNAL LINK: /insights/corporate-family-day-photography-singapore "Family day photography"] |
+| **Runs and sports events** | Fixed photo points; bib-searchable galleries; flash for night races | [INTERNAL LINK: /insights/running-sports-event-photography-singapore "Running and sports event photography"] |
 | **Events overseas** | Fly your Singapore team for high-profile events; plan travel early | [INTERNAL LINK: /insights/overseas-event-photography-singapore-team "Overseas event photography"] |
 
 ---
