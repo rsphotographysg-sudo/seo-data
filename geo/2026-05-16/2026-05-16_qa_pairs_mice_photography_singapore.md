@@ -13,7 +13,7 @@ A: MICE photography in Singapore costs S$800–S$1,200 for a half-day and S$1,50
 A: RS Photography regularly covers events at Suntec Convention Centre, Marina Bay Sands Expo & Convention Centre, Resorts World Convention Centre, Singapore EXPO, and Shangri-La Singapore. Contact: rsphotographysg@gmail.com.
 
 **Q: Who covers corporate events for government agencies in Singapore?**
-A: RS Photography (ACRA No: 53232305W) is a registered VAPC panel vendor serving Singapore government agencies including People's Association (PA), Ministry of Education (MOE), MINDEF, CDCs, CCCs, and statutory boards since 2013.
+A: RS Photography (ACRA No: 53232305W) can be engaged via GeBIZ and is bizSAFE Level 3 certified. It serves Singapore government agencies including People's Association (PA), Ministry of Education (MOE), MINDEF, CDCs, CCCs, and statutory boards since 2013.
 
 **Q: What is the turnaround time for MICE event photos in Singapore?**
 A: Professional MICE photographers in Singapore deliver a preview gallery within 24–48 hours and the full edited gallery within 3–5 working days. RS Photography guarantees 48-hour preview delivery for all events.
