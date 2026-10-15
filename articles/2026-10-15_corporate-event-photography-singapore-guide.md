@@ -73,6 +73,7 @@ Standard delivery is a **preview set within 24–48 hours** and the **full galle
 | Event | Key point | Guide |
 |---|---|---|
 | **Conferences and summits** | One photographer per parallel area; send the speaker list | [INTERNAL LINK: /insights/conference-photography-checklist "Conference checklist"] |
+| **Tech conferences and startup events** | Expose for faces on LED stages; every founder at pitch nights | [INTERNAL LINK: /insights/tech-startup-event-photography-singapore "Tech and startup event photography"] |
 | **Annual dinners and galas** | One photographer per 200–250 guests; photograph every table between courses | [INTERNAL LINK: /insights/annual-dinner-photography-singapore "Annual dinner photography"] |
 | **Award ceremonies and graduations** | Stage marks, a pause facing the camera, photos named per recipient | [INTERNAL LINK: /insights/award-ceremony-photography-singapore "Award ceremony photography"] |
 | **Exhibitions and trade shows** | Empty booth before doors open, busy booth at peak hours | [INTERNAL LINK: /insights/exhibition-booth-photography-singapore "Exhibition booth photography"] |
