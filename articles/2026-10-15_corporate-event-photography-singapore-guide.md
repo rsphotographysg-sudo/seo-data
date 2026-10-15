@@ -85,6 +85,7 @@ After delivery, plan how the photos will be used: social posts, sponsors, press,
 | Event | Key point | Guide |
 |---|---|---|
 | **Conferences and summits** | One photographer per parallel area; send the speaker list | [INTERNAL LINK: /insights/conference-photography-checklist "Conference checklist"] |
+| **Seminars, workshops and training** | Faces from the front corners; engaged participants; a reusable course photo library | [INTERNAL LINK: /insights/seminar-workshop-training-photography-singapore "Seminar and training photography"] |
 | **Tech conferences and startup events** | Expose for faces on LED stages; every founder at pitch nights | [INTERNAL LINK: /insights/tech-startup-event-photography-singapore "Tech and startup event photography"] |
 | **Annual dinners and galas** | One photographer per 200–250 guests; photograph every table between courses | [INTERNAL LINK: /insights/annual-dinner-photography-singapore "Annual dinner photography"] |
 | **Chinese New Year and festive celebrations** | Know when lo hei starts; plan the lion dance route; book 4–6 weeks ahead | [INTERNAL LINK: /insights/festive-corporate-celebration-photography-singapore "Festive celebration photography"] |

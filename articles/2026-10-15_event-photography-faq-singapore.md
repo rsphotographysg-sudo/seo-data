@@ -128,6 +128,10 @@ Find out exactly when each starts, place the photographer before the moment, sta
 With photographers at two or three checkpoints every team passes, a roving photographer between them, and the start and finish covered. Photograph every team at least once.
 → [INTERNAL LINK: /insights/team-building-offsite-photography-singapore "Team building"]
 
+### How long does a photographer need at a seminar or workshop?
+Usually one to two hours, covering the opening, activities and the closing. Several sessions in one day can be combined into one booking.
+→ [INTERNAL LINK: /insights/seminar-workshop-training-photography-singapore "Seminars and training"]
+
 ### When is the best time to photograph an exhibition booth?
 The empty booth before doors open, and the busy booth at peak hours.
 → [INTERNAL LINK: /insights/exhibition-booth-photography-singapore "Exhibitions"]

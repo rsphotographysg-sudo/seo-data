@@ -1,6 +1,6 @@
 # 答案型文章 — 上线指南
 
-39 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
+40 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
 
 ## 建议上线顺序（大致每周一篇）
 
@@ -45,6 +45,7 @@
 | 6 月 8 日那周 | 团建和公司外出会议（offsite）摄影 | /insights/team-building-offsite-photography-singapore | 是否提供当天幻灯片（闭幕或晚宴时播放）；水上活动是否有防水器材或只在岸上拍；是否接 Bintan、Batam 等海外 offsite；配图要客户同意 |
 | 6 月 15 日那周 | 大使馆 / 国庆招待会 / 外交活动摄影 | /insights/embassy-diplomatic-reception-photography-singapore | 文中写“我们拍政府、外交和官方活动”，确认你们拍过外交活动；不要点名大使馆客户，除非对方书面同意；“国庆招待会一般 2–4 小时、两位摄影师”是否符合你的经验 |
 | 6 月 22 日那周（也可以提前，和总指南一起上线效果更好） | 需要专业摄影师还是手机就够？ | /insights/professional-event-photographer-vs-smartphone | 文中写“我们会坦白告诉客户什么时候不需要请我们”，确认你愿意这样承诺；配图最好用你自己在同一场活动拍的手机照和专业照对比 |
+| 6 月 29 日那周 | 研讨会 / 工作坊 / 培训课程摄影 | /insights/seminar-workshop-training-photography-singapore | “大部分课程 1–2 小时”是否符合你的经验；是否接培训机构的课程图库拍摄；配图要学员同意 |
 
 每篇都要确认：联系页的真实网址（文章里先写成 `/contact`）。
 
