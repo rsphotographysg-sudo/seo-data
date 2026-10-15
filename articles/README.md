@@ -1,6 +1,6 @@
 # 答案型文章 — 上线指南
 
-43 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
+44 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
 
 ## 建议上线顺序（大致每周一篇）
 
@@ -49,6 +49,7 @@
 | 7 月 6 日那周 | 商场路演 / 品牌快闪活动摄影 | /insights/roadshow-brand-activation-photography-singapore | 是否按时段（例如高峰 2–3 小时）收费；是否接多商场、多天的路演；可以推给活动公司和公关公司；配图要客户和商场同意 |
 | 7 月 13 日那周（也可以提前，和会议清单一起上线） | 活动摄影需求单模板（brief template） | /insights/event-photography-brief-template | 文中写“这是我们问每位客户的问题”，确认符合你们的流程；可以把模板做成可下载的 PDF 或 Word，放在页面上收集联系方式 |
 | 7 月 20 日那周 | 活动摄影能拿到多少张照片、修图包括什么 | /insights/how-many-event-photos-editing | “每位摄影师每小时约 50–150 张修好的照片”是行业大概数字，请改成符合你们实际的范围；你们是否提供 RAW 文件；相册在线保留多久；精修（磨皮、去物件）是否另外收费 |
+| 7 月 27 日那周（建议提前到 11 月，赶上年底急单） | 临时急找活动摄影师怎么办 | /insights/last-minute-event-photographer-singapore | “当天回复报价”承诺；你们是否接 2–3 天内或隔天的急单；急单是否加收费用（文中只写“有些公司会加收”）|
 
 每篇都要确认：联系页的真实网址（文章里先写成 `/contact`）。
 

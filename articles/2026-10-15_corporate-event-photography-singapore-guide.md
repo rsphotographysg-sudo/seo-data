@@ -47,6 +47,8 @@ Not sure you need a professional at all? Phones are enough for small, bright, in
 
 → [INTERNAL LINK: /insights/professional-event-photographer-vs-smartphone "Professional photographer or phone?"]
 
+Short on time? See [INTERNAL LINK: /insights/last-minute-event-photographer-singapore "how to book an event photographer at short notice"].
+
 ---
 
 ## 3. Planning and preparation

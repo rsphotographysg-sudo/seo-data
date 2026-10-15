@@ -28,7 +28,8 @@ Typically S$600–S$1,200 for a half day and S$1,500–S$2,800 for a full day wi
 It depends on the vendor. RS Photography is not GST-registered, so our quotations are nett and final.
 
 ### How far ahead should we book?
-Four to eight weeks for most events. Book earlier for November to January, the busiest season for annual dinners and year-end events.
+Four to eight weeks for most events. Book earlier for November to January, the busiest season for annual dinners and year-end events. Short-notice bookings are often still possible on weekdays.
+→ [INTERNAL LINK: /insights/last-minute-event-photographer-singapore "Short-notice bookings"]
 
 ### Do we need a professional, or can staff use phones?
 Phones are enough for small, bright, informal internal events. A professional is worth it for low light, stages, VIPs, large events, and photos for press, reports or ads.
