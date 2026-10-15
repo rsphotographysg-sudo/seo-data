@@ -150,6 +150,10 @@ With photographers at two or three checkpoints every team passes, a roving photo
 Usually one to two hours, covering the opening, activities and the closing. Several sessions in one day can be combined into one booking.
 → [INTERNAL LINK: /insights/seminar-workshop-training-photography-singapore "Seminars and training"]
 
+### What should be photographed at a golf day?
+Every flight before tee-off, the flag-off, sponsor and contest holes, players in action without disturbing play, and every winner at the prize dinner.
+→ [INTERNAL LINK: /insights/corporate-golf-day-photography-singapore "Golf days"]
+
 ### When is the best time to photograph an exhibition booth?
 The empty booth before doors open, and the busy booth at peak hours.
 → [INTERNAL LINK: /insights/exhibition-booth-photography-singapore "Exhibitions"]
