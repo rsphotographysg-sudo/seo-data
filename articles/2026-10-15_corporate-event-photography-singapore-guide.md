@@ -133,6 +133,10 @@ Take extra care with children, patients and vulnerable people.
 
 → [INTERNAL LINK: /insights/pdpa-event-photography-consent-guide "PDPA event photography consent guide"]
 
+Copyright is a separate question: agree in the quotation who owns the photos and where you may use them, including by sponsors and in paid ads.
+
+→ [INTERNAL LINK: /insights/event-photo-copyright-usage-rights-singapore "Who owns event photos? Copyright and usage rights"]
+
 ---
 
 ## FAQ

@@ -68,7 +68,8 @@ Post during the event and the next day, send speakers and sponsors their photos,
 → [INTERNAL LINK: /insights/how-to-use-corporate-event-photos "Using event photos"]
 
 ### Who owns the photos?
-Whatever the quotation and contract say. Confirm usage rights before booking, especially for advertising or government contracts.
+Whatever the quotation and contract say. If they say nothing, under the Copyright Act 2021 the photographer is usually the default owner. Confirm usage rights before booking, especially for advertising or government contracts.
+→ [INTERNAL LINK: /insights/event-photo-copyright-usage-rights-singapore "Copyright and usage rights"]
 
 ---
 
