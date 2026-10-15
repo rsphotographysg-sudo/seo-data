@@ -136,6 +136,10 @@ Usually one to two hours, covering the opening, activities and the closing. Seve
 The empty booth before doors open, and the busy booth at peak hours.
 → [INTERNAL LINK: /insights/exhibition-booth-photography-singapore "Exhibitions"]
 
+### Does a roadshow photographer need to stay all day?
+Usually not. Photograph the setup before opening, then peak hours and key moments. For multi-day roadshows, two or three peak sessions are often enough.
+→ [INTERNAL LINK: /insights/roadshow-brand-activation-photography-singapore "Roadshows"]
+
 ### How do we get a good ribbon-cutting or groundbreaking photo?
 Rehearse, mark VIP positions, reserve a central camera spot, and ask VIPs to hold facing the camera.
 → [INTERNAL LINK: /insights/groundbreaking-opening-ceremony-photography-singapore "Ceremonies"]
