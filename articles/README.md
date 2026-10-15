@@ -1,6 +1,6 @@
 # 答案型文章 — 上线指南
 
-6 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
+7 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
 
 ## 建议上线顺序（大致每周一篇）
 
@@ -12,6 +12,7 @@
 | 11 月 3 日那周 | 会议摄影清单 | /insights/conference-photography-checklist | “回复报价时附上草拟拍摄清单”承诺 |
 | 11 月 10 日那周 | 当天交付是怎么做到的 | /insights/same-day-event-photo-delivery-singapore | EXPRESS 24 名称和“1 小时内首批照片”；表格里的照片数量（10–30 张、50–150 张）是否符合你的做法 |
 | 11 月 17 日那周 | 如何挑选新加坡企业活动摄影师 | /insights/how-to-choose-corporate-event-photographer-singapore | “回复报价时书面回答 10 个问题并附完整相册”承诺；第 10 题提到公众责任险，上线前最好先买好保险 |
+| 11 月 24 日那周 | 颁奖典礼 / 授勋 / 毕业典礼摄影 | /insights/award-ceremony-photography-singapore | “每位领奖人 15–20 秒、每小时 150–200 人”是否符合你的经验；照片按领奖人命名和打印邮寄是否是你提供的服务 |
 
 每篇都要确认：联系页的真实网址（文章里先写成 `/contact`）。
 
