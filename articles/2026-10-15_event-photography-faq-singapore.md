@@ -116,6 +116,10 @@ Use stage marks, a pause facing the camera, and a running order to name photos p
 Find out exactly when each starts, place the photographer before the moment, start with the main table for lo hei, and get the lion's route and the plucking of the greens in advance.
 → [INTERNAL LINK: /insights/festive-corporate-celebration-photography-singapore "Festive celebrations"]
 
+### How do you photograph a team building race across the city?
+With photographers at two or three checkpoints every team passes, a roving photographer between them, and the start and finish covered. Photograph every team at least once.
+→ [INTERNAL LINK: /insights/team-building-offsite-photography-singapore "Team building"]
+
 ### When is the best time to photograph an exhibition booth?
 The empty booth before doors open, and the busy booth at peak hours.
 → [INTERNAL LINK: /insights/exhibition-booth-photography-singapore "Exhibitions"]
