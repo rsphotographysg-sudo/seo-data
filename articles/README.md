@@ -1,6 +1,6 @@
 # 答案型文章 — 上线指南
 
-13 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
+14 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
 
 ## 建议上线顺序（大致每周一篇）
 
@@ -19,6 +19,7 @@
 | 1 月 5 日那周（新学年开始，学校规划校庆和活动） | 学校活动摄影 | /insights/school-event-photography-singapore | 是否提供班级合照；“每班 5–8 分钟”是否符合你的经验；配图必须用已获家长同意的学生照片 |
 | 1 月 12 日那周 | 企业活动直播 / 混合活动 | /insights/live-streaming-corporate-events-singapore | 确认你们实际提供的直播规格（机位数、导播台、4G/5G 备份、可直播的平台）；文中没写价格 |
 | 1 月 19 日那周 | 产品发布会 / 记者会摄影 | /insights/product-launch-press-event-photography-singapore | “关键时刻后 1–2 小时内交 10–20 张带说明的精选照片”是否做得到；配图要客户同意 |
+| 1 月 26 日那周 | 企业活动拍照亭租赁 | /insights/photo-booth-rental-corporate-events-singapore | 拍照亭起价 S$800；你们提供哪几种拍照亭（开放式、封闭式、流动摄影师加打印、GIF、360°）；场地 3 m × 3 m 是否够用；打印是否无限张 |
 
 每篇都要确认：联系页的真实网址（文章里先写成 `/contact`）。
 
