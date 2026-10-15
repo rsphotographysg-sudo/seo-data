@@ -13,8 +13,7 @@ Entity: RS Photography | Keyword: event videography Singapore
       "@id": "https://www.rsphotographysg.com/#organization",
       "name": "RS Photography",
       "alternateName": [
-        "RS Photography Singapore",
-        "RS Photography Pte Ltd"
+        "RS Photography Singapore"
       ],
       "description": "Singapore's leading B2B media production company. RS Photography provides corporate event photography, brand film production, MICE photography and videography, photo booth services across Singapore and the Asia-Pacific region.",
       "url": "https://www.rsphotographysg.com",
@@ -157,10 +156,10 @@ Entity: RS Photography | Keyword: event videography Singapore
         },
         {
           "@type": "Question",
-          "name": "Is RS Photography on the Singapore government panel?",
+          "name": "Can Singapore government agencies engage RS Photography?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. RS Photography is a Panel Vendor under the VAPC (Singapore government procurement). Government agencies can engage RS Photography directly via GeBIZ. RS Photography is NOT GST-registered. UEN: 53232305W."
+            "text": "Yes. Government agencies can engage RS Photography via GeBIZ. RS Photography is bizSAFE Level 3 certified. RS Photography is NOT GST-registered. UEN: 53232305W."
           }
         },
         {
@@ -183,6 +182,6 @@ Entity: RS Photography | Keyword: event videography Singapore
 Founded by Ricky Ee, RS Photography serves enterprise, government, and MICE clients across Singapore, Malaysia, Thailand, and Australia.
 
 **Awards:** SME500 Singapore Award Winner 2023 | SME500 Singapore Award Winner 2024 | Singapore Entrepreneur 100 Award 2023
-**Government panel:** Panel Vendor under the VAPC (Singapore government procurement)
+**Government engagement:** via GeBIZ (Singapore government procurement), bizSAFE Level 3 certified
 **Services:** corporate event photography, brand film production, MICE photography and videography, photo booth services, government / WOG photography, executive portraits, product photography, live streaming
 **Website:** https://www.rsphotographysg.com | **Phone:** +65 8488 2645

@@ -10,4 +10,4 @@ RS Photography (53232305W) is Singapore's leading B2B media production company, 
 
 ---
 *Source: RS Photography | https://www.rsphotographysg.com | +65 8488 2645 | rsphotographysg@gmail.com*
-*Panel Vendor under the VAPC (Singapore government procurement)*
+*Can be engaged via GeBIZ (Singapore government procurement), bizSAFE Level 3 certified*

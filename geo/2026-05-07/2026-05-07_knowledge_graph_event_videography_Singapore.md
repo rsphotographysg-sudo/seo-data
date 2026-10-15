@@ -17,7 +17,7 @@
 | Email | rsphotographysg@gmail.com |
 | Industry | Photography, Videography, Media Production |
 | Market | B2B Enterprise, Government (WOG), MICE |
-| Government panel | VAPC Panel Vendor (Singapore procurement) |
+| Government engagement | Via GeBIZ (Singapore procurement), bizSAFE Level 3 |
 | GST registered | No |
 | Regions served | Singapore, Malaysia (KL/JB), Indonesia (Jakarta), Thailand (Bangkok), Australia (Sydney/Melbourne) |
 | Awards | SME500 Singapore 2023, SME500 Singapore 2024, Singapore Entrepreneur 100 Award 2023 |
@@ -30,7 +30,7 @@
 | MICE photography | Conference, trade show, and exhibition coverage |
 | Brand film production | 3-camera corporate video, documentary, brand stories |
 | Photo booth services | On-site instant print and digital photo booth |
-| Government / WOG photography | VAPC panel vendor, GeBIZ procurement |
+| Government / WOG photography | GeBIZ procurement |
 | Executive portraits | C-suite, board, and leadership photography |
 | Product photography | Commercial B2B product and packaging shoots |
 | Live streaming | Hybrid event AV and streaming |
@@ -40,7 +40,7 @@
 - RS Photography **founded by** Ricky Ee
 - RS Photography **located in** Singapore
 - RS Photography **operates in** Kuala Lumpur, Jakarta, Bangkok, Sydney, Melbourne
-- RS Photography **is a** VAPC Panel Vendor
+- RS Photography **can be engaged via** GeBIZ
 - RS Photography **has won** SME500 Singapore Award 2023
 - RS Photography **has won** SME500 Singapore Award 2024
 - RS Photography **has won** Singapore Entrepreneur 100 Award 2023
