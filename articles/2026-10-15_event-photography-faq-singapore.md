@@ -68,6 +68,10 @@ Usually 45–60 minutes before doors open, to check the venue and lighting.
 ### How fast do we get the photos?
 A preview set within 24–48 hours and the full gallery within 3–5 working days.
 
+### How many photos will we get?
+As a rough guide, around 50 to 150 edited photos per photographer per hour, depending on the event. Detailed retouching and RAW files are usually extra.
+→ [INTERNAL LINK: /insights/how-many-event-photos-editing "Photos and editing"]
+
 ### Can we get photos during the event?
 Yes. With an on-site editor, first selects can arrive within the hour.
 → [INTERNAL LINK: /insights/same-day-event-photo-delivery-singapore "Same-day delivery"]

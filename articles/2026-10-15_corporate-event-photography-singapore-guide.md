@@ -76,6 +76,8 @@ Standard delivery is a **preview set within 24–48 hours** and the **full galle
 
 → [INTERNAL LINK: /insights/same-day-event-photo-delivery-singapore "How same-day event photo delivery works"]
 
+→ [INTERNAL LINK: /insights/how-many-event-photos-editing "How many photos you get, and what editing includes"]
+
 After delivery, plan how the photos will be used: social posts, sponsors, press, a recap page and next year's event.
 
 → [INTERNAL LINK: /insights/how-to-use-corporate-event-photos "How to use your corporate event photos"]
