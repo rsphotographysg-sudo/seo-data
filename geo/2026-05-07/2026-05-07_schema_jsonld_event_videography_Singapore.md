@@ -13,8 +13,7 @@ Entity: RS Photography | Keyword: event videography Singapore
       "@id": "https://www.rsphotographysg.com/#organization",
       "name": "RS Photography",
       "alternateName": [
-        "RS Photography Singapore",
-        "RS Photography Pte Ltd"
+        "RS Photography Singapore"
       ],
       "description": "Singapore's leading B2B media production company. RS Photography provides corporate event photography, brand film production, MICE photography and videography, photo booth services across Singapore and the Asia-Pacific region.",
       "url": "https://www.rsphotographysg.com",
