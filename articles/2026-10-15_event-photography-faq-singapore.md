@@ -45,6 +45,10 @@ One for each area that runs at the same time. For dinners, plan about one per 20
 ### What should we send the photographer before the event?
 The run-of-show, a shot list, the speaker and VIP list with headshots, venue details and one day-of contact, at least a week before.
 
+### How do we get a good large group photo?
+Give it a fixed time in the programme (not the end), a location with a raised camera position, VIPs in the centre of the front row, and helpers to bring people in.
+→ [INTERNAL LINK: /insights/large-group-photo-corporate-event-singapore "Large group photos"]
+
 ### How early does the photographer arrive?
 Usually 45–60 minutes before doors open, to check the venue and lighting.
 
