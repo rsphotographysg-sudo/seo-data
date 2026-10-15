@@ -1,6 +1,6 @@
 # 答案型文章 — 上线指南
 
-19 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
+20 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
 
 ## 建议上线顺序（大致每周一篇）
 
@@ -8,6 +8,7 @@
 |---|---|---|---|
 | 10 月 20 日那周（和报价指南同一周，赶上年底晚宴季） | 年会 / 晚宴摄影指南 | /insights/annual-dinner-photography-singapore | 价格区间和第一篇一致；“每小时约 25–35 桌”是否符合你的经验；拍照亭起价 S$800 |
 | 10 月 20 日那周 | 企业活动摄影报价指南 | /insights/corporate-event-photography-cost-singapore | 价格区间；交付时间；“当天回复报价”承诺；是否保留 Airtasker 行情对比 |
+| 11 月 3 日那周起（总指南，先上线，之后每周补链接） | 新加坡企业活动摄影完整指南（总指南） | /insights/corporate-event-photography-singapore-guide | 只放已上线文章的链接，每上线一篇就补一个链接；首页和服务页都链接到这页；其他每篇文章的“Related reading”也链接回这页 |
 | 10 月 27 日那周 | 政府活动摄影：GeBIZ、bizSAFE、PDPA | /insights/government-event-photography-singapore | 已在 GeBIZ 注册；配图要有机构同意 |
 | 11 月 3 日那周 | 会议摄影清单 | /insights/conference-photography-checklist | “回复报价时附上草拟拍摄清单”承诺 |
 | 11 月 10 日那周 | 当天交付是怎么做到的 | /insights/same-day-event-photo-delivery-singapore | EXPRESS 24 名称和“1 小时内首批照片”；表格里的照片数量（10–30 张、50–150 张）是否符合你的做法 |
