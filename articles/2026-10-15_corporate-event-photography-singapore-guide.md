@@ -101,6 +101,7 @@ After delivery, plan how the photos will be used: social posts, sponsors, press,
 | Organisation | Key point | Guide |
 |---|---|---|
 | **Government agencies and statutory boards** | GeBIZ quotations, PO before work, bizSAFE, PDPA for vendors | [INTERNAL LINK: /insights/government-event-photography-singapore "Government event photography"] |
+| **Embassies and high commissions** | Every guest in the receiving line; precedence and titles; security lists in advance | [INTERNAL LINK: /insights/embassy-diplomatic-reception-photography-singapore "Embassy and diplomatic event photography"] |
 | **Schools** | Student consent first; name every prize winner; plan anniversaries early | [INTERNAL LINK: /insights/school-event-photography-singapore "School event photography"] |
 | **Hospitals and healthcare** | Patient privacy, clinical areas only with permission, infection control | [INTERNAL LINK: /insights/healthcare-hospital-photography-singapore "Healthcare photography"] |
 | **Religious and community organisations** | Agree what may be photographed during worship; plan an archive | [INTERNAL LINK: /insights/community-religious-celebration-photography-singapore "Community and religious celebration photography"] |

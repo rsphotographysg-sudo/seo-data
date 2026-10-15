@@ -1,6 +1,6 @@
 # 答案型文章 — 上线指南
 
-37 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
+38 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
 
 ## 建议上线顺序（大致每周一篇）
 
@@ -43,6 +43,7 @@
 | 5 月 25 日那周 | 活动照片版权和使用权 | /insights/event-photo-copyright-usage-rights-singapore | 版权法内容（2021 年 11 月 21 日起，委托拍摄的照片默认归摄影师）是根据律所文章写的，上线前请在 Singapore Statutes Online 或 IPOS 网站核对，必要时问律师；文中没写 RS 自己的标准条款，可以补上你们报价单里的使用权写法；补上 IPOS 或 SSO 的外部链接 |
 | 6 月 1 日那周（年中户外活动和家庭日季节） | 户外活动摄影：天气、下雨和光线 | /insights/outdoor-event-photography-singapore-weather | 季风季节和“新加坡雷电频率是全球最高之一”根据气象局（MSS）的公开说明写的，上线前可再核对；“相机提前 15–30 分钟拿到户外”是否符合你的做法；天气延误怎么收费；补上 MSS 网站的外部链接 |
 | 6 月 8 日那周 | 团建和公司外出会议（offsite）摄影 | /insights/team-building-offsite-photography-singapore | 是否提供当天幻灯片（闭幕或晚宴时播放）；水上活动是否有防水器材或只在岸上拍；是否接 Bintan、Batam 等海外 offsite；配图要客户同意 |
+| 6 月 15 日那周 | 大使馆 / 国庆招待会 / 外交活动摄影 | /insights/embassy-diplomatic-reception-photography-singapore | 文中写“我们拍政府、外交和官方活动”，确认你们拍过外交活动；不要点名大使馆客户，除非对方书面同意；“国庆招待会一般 2–4 小时、两位摄影师”是否符合你的经验 |
 
 每篇都要确认：联系页的真实网址（文章里先写成 `/contact`）。
 
