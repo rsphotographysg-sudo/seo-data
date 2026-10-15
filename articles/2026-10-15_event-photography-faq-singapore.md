@@ -130,6 +130,10 @@ Yes. Since 1 February 2021, vendors acting for public agencies are no longer exc
 Use stage marks, a pause facing the camera, and a running order to name photos per recipient.
 → [INTERNAL LINK: /insights/award-ceremony-photography-singapore "Award ceremonies"]
 
+### When should we plan photos for a company anniversary?
+Three to six months before the celebration, to photograph founders and long-serving staff, collect archive photos and design a book or video.
+→ [INTERNAL LINK: /insights/company-anniversary-celebration-photography-singapore "Company anniversaries"]
+
 ### How do we photograph lo hei and a lion dance?
 Find out exactly when each starts, place the photographer before the moment, start with the main table for lo hei, and get the lion's route and the plucking of the greens in advance.
 → [INTERNAL LINK: /insights/festive-corporate-celebration-photography-singapore "Festive celebrations"]
