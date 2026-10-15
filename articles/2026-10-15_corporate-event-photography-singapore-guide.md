@@ -17,7 +17,7 @@ author: "Ricky Ee, Director, RS Photography"
 - **preparation**: run-of-show, shot list, speaker list and venue details sent a week before
 - **delivery**: preview in 24–48 hours, or same-day selects when the photos are needed on the day
 
-This guide brings together everything we have written on the topic, with links to a detailed guide for each part.
+This guide brings together everything we have written on the topic, with links to a detailed guide for each part. For quick answers, see the [INTERNAL LINK: /insights/event-photography-faq-singapore "event photography FAQ"].
 
 *Written by Ricky Ee, Director of RS Photography. RS Photography has photographed corporate, MICE and government events in Singapore since 2013, with an in-house team covering photography, video, live streaming and photo booths.*
 
