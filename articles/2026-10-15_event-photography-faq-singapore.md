@@ -48,6 +48,7 @@ One for each area that runs at the same time. For dinners, plan about one per 20
 
 ### What should we send the photographer before the event?
 The run-of-show, a shot list, the speaker and VIP list with headshots, venue details and one day-of contact, at least a week before.
+→ [INTERNAL LINK: /insights/event-photography-brief-template "Brief template"]
 
 ### How do we get a good large group photo?
 Give it a fixed time in the programme (not the end), a location with a raised camera position, VIPs in the centre of the front row, and helpers to bring people in.
