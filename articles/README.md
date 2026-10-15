@@ -1,6 +1,6 @@
 # 答案型文章 — 上线指南
 
-18 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
+19 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
 
 ## 建议上线顺序（大致每周一篇）
 
@@ -24,6 +24,7 @@
 | 2 月 9 日那周 | 医院和医疗机构摄影 / 摄像 | /insights/healthcare-hospital-photography-singapore | 文中写“我们为医疗机构拍摄活动、员工专题和项目视频”，确认可以这样说；不要点名医院客户，除非对方书面同意；配图不能有病人 |
 | 2 月 16 日那周 | 非营利机构和慈善活动摄影 / 摄像 | /insights/nonprofit-charity-photography-singapore | 不要点名非营利客户，除非对方书面同意；“全年预先排好拍摄日较便宜”是否是你愿意提供的套餐；配图要有受助人或监护人同意 |
 | 2 月 23 日那周（年中家庭日开始规划） | 企业家庭日 / 员工活动摄影 | /insights/corporate-family-day-photography-singapore | “每 300–400 位来宾一位流动摄影师”是否符合你的经验；是否提供带品牌背景的家庭合照点；配图里的小孩要有家长同意 |
+| 3 月 2 日那周 | 海外活动摄影：派新加坡团队还是请当地 | /insights/overseas-event-photography-singapore-team | 确认覆盖的国家（马来西亚、印尼、泰国、澳洲）；路程日的收费方式；是否陪同代表团出国 |
 
 每篇都要确认：联系页的真实网址（文章里先写成 `/contact`）。
 
