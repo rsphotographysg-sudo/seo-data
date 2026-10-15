@@ -30,6 +30,10 @@ It depends on the vendor. RS Photography is not GST-registered, so our quotation
 ### How far ahead should we book?
 Four to eight weeks for most events. Book earlier for November to January, the busiest season for annual dinners and year-end events.
 
+### Do we need a professional, or can staff use phones?
+Phones are enough for small, bright, informal internal events. A professional is worth it for low light, stages, VIPs, large events, and photos for press, reports or ads.
+→ [INTERNAL LINK: /insights/professional-event-photographer-vs-smartphone "Professional or phone"]
+
 ### How do we choose a photographer?
 Ask for full galleries from events like yours, confirm backup photographers and equipment, and get delivery times and usage rights in writing.
 → [INTERNAL LINK: /insights/how-to-choose-corporate-event-photographer-singapore "How to choose an event photographer"]

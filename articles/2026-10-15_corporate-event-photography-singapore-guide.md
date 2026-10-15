@@ -43,6 +43,10 @@ Ask to see **full galleries** from events like yours, not just highlights. Confi
 
 → [INTERNAL LINK: /insights/how-to-choose-corporate-event-photographer-singapore "How to choose a corporate event photographer: 10 questions to ask"]
 
+Not sure you need a professional at all? Phones are enough for small, bright, informal events.
+
+→ [INTERNAL LINK: /insights/professional-event-photographer-vs-smartphone "Professional photographer or phone?"]
+
 ---
 
 ## 3. Planning and preparation
