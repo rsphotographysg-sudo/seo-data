@@ -119,6 +119,10 @@ It depends on the quotation documents. Level 3 is a common requirement for on-si
 Yes. The key is the receiving line: one photographer stays with the ambassador to photograph every guest, while a second covers the room, following protocol and precedence.
 → [INTERNAL LINK: /insights/embassy-diplomatic-reception-photography-singapore "Embassy events"]
 
+### How do you photograph a ministerial visit or facility tour?
+Walk the route beforehand, stay ahead of the group at every stop, photograph the VIP interacting with staff, follow PPE and security rules, and deliver captioned photos the same day.
+→ [INTERNAL LINK: /insights/vip-visit-facility-tour-photography-singapore "VIP visits"]
+
 ### Does the PDPA apply to vendors working for government agencies?
 Yes. Since 1 February 2021, vendors acting for public agencies are no longer excluded from the PDPA.
 
