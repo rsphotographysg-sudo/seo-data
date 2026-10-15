@@ -59,6 +59,10 @@ Give it a fixed time in the programme (not the end), a location with a raised ca
 Agree a wet-weather plan before the day: covered areas, an indoor backup, a decision time and one person who decides. Pause outdoor activities if there is lightning.
 → [INTERNAL LINK: /insights/outdoor-event-photography-singapore-weather "Outdoor events"]
 
+### Why do speakers look dark in event photos?
+Because the screen behind them is brighter than their faces. Ask the AV team for more front light on speakers and to lower the screen brightness during speeches.
+→ [INTERNAL LINK: /insights/event-stage-lighting-backdrop-photos "Stage lighting and backdrops"]
+
 ### How early does the photographer arrive?
 Usually 45–60 minutes before doors open, to check the venue and lighting.
 

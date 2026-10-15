@@ -60,7 +60,7 @@ Send your photographer four things at least a week before:
 - the speaker and VIP list with headshots
 - venue details
 
-Plan the group photo and make sure speakers' faces are lit.
+Plan the group photo and make sure speakers' faces are lit ([INTERNAL LINK: /insights/event-stage-lighting-backdrop-photos "stage lighting and backdrops that photograph well"]).
 
 → [INTERNAL LINK: /insights/conference-photography-checklist "Conference photography checklist for organisers"]
 
