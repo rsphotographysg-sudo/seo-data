@@ -83,6 +83,7 @@ After delivery, plan how the photos will be used: social posts, sponsors, press,
 | **Conferences and summits** | One photographer per parallel area; send the speaker list | [INTERNAL LINK: /insights/conference-photography-checklist "Conference checklist"] |
 | **Tech conferences and startup events** | Expose for faces on LED stages; every founder at pitch nights | [INTERNAL LINK: /insights/tech-startup-event-photography-singapore "Tech and startup event photography"] |
 | **Annual dinners and galas** | One photographer per 200–250 guests; photograph every table between courses | [INTERNAL LINK: /insights/annual-dinner-photography-singapore "Annual dinner photography"] |
+| **Chinese New Year and festive celebrations** | Know when lo hei starts; plan the lion dance route; book 4–6 weeks ahead | [INTERNAL LINK: /insights/festive-corporate-celebration-photography-singapore "Festive celebration photography"] |
 | **Award ceremonies and graduations** | Stage marks, a pause facing the camera, photos named per recipient | [INTERNAL LINK: /insights/award-ceremony-photography-singapore "Award ceremony photography"] |
 | **Exhibitions and trade shows** | Empty booth before doors open, busy booth at peak hours | [INTERNAL LINK: /insights/exhibition-booth-photography-singapore "Exhibition booth photography"] |
 | **Product launches and press events** | Rehearse the unveil; send captioned photos within hours | [INTERNAL LINK: /insights/product-launch-press-event-photography-singapore "Product launch photography"] |

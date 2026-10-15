@@ -112,6 +112,10 @@ Yes. Since 1 February 2021, vendors acting for public agencies are no longer exc
 Use stage marks, a pause facing the camera, and a running order to name photos per recipient.
 → [INTERNAL LINK: /insights/award-ceremony-photography-singapore "Award ceremonies"]
 
+### How do we photograph lo hei and a lion dance?
+Find out exactly when each starts, place the photographer before the moment, start with the main table for lo hei, and get the lion's route and the plucking of the greens in advance.
+→ [INTERNAL LINK: /insights/festive-corporate-celebration-photography-singapore "Festive celebrations"]
+
 ### When is the best time to photograph an exhibition booth?
 The empty booth before doors open, and the busy booth at peak hours.
 → [INTERNAL LINK: /insights/exhibition-booth-photography-singapore "Exhibitions"]
