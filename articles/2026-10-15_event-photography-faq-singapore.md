@@ -49,6 +49,10 @@ The run-of-show, a shot list, the speaker and VIP list with headshots, venue det
 Give it a fixed time in the programme (not the end), a location with a raised camera position, VIPs in the centre of the front row, and helpers to bring people in.
 → [INTERNAL LINK: /insights/large-group-photo-corporate-event-singapore "Large group photos"]
 
+### What if our outdoor event gets rained out?
+Agree a wet-weather plan before the day: covered areas, an indoor backup, a decision time and one person who decides. Pause outdoor activities if there is lightning.
+→ [INTERNAL LINK: /insights/outdoor-event-photography-singapore-weather "Outdoor events"]
+
 ### How early does the photographer arrive?
 Usually 45–60 minutes before doors open, to check the venue and lighting.
 
