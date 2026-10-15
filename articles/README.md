@@ -1,6 +1,6 @@
 # 答案型文章 — 上线指南
 
-11 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
+12 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
 
 ## 建议上线顺序（大致每周一篇）
 
@@ -17,6 +17,7 @@
 | 12 月 8 日那周 | 企业形象照 / 员工头像 | /insights/corporate-headshots-singapore | “每人 5 分钟、每小时 10–12 人、一天 60–70 人”是否符合你的做法；是否提供季度新员工补拍；文中没写价格，可补上你的头像拍摄价 |
 | 12 月 15 日那周 | 活动摄影 + 摄像：同一团队还是分开请 | /insights/event-photography-and-videography-singapore | 摄像起价 S$2,000 和现有摄像报价页一致；精华视频一般 1–2 周交付、含一轮修改；是否提供直播 |
 | 1 月 5 日那周（新学年开始，学校规划校庆和活动） | 学校活动摄影 | /insights/school-event-photography-singapore | 是否提供班级合照；“每班 5–8 分钟”是否符合你的经验；配图必须用已获家长同意的学生照片 |
+| 1 月 12 日那周 | 企业活动直播 / 混合活动 | /insights/live-streaming-corporate-events-singapore | 确认你们实际提供的直播规格（机位数、导播台、4G/5G 备份、可直播的平台）；文中没写价格 |
 
 每篇都要确认：联系页的真实网址（文章里先写成 `/contact`）。
 
