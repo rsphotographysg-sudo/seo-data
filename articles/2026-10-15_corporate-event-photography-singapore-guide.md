@@ -107,6 +107,7 @@ After delivery, plan how the photos will be used: social posts, sponsors, press,
 | **Runs and sports events** | Fixed photo points; bib-searchable galleries; flash for night races | [INTERNAL LINK: /insights/running-sports-event-photography-singapore "Running and sports event photography"] |
 | **Large group photos** | Fixed time in the programme; raised camera; VIPs centre front | [INTERNAL LINK: /insights/large-group-photo-corporate-event-singapore "Large group photos"] |
 | **Events overseas** | Fly your Singapore team for high-profile events; plan travel early | [INTERNAL LINK: /insights/overseas-event-photography-singapore-team "Overseas event photography"] |
+| **Incentive trips and MICE groups in Singapore** | Landmark group photo; every award winner at the gala; daily highlights during the trip | [INTERNAL LINK: /insights/incentive-trip-mice-group-photography-singapore "Incentive trip photography"] |
 
 ---
 
