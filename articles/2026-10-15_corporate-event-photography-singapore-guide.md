@@ -73,12 +73,14 @@ Standard delivery is a **preview set within 24–48 hours** and the **full galle
 | Event | Key point | Guide |
 |---|---|---|
 | **Conferences and summits** | One photographer per parallel area; send the speaker list | [INTERNAL LINK: /insights/conference-photography-checklist "Conference checklist"] |
+| **Tech conferences and startup events** | Expose for faces on LED stages; every founder at pitch nights | [INTERNAL LINK: /insights/tech-startup-event-photography-singapore "Tech and startup event photography"] |
 | **Annual dinners and galas** | One photographer per 200–250 guests; photograph every table between courses | [INTERNAL LINK: /insights/annual-dinner-photography-singapore "Annual dinner photography"] |
 | **Award ceremonies and graduations** | Stage marks, a pause facing the camera, photos named per recipient | [INTERNAL LINK: /insights/award-ceremony-photography-singapore "Award ceremony photography"] |
 | **Exhibitions and trade shows** | Empty booth before doors open, busy booth at peak hours | [INTERNAL LINK: /insights/exhibition-booth-photography-singapore "Exhibition booth photography"] |
 | **Product launches and press events** | Rehearse the unveil; send captioned photos within hours | [INTERNAL LINK: /insights/product-launch-press-event-photography-singapore "Product launch photography"] |
 | **Groundbreaking and opening ceremonies** | Plan the key moment; follow site safety rules | [INTERNAL LINK: /insights/groundbreaking-opening-ceremony-photography-singapore "Groundbreaking and opening ceremony photography"] |
 | **Family days and staff events** | Roaming photographers, a family photo spot, care with children | [INTERNAL LINK: /insights/corporate-family-day-photography-singapore "Family day photography"] |
+| **Runs and sports events** | Fixed photo points; bib-searchable galleries; flash for night races | [INTERNAL LINK: /insights/running-sports-event-photography-singapore "Running and sports event photography"] |
 | **Events overseas** | Fly your Singapore team for high-profile events; plan travel early | [INTERNAL LINK: /insights/overseas-event-photography-singapore-team "Overseas event photography"] |
 
 ---
@@ -90,6 +92,9 @@ Standard delivery is a **preview set within 24–48 hours** and the **full galle
 | **Government agencies and statutory boards** | GeBIZ quotations, PO before work, bizSAFE, PDPA for vendors | [INTERNAL LINK: /insights/government-event-photography-singapore "Government event photography"] |
 | **Schools** | Student consent first; name every prize winner; plan anniversaries early | [INTERNAL LINK: /insights/school-event-photography-singapore "School event photography"] |
 | **Hospitals and healthcare** | Patient privacy, clinical areas only with permission, infection control | [INTERNAL LINK: /insights/healthcare-hospital-photography-singapore "Healthcare photography"] |
+| **Religious and community organisations** | Agree what may be photographed during worship; plan an archive | [INTERNAL LINK: /insights/community-religious-celebration-photography-singapore "Community and religious celebration photography"] |
+| **Banks and financial services** | Client privacy levels, confidentiality and compliance review | [INTERNAL LINK: /insights/financial-services-event-photography-singapore "Financial services event photography"] |
+| **Associations and chambers** | Council photo at the AGM; photograph members; one vendor for the year | [INTERNAL LINK: /insights/association-member-event-photography-singapore "Association and member event photography"] |
 | **Non-profits and charities** | Beneficiary dignity and consent; one shoot for many uses | [INTERNAL LINK: /insights/nonprofit-charity-photography-singapore "Non-profit photography"] |
 
 ---
@@ -103,6 +108,8 @@ Standard delivery is a **preview set within 24–48 hours** and the **full galle
 | **Corporate and brand videos** | 4–8 weeks from brief to delivery; agree review rounds | [INTERNAL LINK: /insights/corporate-video-production-singapore "Corporate video production"] |
 | **Corporate headshots** | On-site sessions, about 10–12 people an hour, a recorded setup for new joiners | [INTERNAL LINK: /insights/corporate-headshots-singapore "Corporate headshots"] |
 | **Annual report photography** | Board portraits on a meeting day; real people and operations | [INTERNAL LINK: /insights/annual-report-photography-singapore "Annual report photography"] |
+| **Hotel and venue photography** | Each room in its main setups; staged plus real-event photos | [INTERNAL LINK: /insights/hotel-venue-photography-mice-singapore "Hotel and venue photography for MICE"] |
+| **B2B product photography** | Accurate colour, consistent angles; large equipment on site | [INTERNAL LINK: /insights/b2b-product-photography-singapore "B2B product photography"] |
 | **Photo booths** | Instant branded prints from S$800; about 3 m × 3 m of space | [INTERNAL LINK: /insights/photo-booth-rental-corporate-events-singapore "Photo booth rental"] |
 
 ---
