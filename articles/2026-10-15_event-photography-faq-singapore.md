@@ -133,7 +133,7 @@ Photo booths with instant prints start from S$800 at RS Photography.
 
 ### How many headshots can be done in an hour?
 About 10–12 people, using 5-minute slots.
-→ [INTERNAL LINK: /insights/corporate-headshots-singapore "Corporate headshots"]
+→ [INTERNAL LINK: /insights/corporate-headshots-singapore "Corporate headshots"] · [INTERNAL LINK: /insights/workplace-employer-branding-photography-singapore "Workplace photos"]
 
 ---
 
