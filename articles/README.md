@@ -46,6 +46,8 @@
 
 每篇都要确认：联系页的真实网址（文章里先写成 `/contact`）。
 
+**自动发布：** 用 `publishing/publish.sh` 一条命令完成下面第 1–3 步，见 `publishing/发布自动化.md`。
+
 ## 每篇上线步骤
 
 1. 把 `[INTERNAL LINK: /路径 "文字"]` 换成真的链接，把 `[EXTERNAL LINK: …]` 换成对应网站的链接（不想放可以删掉）。

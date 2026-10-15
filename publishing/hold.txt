@@ -1,0 +1,7 @@
+# Articles held back from publishing until the point after "#" is confirmed.
+# Delete a line once it is confirmed; the article then goes live in the next weekly build.
+how-to-choose-corporate-event-photographer-singapore  # Q10 mentions public liability insurance: buy the insurance first
+corporate-video-production-singapore                  # states "many projects are S$10,000–20,000": confirm you want this range public
+running-sports-event-photography-singapore            # mentions bib-number search galleries: confirm you can offer this
+tech-startup-event-photography-singapore              # names Asia Tech x Singapore and HR Tech Asia: confirm you may name them
+event-photo-copyright-usage-rights-singapore          # legal points: check against the Copyright Act 2021 on SSO or with a lawyer

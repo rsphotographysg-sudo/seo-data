@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Optional: runs publishing/publish.sh every Tuesday at 9:00 on your Mac.
+     Replace REPO_PATH with the full path of your seo-data folder, then see 发布自动化.md. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.rsphotography.publish-insights</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>REPO_PATH/publishing/publish.sh</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key><integer>2</integer>
+    <key>Hour</key><integer>9</integer>
+    <key>Minute</key><integer>0</integer>
+  </dict>
+  <key>StandardOutPath</key><string>/tmp/rs-publish-insights.log</string>
+  <key>StandardErrorPath</key><string>/tmp/rs-publish-insights.log</string>
+</dict>
+</plist>
