@@ -1,6 +1,6 @@
 # 答案型文章 — 上线指南
 
-24 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
+25 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
 
 ## 建议上线顺序（大致每周一篇）
 
@@ -30,6 +30,7 @@
 | 3 月 9 日那周 | 动土仪式 / 封顶 / 开幕典礼摄影 | /insights/groundbreaking-opening-ceremony-photography-singapore | 是否提供工程进度摄影；工地 PPE 是自备还是工地提供；无人机只能写“需要持牌操作员和许可”，不要说 RS 自己有执照 |
 | 3 月 16 日那周（很多协会 3–6 月开 AGM） | 商会 / 协会 / AGM / 会员活动摄影 | /insights/association-member-event-photography-singapore | 是否提供全年固定费率合约；不要点名商会客户，除非对方书面同意 |
 | 3 月 23 日那周 | 酒店和场地 MICE 营销摄影 | /insights/hotel-venue-photography-mice-singapore | 是否接场地拍摄（空场布置 + 真实活动）；可以先推给 Grand Hyatt 等已有联系的酒店；无人机外景只能写“持牌操作员” |
+| 3 月 30 日那周 | B2B 产品摄影 | /insights/b2b-product-photography-singapore | 是否接产品 / 型录拍摄（棚拍或到客户现场）；按天还是按件 / 按角度收费；是否做去背景 |
 
 每篇都要确认：联系页的真实网址（文章里先写成 `/contact`）。
 
