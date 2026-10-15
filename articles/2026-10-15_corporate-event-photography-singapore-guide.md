@@ -91,6 +91,7 @@ After delivery, plan how the photos will be used: social posts, sponsors, press,
 | **Chinese New Year and festive celebrations** | Know when lo hei starts; plan the lion dance route; book 4–6 weeks ahead | [INTERNAL LINK: /insights/festive-corporate-celebration-photography-singapore "Festive celebration photography"] |
 | **Award ceremonies and graduations** | Stage marks, a pause facing the camera, photos named per recipient | [INTERNAL LINK: /insights/award-ceremony-photography-singapore "Award ceremony photography"] |
 | **Exhibitions and trade shows** | Empty booth before doors open, busy booth at peak hours | [INTERNAL LINK: /insights/exhibition-booth-photography-singapore "Exhibition booth photography"] |
+| **Roadshows and brand activations** | Setup before opening; peak hours; the same shot list at every mall | [INTERNAL LINK: /insights/roadshow-brand-activation-photography-singapore "Roadshow photography"] |
 | **Product launches and press events** | Rehearse the unveil; send captioned photos within hours | [INTERNAL LINK: /insights/product-launch-press-event-photography-singapore "Product launch photography"] |
 | **Groundbreaking and opening ceremonies** | Plan the key moment; follow site safety rules | [INTERNAL LINK: /insights/groundbreaking-opening-ceremony-photography-singapore "Groundbreaking and opening ceremony photography"] |
 | **Family days and staff events** | Roaming photographers, a family photo spot, care with children | [INTERNAL LINK: /insights/corporate-family-day-photography-singapore "Family day photography"] |
