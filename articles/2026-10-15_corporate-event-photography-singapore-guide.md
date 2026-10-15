@@ -62,6 +62,8 @@ Plan the group photo and make sure speakers' faces are lit.
 
 → [INTERNAL LINK: /insights/conference-photography-checklist "Conference photography checklist for organisers"]
 
+→ [INTERNAL LINK: /insights/event-photography-brief-template "Event photography brief template"]
+
 For outdoor events, schedule key moments in the morning or late afternoon and agree a wet-weather plan.
 
 → [INTERNAL LINK: /insights/outdoor-event-photography-singapore-weather "Outdoor event photography: heat, rain and light"]

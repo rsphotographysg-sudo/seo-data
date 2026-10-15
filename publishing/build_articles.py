@@ -70,6 +70,8 @@ body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 -apple-system
 .rs-article ul.checklist{list-style:none;padding-left:0}
 .rs-article ul.checklist li:before{content:"\\2610  ";color:var(--muted)}
 .rs-article code{background:#f3f3f3;padding:1px 5px;border-radius:4px;font-size:.9em}
+.rs-article pre{background:#f7f7f7;border:1px solid var(--line);border-radius:6px;padding:16px;overflow-x:auto;white-space:pre-wrap}
+.rs-article pre code{background:none;padding:0;font-size:.85rem}
 .rs-article .source{color:var(--muted);font-size:.9em}
 """
 
@@ -172,6 +174,15 @@ def md_to_html(md, linker):
         s = line.strip()
         if not s:
             flush(); i += 1; continue
+        if s.startswith("```"):
+            flush()
+            i += 1
+            code = []
+            while i < len(lines) and not lines[i].strip().startswith("```"):
+                code.append(lines[i]); i += 1
+            i += 1
+            out.append("<pre><code>%s</code></pre>" % html.escape("\n".join(code), quote=False))
+            continue
         if re.fullmatch(r"-{3,}", s):
             flush(); out.append("<hr>"); i += 1; continue
         h = re.match(r"(#{1,4}) (.*)", s)
