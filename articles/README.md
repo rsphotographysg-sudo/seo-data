@@ -1,6 +1,6 @@
 # 答案型文章 — 上线指南
 
-16 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
+17 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
 
 ## 建议上线顺序（大致每周一篇）
 
@@ -22,6 +22,7 @@
 | 1 月 26 日那周 | 企业活动拍照亭租赁 | /insights/photo-booth-rental-corporate-events-singapore | 拍照亭起价 S$800；你们提供哪几种拍照亭（开放式、封闭式、流动摄影师加打印、GIF、360°）；场地 3 m × 3 m 是否够用；打印是否无限张 |
 | 2 月 2 日那周 | 企业宣传片 / 品牌影片制作 | /insights/corporate-video-production-singapore | “很多项目在 S$10,000–20,000 之间”是根据你近期的视频报价（NUHS、SINDA、SYFC、APSN 等）写的，确认愿意公开这个区间；“4–8 周交付、2–3 轮修改”是否符合你的做法 |
 | 2 月 9 日那周 | 医院和医疗机构摄影 / 摄像 | /insights/healthcare-hospital-photography-singapore | 文中写“我们为医疗机构拍摄活动、员工专题和项目视频”，确认可以这样说；不要点名医院客户，除非对方书面同意；配图不能有病人 |
+| 2 月 16 日那周 | 非营利机构和慈善活动摄影 / 摄像 | /insights/nonprofit-charity-photography-singapore | 不要点名非营利客户，除非对方书面同意；“全年预先排好拍摄日较便宜”是否是你愿意提供的套餐；配图要有受助人或监护人同意 |
 
 每篇都要确认：联系页的真实网址（文章里先写成 `/contact`）。
 
