@@ -192,7 +192,11 @@ About 10–12 people, using 5-minute slots.
 
 ---
 
-## Overseas events
+## Incentive groups and overseas events
+
+### Do you photograph incentive groups visiting Singapore?
+Yes. Coverage usually includes the welcome, city tours, a landmark group photo and the gala or award night, with daily highlights shared during the trip.
+→ [INTERNAL LINK: /insights/incentive-trip-mice-group-photography-singapore "Incentive trips"]
 
 ### Can a Singapore team cover events overseas?
 Yes. It is worth it for high-profile events and delegations. Flights, accommodation and travel days are added to the quote.

@@ -1,6 +1,6 @@
 # 答案型文章 — 上线指南
 
-47 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
+48 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
 
 ## 建议上线顺序（大致每周一篇）
 
@@ -53,6 +53,7 @@
 | 8 月 3 日那周 | 活动舞台灯光和背景板怎么做才好拍 | /insights/event-stage-lighting-backdrop-photos | 文中写“我们会在活动前和 AV 团队沟通灯光”，确认符合你们的做法；“背景板至少 3 米宽（8–10 人合照）”是否符合你的经验；可以发给合作的 AV 公司和活动公司 |
 | 8 月 10 日那周 | 公司周年庆摄影（10、25、50 周年） | /insights/company-anniversary-celebration-photography-singapore | 是否接整年的周年项目（肖像、办公环境、活动、纪念册和影片）；是否提供旧照片扫描和纪念册精修；配图要客户同意 |
 | 8 月 17 日那周 | 部长 / 贵宾到访和参观设施摄影 | /insights/vip-visit-facility-tour-photography-singapore | 是否接 1–3 小时的到访拍摄；PPE（安全帽、安全鞋等）是自备还是客户提供；配图要客户同意，不要点名到访的部长或客户，除非对方书面同意 |
+| 8 月 24 日那周 | 奖励旅游 / MICE 团体来新加坡摄影 | /insights/incentive-trip-mice-group-photography-singapore | 是否接奖励旅游团（按天或半天）；是否提供每天晚上交付精华；是否接受 DMC 白标交付（用 DMC 名义）；可以把这篇发给新加坡的 DMC 和旅行社 |
 
 每篇都要确认：联系页的真实网址（文章里先写成 `/contact`）。
 
