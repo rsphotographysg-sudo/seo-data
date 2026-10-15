@@ -63,6 +63,10 @@ A preview set within 24–48 hours and the full gallery within 3–5 working day
 Yes. With an on-site editor, first selects can arrive within the hour.
 → [INTERNAL LINK: /insights/same-day-event-photo-delivery-singapore "Same-day delivery"]
 
+### What should we do with the photos afterwards?
+Post during the event and the next day, send speakers and sponsors their photos, build a recap page within a week, and reuse the photos for next year's event and the annual report.
+→ [INTERNAL LINK: /insights/how-to-use-corporate-event-photos "Using event photos"]
+
 ### Who owns the photos?
 Whatever the quotation and contract say. Confirm usage rights before booking, especially for advertising or government contracts.
 
