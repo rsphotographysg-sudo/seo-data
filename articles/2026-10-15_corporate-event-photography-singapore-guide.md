@@ -100,6 +100,7 @@ After delivery, plan how the photos will be used: social posts, sponsors, press,
 | **Exhibitions and trade shows** | Empty booth before doors open, busy booth at peak hours | [INTERNAL LINK: /insights/exhibition-booth-photography-singapore "Exhibition booth photography"] |
 | **Roadshows and brand activations** | Setup before opening; peak hours; the same shot list at every mall | [INTERNAL LINK: /insights/roadshow-brand-activation-photography-singapore "Roadshow photography"] |
 | **Product launches and press events** | Rehearse the unveil; send captioned photos within hours | [INTERNAL LINK: /insights/product-launch-press-event-photography-singapore "Product launch photography"] |
+| **Property launches and showflats** | Interiors before opening; launch-weekend demand; buyer privacy on booking day | [INTERNAL LINK: /insights/property-launch-showflat-photography-singapore "Property launch photography"] |
 | **Groundbreaking and opening ceremonies** | Plan the key moment; follow site safety rules | [INTERNAL LINK: /insights/groundbreaking-opening-ceremony-photography-singapore "Groundbreaking and opening ceremony photography"] |
 | **VIP visits and facility tours** | Walk the route first; stay ahead of the group; PPE and confidential areas | [INTERNAL LINK: /insights/vip-visit-facility-tour-photography-singapore "VIP visit photography"] |
 | **Family days and staff events** | Roaming photographers, a family photo spot, care with children | [INTERNAL LINK: /insights/corporate-family-day-photography-singapore "Family day photography"] |

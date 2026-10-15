@@ -1,6 +1,6 @@
 # 答案型文章 — 上线指南
 
-49 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
+50 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
 
 ## 建议上线顺序（大致每周一篇）
 
@@ -55,6 +55,7 @@
 | 8 月 17 日那周 | 部长 / 贵宾到访和参观设施摄影 | /insights/vip-visit-facility-tour-photography-singapore | 是否接 1–3 小时的到访拍摄；PPE（安全帽、安全鞋等）是自备还是客户提供；配图要客户同意，不要点名到访的部长或客户，除非对方书面同意 |
 | 8 月 24 日那周 | 奖励旅游 / MICE 团体来新加坡摄影 | /insights/incentive-trip-mice-group-photography-singapore | 是否接奖励旅游团（按天或半天）；是否提供每天晚上交付精华；是否接受 DMC 白标交付（用 DMC 名义）；可以把这篇发给新加坡的 DMC 和旅行社 |
 | 8 月 31 日那周 | 企业 / 慈善高尔夫球日摄影 | /insights/corporate-golf-day-photography-singapore | 是否接高尔夫球日（一般全天）；摄影师是否熟悉高尔夫礼仪；“新加坡球场遇到雷电会暂停比赛”是一般做法，可再核对；配图要主办方同意 |
+| 9 月 7 日那周 | 房地产项目推出 / 示范单位活动摄影 | /insights/property-launch-showflat-photography-singapore | 是否接示范单位室内摄影（需要三脚架和灯光，偏建筑摄影）；是否接推出周末的时段拍摄；订购日一定不能拍到买家证件和文件；配图要发展商同意 |
 
 每篇都要确认：联系页的真实网址（文章里先写成 `/contact`）。
 
