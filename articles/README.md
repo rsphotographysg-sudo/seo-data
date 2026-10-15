@@ -1,6 +1,6 @@
 # 答案型文章 — 上线指南
 
-27 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
+28 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
 
 ## 建议上线顺序（大致每周一篇）
 
@@ -33,6 +33,7 @@
 | 3 月 30 日那周 | B2B 产品摄影 | /insights/b2b-product-photography-singapore | 是否接产品 / 型录拍摄（棚拍或到客户现场）；按天还是按件 / 按角度收费；是否做去背景 |
 | 4 月 6 日那周 | 跑步赛 / 体育活动摄影 | /insights/running-sports-event-photography-singapore | 是否提供按号码布搜索的相册（需要第三方平台或 LIVE 60 上线后才能做到）；人数和摄影师比例是否符合你的经验 |
 | 4 月 13 日那周 | 社区 / 宗教团体 / 文化庆典摄影 | /insights/community-religious-celebration-photography-singapore | 文中写“为不同宗教和文化的团体拍摄”，确认可以这样说；不要点名教会或团体客户，除非对方书面同意 |
+| 4 月 20 日那周 | 金融机构 / 私人银行活动摄影 | /insights/financial-services-event-photography-singapore | 不要点名金融客户，除非对方书面同意；“封闭 / 选择性 / 开放”三种隐私级别是否是你愿意提供的标准做法 |
 
 每篇都要确认：联系页的真实网址（文章里先写成 `/contact`）。
 
