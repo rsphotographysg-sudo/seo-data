@@ -154,6 +154,10 @@ Usually one to two hours, covering the opening, activities and the closing. Seve
 Every flight before tee-off, the flag-off, sponsor and contest holes, players in action without disturbing play, and every winner at the prize dinner.
 → [INTERNAL LINK: /insights/corporate-golf-day-photography-singapore "Golf days"]
 
+### Can buyers be photographed at a property launch?
+Only with care. Keep forms, cheques, IDs and screens out of frame, and don't use identifiable buyers in public photos without consent. Focus on the showflat, the model, crowds and the developer's team.
+→ [INTERNAL LINK: /insights/property-launch-showflat-photography-singapore "Property launches"]
+
 ### When is the best time to photograph an exhibition booth?
 The empty booth before doors open, and the busy booth at peak hours.
 → [INTERNAL LINK: /insights/exhibition-booth-photography-singapore "Exhibitions"]
