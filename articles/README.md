@@ -1,6 +1,6 @@
 # 答案型文章 — 上线指南
 
-59 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
+60 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
 
 ## 建议上线顺序（大致每周一篇）
 
@@ -65,6 +65,7 @@
 | 10 月 26 日那周 | 画廊 / 博物馆展览开幕摄影 | /insights/gallery-museum-exhibition-opening-photography-singapore | 是否接展览开幕和展场照（installation views）；配图里的艺术品要画廊和艺术家同意；不要点名画廊或博物馆，除非对方书面同意 |
 | 11 月 2 日那周 | 企业社会责任（CSR）和可持续发展活动摄影 | /insights/csr-sustainability-event-photography-singapore | 是否接早上的户外 CSR 活动；是否提供给可持续发展报告用的带说明文件夹；配图要合作机构和受助人同意 |
 | 11 月 9 日那周 | 汽车发布会 / 展厅开幕摄影 | /insights/car-launch-automotive-event-photography-singapore | 是否接汽车发布会（开场前拍车 + 活动）；是否接试驾或媒体试驾；不要点名汽车品牌，除非对方书面同意；配图要品牌同意 |
+| 11 月 16 日那周 | 工厂 / 工地 / 安全日活动摄影 | /insights/industrial-site-safety-event-photography-singapore | 文中写“我们有 bizSAFE Level 3”，请确认证书仍有效；“裕廊岛部分区域限制拍摄”是一般说法，可再核对；是否接工厂和工地活动；PPE 是否自备 |
 
 每篇都要确认：联系页的真实网址（文章里先写成 `/contact`）。
 
