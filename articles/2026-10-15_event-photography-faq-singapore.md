@@ -170,6 +170,10 @@ Before guests arrive, with the chef plating each dish fresh. Then photograph the
 Usually, but check the performer's agreement first: some limit photos, video or flash, or need approval before publishing.
 → [INTERNAL LINK: /insights/stage-performance-photography-corporate-events-singapore "Stage performances"]
 
+### How do you photograph a university or polytechnic open house?
+With several photographers or fixed points across the campus, covering every faculty's booth, demonstrations, talks and tours, with same-day selects for social media.
+→ [INTERNAL LINK: /insights/university-polytechnic-event-photography-singapore "Universities and polytechnics"]
+
 ### When is the best time to photograph an exhibition booth?
 The empty booth before doors open, and the busy booth at peak hours.
 → [INTERNAL LINK: /insights/exhibition-booth-photography-singapore "Exhibitions"]
