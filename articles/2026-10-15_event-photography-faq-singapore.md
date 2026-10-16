@@ -127,6 +127,10 @@ Walk the route beforehand, stay ahead of the group at every stop, photograph the
 The guest of honour's arrival, walkabout and speech, residents of all ages at the activities, volunteers and partners, and group photos with the committee.
 → [INTERNAL LINK: /insights/grassroots-community-event-photography-singapore "Community events"]
 
+### Can you photograph events at factories and industrial sites?
+Yes, with the right PPE, the site induction, any photography permits and an escort, staying out of restricted and hazardous areas, and showing correct safety practice in every photo.
+→ [INTERNAL LINK: /insights/industrial-site-safety-event-photography-singapore "Industrial sites"]
+
 ### Does the PDPA apply to vendors working for government agencies?
 Yes. Since 1 February 2021, vendors acting for public agencies are no longer excluded from the PDPA.
 
