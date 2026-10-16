@@ -1,6 +1,6 @@
 # 答案型文章 — 上线指南
 
-52 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
+53 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
 
 ## 建议上线顺序（大致每周一篇）
 
@@ -58,6 +58,7 @@
 | 9 月 7 日那周 | 房地产项目推出 / 示范单位活动摄影 | /insights/property-launch-showflat-photography-singapore | 是否接示范单位室内摄影（需要三脚架和灯光，偏建筑摄影）；是否接推出周末的时段拍摄；订购日一定不能拍到买家证件和文件；配图要发展商同意 |
 | 9 月 14 日那周 | 基层组织 / 民众联络所社区活动摄影 | /insights/grassroots-community-event-photography-singapore | 文中写“我们拍政府、社区和公共活动”，确认可以这样说；是否接 2–4 小时的社区活动；不要点名议员或基层组织，除非对方书面同意；配图要主办方同意 |
 | 9 月 21 日那周 | 餐厅开幕 / 媒体试吃会摄影 | /insights/restaurant-launch-media-tasting-photography-singapore | 是否接餐饮拍摄（开场前的菜品拍摄 + 活动）；是否提供菜品精修和媒体资料包；配图要餐厅同意 |
+| 9 月 28 日那周 | 律师事务所 / 会计师事务所 / 顾问公司摄影 | /insights/law-firm-professional-services-photography-singapore | 是否接合伙人肖像（统一风格）和客户研讨会；不要点名律所或客户，除非对方书面同意；配图要客户同意 |
 
 每篇都要确认：联系页的真实网址（文章里先写成 `/contact`）。
 
