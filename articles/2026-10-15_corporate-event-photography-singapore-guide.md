@@ -141,6 +141,7 @@ After delivery, plan how the photos will be used: social posts, sponsors, press,
 | **Live streaming and hybrid events** | Wired internet with backup, audio from the AV desk, a full rehearsal | [INTERNAL LINK: /insights/live-streaming-corporate-events-singapore "Live streaming corporate events"] |
 | **Corporate and brand videos** | 4–8 weeks from brief to delivery; agree review rounds | [INTERNAL LINK: /insights/corporate-video-production-singapore "Corporate video production"] |
 | **Corporate headshots** | On-site sessions, about 10–12 people an hour, a recorded setup for new joiners | [INTERNAL LINK: /insights/corporate-headshots-singapore "Corporate headshots"] |
+| **Headshot booths at events** | About 3 m × 3 m; 20–30 people an hour per photographer; sponsor branding | [INTERNAL LINK: /insights/event-headshot-booth-singapore "Event headshot booths"] |
 | **Annual report photography** | Board portraits on a meeting day; real people and operations | [INTERNAL LINK: /insights/annual-report-photography-singapore "Annual report photography"] |
 | **Workplace and employer branding** | Real staff at real work; a shot list by department; written consent | [INTERNAL LINK: /insights/workplace-employer-branding-photography-singapore "Workplace photography"] |
 | **Hotel and venue photography** | Each room in its main setups; staged plus real-event photos | [INTERNAL LINK: /insights/hotel-venue-photography-mice-singapore "Hotel and venue photography for MICE"] |

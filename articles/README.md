@@ -1,6 +1,6 @@
 # 答案型文章 — 上线指南
 
-55 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
+56 篇英文文章，给 rsphotographysg.com 的 /insights 栏目。每篇都有：开头的直接回答、常见问题、Article + FAQPage 结构化数据（已用 `structured-data-fix/fix_structured_data.py` 检查，0 错误）、配图建议。
 
 ## 建议上线顺序（大致每周一篇）
 
@@ -61,6 +61,7 @@
 | 9 月 28 日那周 | 律师事务所 / 会计师事务所 / 顾问公司摄影 | /insights/law-firm-professional-services-photography-singapore | 是否接合伙人肖像（统一风格）和客户研讨会；不要点名律所或客户，除非对方书面同意；配图要客户同意 |
 | 10 月 5 日那周（年底晚宴季前） | 企业活动上的舞台表演怎么拍 | /insights/stage-performance-photography-corporate-events-singapore | 你们表演时是否一般不用闪光灯；配图要表演者和主办方同意，名人表演者尤其要看合约 |
 | 10 月 12 日那周（很多院校 1 月至 3 月办开放日） | 大学 / 理工学院 / 工艺教育学院活动摄影 | /insights/university-polytechnic-event-photography-singapore | 文中写“我们拍教育、政府和企业活动”，确认可以这样说；是否接开放日（多位摄影师）和年度合约；不要点名院校，除非对方书面同意；配图要学生同意 |
+| 10 月 19 日那周 | 会议和活动上的形象照拍摄站（headshot booth） | /insights/event-headshot-booth-singapore | “每位摄影师每小时 20–30 人”是否符合你的经验；是否提供现场选片和一天内交付；可以推给会议主办方和赞助商 |
 
 每篇都要确认：联系页的真实网址（文章里先写成 `/contact`）。
 
