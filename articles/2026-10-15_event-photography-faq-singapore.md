@@ -166,6 +166,10 @@ Only with care. Keep forms, cheques, IDs and screens out of frame, and don't use
 Before guests arrive, with the chef plating each dish fresh. Then photograph the space, the chef and the event itself.
 → [INTERNAL LINK: /insights/restaurant-launch-media-tasting-photography-singapore "Restaurant launches"]
 
+### Can performers at our event be photographed?
+Usually, but check the performer's agreement first: some limit photos, video or flash, or need approval before publishing.
+→ [INTERNAL LINK: /insights/stage-performance-photography-corporate-events-singapore "Stage performances"]
+
 ### When is the best time to photograph an exhibition booth?
 The empty booth before doors open, and the busy booth at peak hours.
 → [INTERNAL LINK: /insights/exhibition-booth-photography-singapore "Exhibitions"]
