@@ -108,6 +108,7 @@ After delivery, plan how the photos will be used: social posts, sponsors, press,
 | **VIP visits and facility tours** | Walk the route first; stay ahead of the group; PPE and confidential areas | [INTERNAL LINK: /insights/vip-visit-facility-tour-photography-singapore "VIP visit photography"] |
 | **Family days and staff events** | Roaming photographers, a family photo spot, care with children | [INTERNAL LINK: /insights/corporate-family-day-photography-singapore "Family day photography"] |
 | **Team building and offsites** | Checkpoints plus a roving photographer; a photo of every team; strategy sessions kept confidential | [INTERNAL LINK: /insights/team-building-offsite-photography-singapore "Team building photography"] |
+| **CSR and sustainability events** | Real impact and before-and-after; accurate captions for ESG reports | [INTERNAL LINK: /insights/csr-sustainability-event-photography-singapore "CSR event photography"] |
 | **Runs and sports events** | Fixed photo points; bib-searchable galleries; flash for night races | [INTERNAL LINK: /insights/running-sports-event-photography-singapore "Running and sports event photography"] |
 | **Golf days** | A photo of every flight; no movement during swings; every winner at the dinner | [INTERNAL LINK: /insights/corporate-golf-day-photography-singapore "Golf day photography"] |
 | **Large group photos** | Fixed time in the programme; raised camera; VIPs centre front | [INTERNAL LINK: /insights/large-group-photo-corporate-event-singapore "Large group photos"] |

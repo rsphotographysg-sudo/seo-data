@@ -178,6 +178,10 @@ With several photographers or fixed points across the campus, covering every fac
 Often not near certain works. Ask the venue first and use the exhibition lighting, and photograph installation views separately before the opening.
 → [INTERNAL LINK: /insights/gallery-museum-exhibition-opening-photography-singapore "Exhibition openings"]
 
+### What should be photographed at a CSR event for an ESG report?
+Real activity and measurable impact, before and after, partners and the team, with accurate captions: date, place, partner and what was achieved.
+→ [INTERNAL LINK: /insights/csr-sustainability-event-photography-singapore "CSR events"]
+
 ### When is the best time to photograph an exhibition booth?
 The empty booth before doors open, and the busy booth at peak hours.
 → [INTERNAL LINK: /insights/exhibition-booth-photography-singapore "Exhibitions"]
