@@ -202,6 +202,10 @@ Usually 4–8 weeks from brief to delivery.
 Photo booths with instant prints start from S$800 at RS Photography.
 → [INTERNAL LINK: /insights/photo-booth-rental-corporate-events-singapore "Photo booths"]
 
+### How do professional firms keep partner portraits consistent?
+Agree a standard background, lighting, crop and retouching level, record the setup, and photograph new partners the same way later.
+→ [INTERNAL LINK: /insights/law-firm-professional-services-photography-singapore "Professional services"]
+
 ### How many headshots can be done in an hour?
 About 10–12 people, using 5-minute slots.
 → [INTERNAL LINK: /insights/corporate-headshots-singapore "Corporate headshots"] · [INTERNAL LINK: /insights/workplace-employer-branding-photography-singapore "Workplace photos"]
