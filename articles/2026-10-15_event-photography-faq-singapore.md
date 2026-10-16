@@ -123,6 +123,10 @@ Yes. The key is the receiving line: one photographer stays with the ambassador t
 Walk the route beforehand, stay ahead of the group at every stop, photograph the VIP interacting with staff, follow PPE and security rules, and deliver captioned photos the same day.
 → [INTERNAL LINK: /insights/vip-visit-facility-tour-photography-singapore "VIP visits"]
 
+### What should be photographed at a community centre event?
+The guest of honour's arrival, walkabout and speech, residents of all ages at the activities, volunteers and partners, and group photos with the committee.
+→ [INTERNAL LINK: /insights/grassroots-community-event-photography-singapore "Community events"]
+
 ### Does the PDPA apply to vendors working for government agencies?
 Yes. Since 1 February 2021, vendors acting for public agencies are no longer excluded from the PDPA.
 

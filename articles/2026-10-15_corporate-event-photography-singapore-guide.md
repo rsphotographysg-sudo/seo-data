@@ -122,6 +122,7 @@ After delivery, plan how the photos will be used: social posts, sponsors, press,
 | **Schools** | Student consent first; name every prize winner; plan anniversaries early | [INTERNAL LINK: /insights/school-event-photography-singapore "School event photography"] |
 | **Hospitals and healthcare** | Patient privacy, clinical areas only with permission, infection control | [INTERNAL LINK: /insights/healthcare-hospital-photography-singapore "Healthcare photography"] |
 | **Religious and community organisations** | Agree what may be photographed during worship; plan an archive | [INTERNAL LINK: /insights/community-religious-celebration-photography-singapore "Community and religious celebration photography"] |
+| **Grassroots and community centres** | Follow the guest of honour; residents of all ages; care with children and seniors | [INTERNAL LINK: /insights/grassroots-community-event-photography-singapore "Grassroots event photography"] |
 | **Banks and financial services** | Client privacy levels, confidentiality and compliance review | [INTERNAL LINK: /insights/financial-services-event-photography-singapore "Financial services event photography"] |
 | **Associations and chambers** | Council photo at the AGM; photograph members; one vendor for the year | [INTERNAL LINK: /insights/association-member-event-photography-singapore "Association and member event photography"] |
 | **Non-profits and charities** | Beneficiary dignity and consent; one shoot for many uses | [INTERNAL LINK: /insights/nonprofit-charity-photography-singapore "Non-profit photography"] |
