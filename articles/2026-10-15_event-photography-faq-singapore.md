@@ -162,6 +162,10 @@ Every flight before tee-off, the flag-off, sponsor and contest holes, players in
 Only with care. Keep forms, cheques, IDs and screens out of frame, and don't use identifiable buyers in public photos without consent. Focus on the showflat, the model, crowds and the developer's team.
 → [INTERNAL LINK: /insights/property-launch-showflat-photography-singapore "Property launches"]
 
+### When should food be photographed at a restaurant launch?
+Before guests arrive, with the chef plating each dish fresh. Then photograph the space, the chef and the event itself.
+→ [INTERNAL LINK: /insights/restaurant-launch-media-tasting-photography-singapore "Restaurant launches"]
+
 ### When is the best time to photograph an exhibition booth?
 The empty booth before doors open, and the busy booth at peak hours.
 → [INTERNAL LINK: /insights/exhibition-booth-photography-singapore "Exhibitions"]
