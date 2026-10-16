@@ -215,7 +215,8 @@ Agree a standard background, lighting, crop and retouching level, record the set
 → [INTERNAL LINK: /insights/law-firm-professional-services-photography-singapore "Professional services"]
 
 ### How many headshots can be done in an hour?
-About 10–12 people, using 5-minute slots.
+About 10–12 people, using 5-minute slots. A quick headshot booth at a conference can do about 20–30 an hour per photographer.
+→ [INTERNAL LINK: /insights/event-headshot-booth-singapore "Headshot booths"]
 → [INTERNAL LINK: /insights/corporate-headshots-singapore "Corporate headshots"] · [INTERNAL LINK: /insights/workplace-employer-branding-photography-singapore "Workplace photos"]
 
 ---
