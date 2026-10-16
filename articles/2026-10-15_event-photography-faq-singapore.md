@@ -194,6 +194,10 @@ Usually not. Photograph the setup before opening, then peak hours and key moment
 Rehearse, mark VIP positions, reserve a central camera spot, and ask VIPs to hold facing the camera.
 → [INTERNAL LINK: /insights/groundbreaking-opening-ceremony-photography-singapore "Ceremonies"]
 
+### How do you photograph a car launch?
+Hero shots of the clean car before guests arrive, controlled reflections, a rehearsed reveal from two positions, then leaders, media and guests with the car.
+→ [INTERNAL LINK: /insights/car-launch-automotive-event-photography-singapore "Car launches"]
+
 ### How do we get press-ready photos from a launch?
 Rehearse the unveil, prepare names and titles, and send a small captioned set within hours.
 → [INTERNAL LINK: /insights/product-launch-press-event-photography-singapore "Launches and press events"]
