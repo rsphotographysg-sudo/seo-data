@@ -174,6 +174,10 @@ Usually, but check the performer's agreement first: some limit photos, video or 
 With several photographers or fixed points across the campus, covering every faculty's booth, demonstrations, talks and tours, with same-day selects for social media.
 → [INTERNAL LINK: /insights/university-polytechnic-event-photography-singapore "Universities and polytechnics"]
 
+### Can photographers use flash at a gallery or museum opening?
+Often not near certain works. Ask the venue first and use the exhibition lighting, and photograph installation views separately before the opening.
+→ [INTERNAL LINK: /insights/gallery-museum-exhibition-opening-photography-singapore "Exhibition openings"]
+
 ### When is the best time to photograph an exhibition booth?
 The empty booth before doors open, and the busy booth at peak hours.
 → [INTERNAL LINK: /insights/exhibition-booth-photography-singapore "Exhibitions"]
