@@ -21,7 +21,7 @@ For the full overview, see [INTERNAL LINK: /insights/corporate-event-photography
 ## Prices and booking
 
 ### How much does corporate event photography cost in Singapore?
-Typically S$600–S$1,200 for a half day and S$1,500–S$2,800 for a full day with one photographer. Gala dinners and MICE events usually run S$2,000–S$3,500 or more.
+Our published rates for one photographer are S$500 for 2 hours, S$680 for a half day (up to 4 hours) and S$1,200 for a full day (up to 8 hours), all nett. Coverage from 6pm, on weekends or on public holidays adds S$100 (2 hours or half day) or S$200 (full day). See [INTERNAL LINK: /rates "our rates"].
 → [INTERNAL LINK: /insights/corporate-event-photography-cost-singapore "Event photography costs"]
 
 ### Is GST included?
@@ -275,7 +275,7 @@ Paste this block into the page `<head>`. It includes the 12 most important quest
     {
       "@type": "Question",
       "name": "How much does corporate event photography cost in Singapore?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Typically S$600 to S$1,200 for a half day and S$1,500 to S$2,800 for a full day with one photographer. Gala dinners and MICE events usually run S$2,000 to S$3,500 or more." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Our published rates for one photographer are S$500 for 2 hours, S$680 for a half day (up to 4 hours) and S$1,200 for a full day (up to 8 hours), all nett. Coverage from 6pm, on weekends or on public holidays adds S$100 (2 hours or half day) or S$200 (full day)." }
     },
     {
       "@type": "Question",

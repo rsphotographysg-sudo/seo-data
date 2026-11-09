@@ -116,8 +116,8 @@ Booking both from one team means one brief, one setup plan and matching branding
 
 | Option | Budget (nett, SGD) |
 |---|---|
-| Photo booth with instant prints | From S$800 |
-| Annual dinner with 2 photographers + booth | S$2,800 – S$4,000 |
+| Photo booth with instant prints | S$800 for 2 hours, S$1,000 for 3 hours |
+| Annual dinner (evening, up to 4 hours) with 2 photographers + a 2-hour booth | S$2,360 |
 
 What changes the price:
 - booth hours
