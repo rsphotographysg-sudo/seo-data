@@ -12,12 +12,12 @@
 
 ```html
 <title>Corporate Event Photographer Singapore | RS Photography</title>
-<meta name="description" content="Corporate, MICE and government event photography and video in Singapore since 2013. bizSAFE Level 3, engageable via GeBIZ, nett quotes, Express 24 delivery.">
+<meta name="description" content="Corporate, MICE &amp; government event photography and video in Singapore since 2013. bizSAFE Level 3, engageable via GeBIZ, nett quotes, Express 24 delivery.">
 <meta property="og:title" content="Corporate Event Photographer Singapore | RS Photography">
-<meta property="og:description" content="Corporate, MICE and government event photography and video in Singapore since 2013. bizSAFE Level 3, engageable via GeBIZ, nett quotes, Express 24 delivery.">
+<meta property="og:description" content="Corporate, MICE &amp; government event photography and video in Singapore since 2013. bizSAFE Level 3, engageable via GeBIZ, nett quotes, Express 24 delivery.">
 ```
 
-- 标题 55 个字符，描述 154 个字符，Google 一般能完整显示。
+- 标题 55 个字符，描述 154 个字符（代码里的 `&amp;` 在页面上显示为 `&`），Google 一般能完整显示。
 - 页面上的 H1 不用改。
 
 ## 2. PDPA 指南 `/insights/pdpa-event-photography-consent-guide`
@@ -31,7 +31,7 @@
 <meta property="og:description" content="What Singapore's PDPA means for event photography: when you need consent, how to tell guests, opt-outs, and how to handle and share photos safely.">
 ```
 
-- 标题 58 个字符，描述 148 个字符。
+- 标题 58 个字符，描述 146 个字符。
 - 上线前请确认：页面正文确实讲了"告知来宾、不拍的选择、照片的保存和分享"。如果有哪一项没讲，把描述里那一项删掉。
 
 ---
