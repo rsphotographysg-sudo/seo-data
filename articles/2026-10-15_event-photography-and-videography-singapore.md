@@ -102,8 +102,8 @@ See our [INTERNAL LINK: /insights/conference-photography-checklist "conference p
 Video adds more to the budget than people expect, mainly because of editing time. As a guide:
 
 - **Event photography**: see [INTERNAL LINK: /insights/corporate-event-photography-cost-singapore "corporate event photography costs in Singapore"]
-- **Event videography**: from **S$2,000** per event for a highlight reel. See [INTERNAL LINK: /insights/event-videography-rates-singapore "event videography rates in Singapore"].
-- **Photo + video from one crew**: usually less than booking the two separately, because planning, briefing and travel are shared.
+- **Event videography**: a 1–2 minute highlight film starts from **S$1,800**. See [INTERNAL LINK: /insights/event-videography-rates-singapore "event videography rates in Singapore"].
+- **Photo + video from one crew**: one brief, one point of contact and shared planning.
 
 What changes the video price most:
 
@@ -131,7 +131,7 @@ Take a feed from the venue's AV desk for speeches and panels, use lapel micropho
 Same-day or next-day reels are possible with an on-site editor. Otherwise, highlight reels are usually delivered within one to two weeks, including one round of changes.
 
 ### How much does event videography cost in Singapore?
-Event videography for a highlight reel typically starts from about S$2,000 per event. Costs rise with more camera operators, more edited videos, interviews, same-day editing and live streaming. Booking photo and video together usually costs less than booking them separately.
+A 1–2 minute highlight film starts from S$1,800. Costs rise with more camera operators, more edited videos, interviews, same-day editing and live streaming.
 
 ---
 
@@ -213,7 +213,7 @@ Paste both blocks into the page `<head>`.
     {
       "@type": "Question",
       "name": "How much does event videography cost in Singapore?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Event videography for a highlight reel typically starts from about S$2,000 per event. Costs rise with more camera operators, more edited videos, interviews, same-day editing and live streaming. Booking photo and video together usually costs less than booking them separately." }
+      "acceptedAnswer": { "@type": "Answer", "text": "A 1–2 minute highlight film starts from S$1,800. Costs rise with more camera operators, more edited videos, interviews, same-day editing and live streaming." }
     }
   ]
 }

@@ -63,7 +63,6 @@ A mixed approach also works: **a Singapore lead photographer** for the main mome
 - **Equipment.** Cameras, lenses, lighting and laptops travel as carry-on and checked luggage. Some countries may require customs paperwork for professional equipment, such as an ATA Carnet. Check in advance.
 - **Venue access.** Send crew names for passes, as you would at home.
 - **Local transport.** Arrange a car or driver between the airport, hotel and venue, especially with heavy equipment.
-- **Insurance.** Check that equipment and travel insurance cover the destination.
 
 ---
 
